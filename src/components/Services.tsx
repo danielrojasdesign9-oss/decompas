@@ -4,7 +4,7 @@ export default function Services() {
   const servicesData = [
     {
       id: "web",
-      tag: "Digital Presence",
+      tag: "Presencia digital",
       title: "Vitrinas Web",
       desc: "Sitios de alto impacto visual y conversión diseñados para capturar leads y transmitir autoridad.",
       icon: "web",
@@ -14,7 +14,7 @@ export default function Services() {
     },
     {
       id: "menu",
-      tag: "Hospitality",
+      tag: "Hospitalidad",
       title: "Menús Digitales QR",
       desc: "Experiencias interactivas para el sector gastronómico.",
       icon: "qr_code_scanner",
@@ -24,7 +24,7 @@ export default function Services() {
     },
     {
       id: "portfolio",
-      tag: "Data",
+      tag: "Datos",
       title: "Portafolios Inteligentes",
       desc: "Catálogos con bases de datos editables y escalables.",
       icon: "database",
@@ -34,7 +34,7 @@ export default function Services() {
     },
     {
       id: "whatsapp",
-      tag: "Efficiency",
+      tag: "Eficiencia",
       title: "Automatizaciones con IA",
       desc: "Flujos de trabajo que operan de manera autónoma, reduciendo carga manual y errores operativos.",
       icon: "smart_toy",
@@ -45,7 +45,7 @@ export default function Services() {
   ];
 
   const whatsappNumber = "573174446641";
-  const teamEmail = "decompasdesign@gmail.com";
+  const teamEmail = "decompasdesing@gmail.com";
 
   return (
     <section className="px-6 md:px-20 max-w-7xl mx-auto py-16 md:py-24" id="servicios">
@@ -89,19 +89,10 @@ export default function Services() {
                 {/* Dual Call to Action contact options tailored to the service */}
                 <div className="flex flex-wrap items-center gap-3">
                   <a 
-                    href={waUrl}
-                    target="_blank"
-                    rel="noopener noreferrer"
+                    href={mailUrl}
                     className="inline-flex items-center gap-1.5 bg-secondary text-on-secondary font-display text-[10px] uppercase tracking-wider px-4 py-2.5 rounded-full font-bold hover:scale-105 transition-transform duration-200"
                   >
-                    <span>WhatsApp</span>
-                  </a>
-                  
-                  <a 
-                    href={mailUrl}
-                    className="inline-flex items-center gap-1.5 border border-on-surface/25 text-on-surface font-display text-[10px] uppercase tracking-wider px-4 py-2.5 rounded-full font-bold hover:border-secondary hover:text-secondary transition-all duration-200"
-                  >
-                    <span>Enviar Correo</span>
+                    <span>Colaboremos juntos</span>
                   </a>
                 </div>
 

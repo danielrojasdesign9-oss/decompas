@@ -7,23 +7,23 @@ interface HeroProps {
 
 export default function Hero({ onScaleOperation, onScrollToSection }: HeroProps) {
   return (
-    <section 
-      id="hero" 
+    <section
+      id="hero"
       className="min-h-[70vh] md:min-h-[819px] flex flex-col justify-center px-6 md:px-20 max-w-7xl mx-auto py-12 md:py-24"
     >
       <div className="max-w-4xl">
         {/* Animated Headline matching exactly Stitch text and typography styles */}
-        <motion.h1 
+        <motion.h1
           initial={{ opacity: 0, y: 15 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
-          className="font-display text-[36px] md:text-[56px] leading-[44px] md:leading-[64px] font-bold text-secondary mb-8 tracking-tight"
+          className="font-display text-[24px] md:text-[56px] leading-[44px] md:leading-[64px] font-bold text-secondary mb-8 tracking-tight"
         >
-          Deja de perder ventas por WhatsApp saturados o PDFs pesados. Digitaliza y automatiza tu negocio hoy.
+          Si pasas el día respondiendo los mismos precios y pasando datos a mano, tu negocio no está creciendo, te está consumiendo. Automatiza tu flujo hoy.
         </motion.h1>
 
         {/* Animated Subtitle matching exactly Stitch text styles */}
-        <motion.p 
+        <motion.p
           initial={{ opacity: 0, y: 15 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.15 }}
@@ -33,20 +33,20 @@ export default function Hero({ onScaleOperation, onScrollToSection }: HeroProps)
         </motion.p>
 
         {/* Action Buttons matching exactly Stitch styles */}
-        <motion.div 
+        <motion.div
           initial={{ opacity: 0, y: 15 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.3 }}
           className="flex flex-wrap gap-4 md:gap-6"
         >
-          <button 
+          <button
             onClick={onScaleOperation}
             className="bg-secondary text-on-secondary font-display text-[11px] uppercase tracking-widest px-8 py-4 rounded-full hover:scale-105 transition-transform duration-200 font-bold cursor-pointer"
           >
             Escala tu Negocio
           </button>
-          
-          <button 
+
+          <button
             onClick={() => onScrollToSection("proceso")}
             className="border border-on-surface/20 text-on-surface font-display text-[11px] uppercase tracking-widest px-8 py-4 rounded-full hover:border-secondary hover:text-secondary hover:scale-102 transition-all duration-300 cursor-pointer"
           >
