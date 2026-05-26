@@ -19,7 +19,15 @@ export default function Hero({ onScaleOperation, onScrollToSection }: HeroProps)
           transition={{ duration: 0.6 }}
           className="font-display text-[24px] md:text-[56px] leading-[44px] md:leading-[64px] font-bold text-secondary mb-8 tracking-tight"
         >
-          Si pasas el día respondiendo los mismos precios y pasando datos a mano, tu negocio no está creciendo, te está consumiendo. Automatiza tu flujo hoy.
+          Si pasas el día respondiendo los mismos precios y pasando datos a mano, tu negocio no está creciendo, te está consumiendo.{" "}
+          <motion.span
+            initial={{ backgroundSize: "0% 100%" }}
+            animate={{ backgroundSize: "100% 100%" }}
+            transition={{ delay: 0.8, duration: 0.8, ease: "easeOut" }}
+            className="relative inline-block bg-secondary/20 bg-no-repeat [background-position:100%_100%] px-1 rounded-sm"
+          >
+            Automatiza tu flujo hoy.
+          </motion.span>
         </motion.h1>
 
         {/* Animated Subtitle matching exactly Stitch text styles */}
