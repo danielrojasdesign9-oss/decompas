@@ -1,0 +1,8 @@
+{
+  "name": "Decompas",
+  "description": "Premium Digital Agency - Automatizaciones con IA, Vitrinas Web, Menús QR interactivos y Portafolios Inteligentes con cálculo de ROI y simulador de chatbot en tiempo real.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
