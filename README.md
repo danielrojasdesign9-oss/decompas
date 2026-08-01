@@ -1,8 +1,8 @@
-# DeCompas
+# Daniel Rojas — Consultor de IA y Diseño para Pymes
 
-Consultoría de IA y diseño para Pymes. Aliado estratégico (Fractional AI & Design Officer): auditoría de procesos primero, código después.
+Consultor de IA y diseño para Pymes. Aliado estratégico (Fractional AI & Design Officer): auditoría de procesos primero, código después.
 
-- **Landing:** https://decompas.netlify.app
+- **Sitio:** https://decompas-318.netlify.app
 
 ## Estructura
 
@@ -23,6 +23,9 @@ npm run dev
 # o sin Node:
 python -m http.server 5173
 
+# Build para deploy (Netlify)
+npm run build
+
 # Lead Engine (Paso A)
 pip install -r requirements.txt
 python leads/run.py --source demo
@@ -38,4 +41,5 @@ python outreach/run_outreach.py --scored data/<scored>.json
 ## Configuración
 
 - `GOOGLE_MAPS_API_KEY` en `.env` para el Lead Engine (Places API).
-- WhatsApp de contacto de la landing: +573174446641 (edítalo en `index.html`).
+- WhatsApp de contacto: +573174446641 (edítalo en `index.html`).
+- Despliegue: Netlify con `netlify.toml` (build `npm run build`, publish `dist`).

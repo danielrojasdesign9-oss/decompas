@@ -1,7 +1,7 @@
 """Generador de reportes HTML personalizados por lead (DeCompas Score).
 
 Cada reporte es una página autocontenida (CSS inline) con la identidad de
-DeCompas, lista para abrir localmente o publicar en decompas.netlify.app.
+Daniel Rojas, lista para abrir localmente o publicar en la web.
 """
 from __future__ import annotations
 
@@ -122,13 +122,13 @@ def build_report_html(lead: dict, report_path: str = "", base_url: str = "") -> 
 
     wa = (lead.get("whatsapp_url") or lead.get("whatsapp") or "").strip()
     wa_num = (lead.get("whatsapp") or "").strip()
-    wa_url = f"https://wa.me/{wa_num}?text={quote_text('Hola, vi el diagnóstico de mi negocio en DeCompas. ¿Cómo puedo mejorar mi puntaje?')}" if wa_num else ""
+    wa_url = f"https://wa.me/{wa_num}?text={quote_text('Hola Daniel, vi el diagnóstico de mi negocio. ¿Cómo puedo mejorar mi puntaje?')}" if wa_num else ""
     cta_wa = f'<a class="cta wa" href="{wa_url}" target="_blank" rel="noopener">Quiero mejorar mi puntaje →</a>' if wa_url else ""
     cta_main = f'<a class="cta" href="{base_url}" target="_blank" rel="noopener">Quiero el diagnóstico completo en DeCompas</a>'
 
     sub = f"<p class='sub'>Reporte preparado por DeCompas · {city} · {category}</p>" if (city or category) else ""
 
-    title = html.escape(f"{name} — Diagnóstico DeCompas")
+    title = html.escape(f"{name} — Diagnóstico IA")
     return f"""<!DOCTYPE html>
 <html lang="es">
 <head>
@@ -139,7 +139,7 @@ def build_report_html(lead: dict, report_path: str = "", base_url: str = "") -> 
 </head>
 <body>
 <div class="wrap">
-  <div class="brand"><span class="dot"></span>DECOMPAS<span style="color:var(--muted);font-weight:500">/diagnóstico</span></div>
+  <div class="brand"><span class="dot"></span>DANIEL ROJAS<span style="color:var(--muted);font-weight:500">/diagnóstico</span></div>
   <div class="hero">
     <span class="tag">Diagnóstico IA de tu negocio</span>
     <h1 class="serif">{html.escape(name)}</h1>
@@ -158,7 +158,7 @@ def build_report_html(lead: dict, report_path: str = "", base_url: str = "") -> 
   {cta_wa}
   {cta_main}
   <div class="foot">
-    <p>Aliado estratégico de IA y diseño para Pymes · <a href="https://decompas.netlify.app">decompas.netlify.app</a></p>
+    <p>Consultor de IA y Diseño para Pymes · <a href="https://decompas-318.netlify.app">decompas-318.netlify.app</a></p>
     <p style="margin-top:6px">Auditoría de procesos primero, código después.</p>
   </div>
 </div>

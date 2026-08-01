@@ -4,6 +4,7 @@
   "private": true,
   "description": "DeCompas — Landing estática + ecosistema de IA (Lead Engine, DeCompas Score, Outreach).",
   "scripts": {
+    "build": "node scripts/build.mjs",
     "dev": "python -m http.server 5173",
     "preview": "python -m http.server 5173"
   }

@@ -22,7 +22,8 @@ def build_whatsapp_message(lead: dict, report_url: str = "", owner: str = "") ->
         f"podrías estar perdiendo clientes frente a la competencia.\n\n"
         f"Puntos detectados:\n{top2}\n\n"
         f"Preparamos un diagnóstico rápido sin costo (puntaje {score}/100) aquí: {report_link}\n\n"
-        "En DeCompas nos enfocamos en entender a fondo el negocio y resolverlo con IA y diseño."
+        "Me enfoco en entender a fondo tu negocio; si veo una oportunidad real, te cuento cómo "
+        "podría ayudarte con IA y diseño. Sin compromiso."
     )
 
 
@@ -43,10 +44,10 @@ def build_email_message(lead: dict, report_url: str = "", owner: str = "") -> di
         f"fugas concretas:\n\n{top2}\n\n"
         f"Preparamos un diagnóstico sin costo con puntaje {score}/100 y las acciones para mejorarlo: "
         f"{report_link}\n\n"
-        "En DeCompas nos enfocamos en entender a fondo el negocio y resolverlo con IA y diseño, "
-        "no vendemos 'páginas web' sino soluciones operativas.\n\n"
-        "¿Agendamos 15 minutos esta semana?\n\nSaludos,\nDeCompas — Aliado de IA y diseño para Pymes\n"
-        "https://decompas.netlify.app"
+        "En primer lugar me interesa entender tu negocio a fondo y encontrar dónde está el dolor "
+        "real; después vemos si puedo ayudarte con IA y diseño.\n\n"
+        "¿Agendamos 15 minutos esta semana?\n\nSaludos,\nDaniel Rojas — Consultor de IA y Diseño para Pymes\n"
+        "https://decompas-318.netlify.app"
     )
     return {"subject": subject, "body": body}
 

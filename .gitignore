@@ -25,3 +25,6 @@ out/
 
 # Mantener plantillas de entorno en el repo
 !.env.example
+
+# Local Netlify folder
+.netlify
