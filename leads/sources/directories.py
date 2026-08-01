@@ -30,7 +30,7 @@ from .base import BaseSource
 class DirectorySource(BaseSource):
     name = "directories"
 
-    def __init__(self, config_path: str, default_country: str = "52",
+    def __init__(self, config_path: str, default_country: str = "57",
                  timeout: int = 30, headers: dict | None = None):
         with open(config_path, encoding="utf-8") as f:
             self.config = json.load(f)

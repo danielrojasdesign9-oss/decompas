@@ -75,6 +75,9 @@ label{display:block;font-weight:600;font-size:.9rem;margin:22px 0 8px}
 @media(max-width:640px){.row{grid-template-columns:1fr}}
 .input{border:2px solid var(--line);border-radius:10px;padding:12px 14px;font-size:1.05rem;width:100%;font-family:inherit;background:#fff;color:var(--ink)}
 .input:focus{outline:none;border-color:var(--amber)}
+.rate-row{display:flex;gap:8px}
+.rate-row .input:first-child{flex:1}
+.rate-row select.input{max-width:96px;cursor:pointer}
 .hint{font-size:.78rem;color:var(--muted);margin-top:5px}
 .results{margin-top:26px;display:none;gap:16px;grid-template-columns:repeat(auto-fit,minmax(200px,1fr))}
 .stat2{background:var(--green-soft);border:1px solid #cfe6da;border-radius:14px;padding:20px;text-align:center}
@@ -210,8 +213,16 @@ footer a{color:var(--amber);font-weight:600;text-decoration:none}
       </div>
       <div class="row">
         <div>
-          <label for="rate">Costo por hora de tu equipo (MXN)</label>
-          <input class="input" id="rate" type="number" min="20" max="5000" value="120"/>
+          <label for="rate">Costo por hora de tu equipo</label>
+          <div class="rate-row">
+            <input class="input" id="rate" type="number" min="3000" max="200000" value="8000"/>
+            <select class="input" id="currency" aria-label="Moneda">
+              <option value="COP" selected>COP</option>
+              <option value="USD">USD</option>
+              <option value="MXN">MXN</option>
+            </select>
+          </div>
+          <p class="hint" id="rateHint">Costo por hora en COP · tasas de referencia</p>
         </div>
         <div>
           <label for="cta24">Leads perdidos fuera de horario al mes</label>
@@ -243,8 +254,8 @@ footer a{color:var(--amber);font-weight:600;text-decoration:none}
       <input class="input" id="dNegocio" type="text" placeholder="Ej. Taquería El Buen Sabor" required/>
       <label for="dWeb">Sitio web (si tienes)</label>
       <input class="input" id="dWeb" type="url" placeholder="https://..." />
-      <label for="dWa">Tu WhatsApp (con lada, ej. 81 1234 5678)</label>
-      <input class="input" id="dWa" type="tel" placeholder="81 1234 5678" required/>
+      <label for="dWa">Tu WhatsApp (con indicativo, ej. 300 123 4567)</label>
+      <input class="input" id="dWa" type="tel" placeholder="300 123 4567" required/>
       <div style="margin-top:22px">
         <button class="btn amber" style="width:100%;border:none;cursor:pointer" type="submit">Agendar mi conversación →</button>
       </div>
@@ -334,8 +345,39 @@ const SECTORS = {
     sol:{t:"Agente de cotización y agenda de visitas",
          d:"Cotiza y agenda visitas automáticamente, dándole respuestas inmediatas a tus clientes."}}
 };
-const fmt = new Intl.NumberFormat("es-MX");
-const money = n => "$" + fmt.format(Math.round(n));
+const CURR = {
+  COP:{fmt:new Intl.NumberFormat("es-CO"), min:3000, max:200000, def:8000, label:"Peso colombiano"},
+  USD:{fmt:new Intl.NumberFormat("en-US"), min:1, max:300, def:2, label:"Dólar"},
+  MXN:{fmt:new Intl.NumberFormat("es-MX"), min:20, max:6000, def:42, label:"Peso mexicano"}
+};
+let currency = "COP";
+let copPerUnit = {COP:1, USD:1/3200, MXN:1/184};
+fetch("https://open.er-api.com/v6/latest/COP")
+  .then(r=>r.json()).then(d=>{
+    if (d && d.result === "success" && d.rates) {
+      copPerUnit.USD = d.rates.USD;
+      copPerUnit.MXN = d.rates.MXN;
+    }
+  }).catch(()=>{});
+
+const money = n => currency + " " + CURR[currency].fmt.format(Math.round(n));
+
+function toCurrency(value, from, to){
+  return value / copPerUnit[from] * copPerUnit[to];
+}
+
+function setCurrency(next){
+  if (next === currency) return;
+  const cur = +document.getElementById("rate").value || 0;
+  const el = document.getElementById("rate");
+  el.value = cur ? Math.round(toCurrency(cur, currency, next)*100)/100 : CURR[next].def;
+  el.min = CURR[next].min;
+  el.max = CURR[next].max;
+  currency = next;
+  document.getElementById("rateHint").textContent =
+    "Costo por hora en " + next + " · tasas de referencia";
+  compute();
+}
 
 function buildSectors(){
   const box = document.getElementById("sectors");
@@ -376,6 +418,7 @@ function compute(){
 ["employees","hours","rate","cta24"].forEach(id=>{
   document.getElementById(id).addEventListener("input", compute);
 });
+document.getElementById("currency").addEventListener("change", e=>setCurrency(e.target.value));
 
 // Formulario de conversación → abre WhatsApp con la solicitud
 document.getElementById("diagForm").addEventListener("submit", e=>{

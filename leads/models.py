@@ -53,7 +53,7 @@ def clean_phone(raw: str | None) -> str:
     return raw
 
 
-def to_international(digits: str, default_country: str = "52") -> str:
+def to_international(digits: str, default_country: str = "57") -> str:
     """Convierte dígitos locales a número internacional (E.164 sin '+')."""
     if not digits:
         return ""
@@ -74,7 +74,7 @@ def build_whatsapp_url(number: str) -> str:
     return f"https://wa.me/{digits}"
 
 
-def normalize_lead(lead: Lead, default_country: str = "52") -> Lead:
+def normalize_lead(lead: Lead, default_country: str = "57") -> Lead:
     """Normaliza campos clave (website, teléfono, WhatsApp) de un lead."""
     lead.website = (lead.website or "").strip().rstrip("/")
     lead.whatsapp = to_international(clean_phone(lead.whatsapp or lead.phone), default_country)

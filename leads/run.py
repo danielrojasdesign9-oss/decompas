@@ -37,7 +37,7 @@ def build_parser() -> argparse.ArgumentParser:
     p.add_argument("--api-key", default="", help="API key de Google Places (o GOOGLE_MAPS_API_KEY)")
     p.add_argument("--scrape", action="store_true", help="Usar scraping Playwright en vez de la API")
     p.add_argument("--config", default="", help="Ruta al JSON de configuración de directorios")
-    p.add_argument("--country", default="52", help="Código de país por defecto (E.164, sin +)")
+    p.add_argument("--country", default="57", help="Código de país por defecto (E.164, sin +)")
     p.add_argument("--no-enrich", action="store_true", help="No detectar redes sociales desde la web")
     p.add_argument("--output", default="", help="Archivo JSON de salida")
     p.add_argument("--csv", action="store_true", help="Además exportar CSV")

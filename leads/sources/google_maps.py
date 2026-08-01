@@ -39,7 +39,7 @@ class GoogleMapsSource(BaseSource):
     def __init__(
         self,
         api_key: str,
-        default_country: str = "52",
+        default_country: str = "57",
         fields: list[str] | None = None,
         timeout: int = 30,
     ):
