@@ -54,6 +54,15 @@ def main() -> int:
             f.write("[WHATSAPP]\n" + item["message"] + "\n\n")
             f.write("[EMAIL]\nAsunto: " + item["email_subject"] + "\n" + item["email_body"] + "\n\n")
     print(f"Texto plano: -> {txt_path}")
+
+    links_path = os.path.join(args.out_dir, "outreach_links.txt")
+    from urllib.parse import quote
+    with open(links_path, "w", encoding="utf-8") as f:
+        for item in bundle["leads"]:
+            wa_num = (item.get("whatsapp") or "").strip()
+            link = f"https://wa.me/{wa_num}?text={quote(item['message'])}" if wa_num else "SIN WHATSAPP"
+            f.write(f"{item['name']} | {link}\n")
+    print(f"Enlaces de un clic: -> {links_path}")
     return 0
 
 

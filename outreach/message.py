@@ -16,9 +16,12 @@ def build_whatsapp_message(lead: dict, report_url: str = "", owner: str = "") ->
     report_link = report_url or "[Link al diagnóstico]"
     greeting = f"Hola {owner}, " if owner else "Hola, "
 
+    n_opps = min(2, len(opps))
+    n_txt = ("1 oportunidad" if n_opps == 1 else f"{n_opps} oportunidades") if opps else "detalles"
+
     return (
         f"{greeting}vi tu negocio en {city}. Analizamos la experiencia digital de {name} "
-        f"y encontramos {min(2, len(opps)) if opps else 'detalles'} en el flujo de ventas donde "
+        f"y encontramos {n_txt} en el flujo de ventas donde "
         f"podrías estar perdiendo clientes frente a la competencia.\n\n"
         f"Puntos detectados:\n{top2}\n\n"
         f"Preparamos un diagnóstico rápido sin costo (puntaje {score}/100) aquí: {report_link}\n\n"

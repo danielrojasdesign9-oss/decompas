@@ -36,7 +36,22 @@ python score/run_score.py --lead data/<leads>.json
 
 # Outreach
 python outreach/run_outreach.py --scored data/<scored>.json
+
+# Campaña semanal completa (leads -> score -> outreach -> deploy reportes)
+python scripts/campaign.py --city Cali --max 15
+python scripts/campaign.py --source demo --no-deploy   # prueba sin API key
 ```
+
+## Automatización del lunes
+
+- `scripts/campaign.py` corre el pipeline completo y deja en `out/campaign_<ciudad>_<fecha>/`:
+  `whatsapp_links.txt` (enlaces wa.me de un clic), `outreach_messages.txt`, reportes y `INSTRUCCIONES.txt`.
+- El ranking selecciona los leads con mayor oportunidad (con WhatsApp y peor score).
+- Tarea de Windows "DeCompas_Campana_Lunes" (lunes 07:00, con repetición si la PC estaba apagada):
+  ```bash
+  schtasks /create /tn "DeCompas_Campana_Lunes" /tr "cmd /c call X:\...\scripts\run_monday.bat" /sc weekly /d MON /st 07:00 /f
+  ```
+- Requiere `GOOGLE_MAPS_API_KEY` en `.env` (tier gratis de Places API) para datos reales.
 
 ## Configuración
 

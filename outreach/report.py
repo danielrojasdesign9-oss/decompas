@@ -124,9 +124,9 @@ def build_report_html(lead: dict, report_path: str = "", base_url: str = "") -> 
     wa_num = (lead.get("whatsapp") or "").strip()
     wa_url = f"https://wa.me/{wa_num}?text={quote_text('Hola Daniel, vi el diagnóstico de mi negocio. ¿Cómo puedo mejorar mi puntaje?')}" if wa_num else ""
     cta_wa = f'<a class="cta wa" href="{wa_url}" target="_blank" rel="noopener">Quiero mejorar mi puntaje →</a>' if wa_url else ""
-    cta_main = f'<a class="cta" href="{base_url}" target="_blank" rel="noopener">Quiero el diagnóstico completo en DeCompas</a>'
+    cta_main = f'<a class="cta" href="{base_url}" target="_blank" rel="noopener">Quiero conversar sobre esto →</a>'
 
-    sub = f"<p class='sub'>Reporte preparado por DeCompas · {city} · {category}</p>" if (city or category) else ""
+    sub = f"<p class='sub'>Preparado por Daniel Rojas · {city} · {category}</p>" if (city or category) else ""
 
     title = html.escape(f"{name} — Diagnóstico IA")
     return f"""<!DOCTYPE html>
@@ -192,13 +192,13 @@ def write_reports(scored_leads: list[dict], out_dir: str = "out/reports") -> lis
         )
     index_html = f"""<!DOCTYPE html><html lang="es"><head><meta charset="utf-8"/>
 <meta name="viewport" content="width=device-width,initial-scale=1"/>
-<title>Diagnósticos DeCompas</title>
+<title>Diagnósticos Daniel Rojas</title>
 <style>body{{font-family:system-ui,sans-serif;background:#faf7f2;color:#16222e;max-width:820px;margin:0 auto;padding:40px 20px}}
 table{{width:100%;border-collapse:collapse;background:#fff;border-radius:14px;overflow:hidden}}
 th,td{{padding:12px 16px;text-align:left;border-bottom:1px solid #e9e2d7}}
 th{{background:#16222e;color:#fff;font-size:.85rem}}
 a{{color:#e07b39;font-weight:600;text-decoration:none}}</style></head>
-<body><h1>Diagnósticos DeCompas</h1><p style="color:#5b6b7c">Reportes generados para tu outreach</p>
+<body><h1>Diagnósticos Daniel Rojas</h1><p style="color:#5b6b7c">Reportes generados para tu outreach</p>
 <table><tr><th>Negocio</th><th>Ciudad</th><th>Score</th></tr>{''.join(index_rows)}</table></body></html>"""
     with open(os.path.join(out_dir, "index.html"), "w", encoding="utf-8") as f:
         f.write(index_html)
