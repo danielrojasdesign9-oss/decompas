@@ -1,0 +1,6 @@
+# Lead Engine de DeCompas (Paso A)
+requests>=2.31
+beautifulsoup4>=4.12
+
+# Opcional: scraping de Google Maps sin API key
+# playwright>=1.40

@@ -1,0 +1,18 @@
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# Entorno / secretos
+.env
+
+# Datos generados y salidas
+data/*.json
+data/*.csv
+data/wa_probes/
+out/
+
+# Sitio / dependencias
+node_modules/
+dist/
