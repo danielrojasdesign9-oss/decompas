@@ -47,7 +47,7 @@ def build_email_message(lead: dict, report_url: str = "", owner: str = "") -> di
         "En primer lugar me interesa entender tu negocio a fondo y encontrar dónde está el dolor "
         "real; después vemos si puedo ayudarte con IA y diseño.\n\n"
         "¿Agendamos 15 minutos esta semana?\n\nSaludos,\nDaniel Rojas — Consultor de IA y Diseño para Pymes\n"
-        "https://decompas-318.netlify.app"
+        "https://danielrojasdesign.netlify.app"
     )
     return {"subject": subject, "body": body}
 

@@ -158,7 +158,7 @@ def build_report_html(lead: dict, report_path: str = "", base_url: str = "") -> 
   {cta_wa}
   {cta_main}
   <div class="foot">
-    <p>Consultor de IA y Diseño para Pymes · <a href="https://decompas-318.netlify.app">decompas-318.netlify.app</a></p>
+    <p>Consultor de IA y Diseño para Pymes · <a href="https://danielrojasdesign.netlify.app">danielrojasdesign.netlify.app</a></p>
     <p style="margin-top:6px">Auditoría de procesos primero, código después.</p>
   </div>
 </div>

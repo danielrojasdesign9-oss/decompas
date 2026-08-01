@@ -1,7 +1,7 @@
 # OpenCode Skills & Daniel Rojas — Framework de Experiencia Agentic (AX)
 
 > **Autor:** Daniel Rojas — Consultor de IA y Diseño para Pymes.
-> **Plataforma:** https://decompas-318.netlify.app
+> **Plataforma:** https://danielrojasdesign.netlify.app
 > **Propósito:** Configurar un ecosistema de skills para OpenCode que permita (1) desarrollar agentes especializados y (2) automatizar un embudo de prospección local con valor agregado para Pymes.
 > **Nota de marca:** Identidad personal "Daniel Rojas, Consultor de IA y Diseño". El nombre "DeCompas" queda reservado como marca del producto de diagnóstico ("DeCompas Score") y de las herramientas internas.
 
@@ -113,7 +113,7 @@ Cada `SKILL.md` usa frontmatter con `name` (obligatorio, minúsculas y guiones) 
 
 ## PARTE 2: Estrategia de Automatización y Crecimiento para DeCompas
 
-> **Objetivo:** posicionarse como el **aliado estratégico de IA y Diseño para Pymes**, impulsando https://decompas-318.netlify.app mediante un embudo de prospección local automatizado que genera valor antes de vender.
+> **Objetivo:** posicionarse como el **aliado estratégico de IA y Diseño para Pymes**, impulsando https://danielrojasdesign.netlify.app mediante un embudo de prospección local automatizado que genera valor antes de vender.
 
 ### 1. Embudo Tecnológico de Prospección Local (Lead Engine)
 
@@ -161,7 +161,7 @@ Enviar un video corto (Loom/Veed de 60 segundos) o un reporte visual interactivo
 
 > *"Hola [Nombre del Dueño/Gerente], vi tu negocio en [Ciudad/Plataforma]. Analizamos la experiencia digital de [Nombre del Negocio] y notamos 2 detalles en el flujo de ventas móvil donde están perdiendo clientes frente a la competencia. Preparamos un diagnóstico rápido sin costo aquí: [Link a Landing/DeCompas con reporte]. En DeCompas nos enfocamos en entender a fondo el negocio y resolverlo con IA y diseño."*
 
-#### B. Conversión en la landing (https://decompas-318.netlify.app)
+#### B. Conversión en la landing (https://danielrojasdesign.netlify.app)
 
 Para maximizar la conversión en la landing actual:
 

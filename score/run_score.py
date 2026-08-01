@@ -1,7 +1,7 @@
 """CLI del DeCompas Score (Paso B).
 
 Ejemplos:
-  python score/run_score.py --url https://decompas-318.netlify.app
+  python score/run_score.py --url https://danielrojasdesign.netlify.app
   python score/run_score.py --lead data/demo_leads.json --out data/scored.json
   python score/run_score.py --whatsapp-probe 528112345678
   python score/run_score.py --whatsapp-check 528112345678

@@ -2,7 +2,7 @@
 
 Consultor de IA y diseño para Pymes. Aliado estratégico (Fractional AI & Design Officer): auditoría de procesos primero, código después.
 
-- **Sitio:** https://decompas-318.netlify.app
+- **Sitio:** https://danielrojasdesign.netlify.app
 
 ## Estructura
 

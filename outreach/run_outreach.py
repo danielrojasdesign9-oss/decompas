@@ -2,7 +2,7 @@
 
 Ejemplo:
   python outreach/run_outreach.py --scored data/scored_20260801_001002.json \
-      --base-url https://decompas-318.netlify.app/diagnostico --out-dir out
+      --base-url https://danielrojasdesign.netlify.app/diagnostico --out-dir out
 """
 from __future__ import annotations
 
@@ -25,7 +25,7 @@ from outreach.report import write_reports  # noqa: E402
 def main() -> int:
     p = argparse.ArgumentParser(description="Outreach DeCompas: reportes + mensajes por lead")
     p.add_argument("--scored", required=True, help="JSON con leads ya auditados (salida de score/run_score.py)")
-    p.add_argument("--base-url", default="https://decompas-318.netlify.app/diagnostico",
+    p.add_argument("--base-url", default="https://danielrojasdesign.netlify.app/diagnostico",
                    help="URL pública donde se publicarán los reportes")
     p.add_argument("--out-dir", default="out")
     args = p.parse_args()
