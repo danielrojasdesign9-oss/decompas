@@ -1,20 +1,41 @@
-<div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://ai.google.dev/static/site-assets/images/share-ais-513315318.png" />
-</div>
+# DeCompas
 
-# Run and deploy your AI Studio app
+Consultoría de IA y diseño para Pymes. Aliado estratégico (Fractional AI & Design Officer): auditoría de procesos primero, código después.
 
-This contains everything you need to run your app locally.
+- **Landing:** https://decompas.netlify.app
 
-View your app in AI Studio: https://ai.studio/apps/b514df49-98c5-4e3a-b0be-10edb1fea581
+## Estructura
 
-## Run Locally
+```
+index.html                 Landing principal (estática, con calculadora de impacto integrada)
+landing/calculadora.html   Widget standalone de la calculadora de impacto de IA
+leads/                     Lead Engine: extracción de Pymes (Google Maps API/scraping, directorios)
+score/                     DeCompas Score: auditor 0-100 de presencia digital + test de WhatsApp
+outreach/                  Reportes HTML personalizados + mensajes WhatsApp/Email por lead
+.opencode/skills/          Skills para OpenCode (agent-browser, mcp-builder, frontend-design, vercel-rules, find-skills)
+```
 
-**Prerequisites:**  Node.js
+## Correr localmente
 
+```bash
+# Landing (abre en http://localhost:5173)
+npm run dev
+# o sin Node:
+python -m http.server 5173
 
-1. Install dependencies:
-   `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-3. Run the app:
-   `npm run dev`
+# Lead Engine (Paso A)
+pip install -r requirements.txt
+python leads/run.py --source demo
+python leads/run.py --source google_maps --query restaurantes --city Monterrey --max 50
+
+# DeCompas Score (Paso B)
+python score/run_score.py --lead data/<leads>.json
+
+# Outreach
+python outreach/run_outreach.py --scored data/<scored>.json
+```
+
+## Configuración
+
+- `GOOGLE_MAPS_API_KEY` en `.env` para el Lead Engine (Places API).
+- WhatsApp de contacto de la landing: +573174446641 (edítalo en `index.html`).
