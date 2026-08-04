@@ -55,8 +55,8 @@ def build_parser() -> argparse.ArgumentParser:
     p.add_argument("--city", default="Cali", help="Ciudad de búsqueda")
     p.add_argument("--max", type=int, default=15, help="Leads objetivo")
     p.add_argument("--sectors", default="", help="Sectores separados por coma (default: lista amplia)")
-    p.add_argument("--source", default="api",
-                   help="api | demo | directory:<config.json>")
+    p.add_argument("--source", default="auto",
+                   help="auto | api | demo | scrape | directory:<config.json>")
     p.add_argument("--api-key", default="", help="Key de Places API (o GOOGLE_MAPS_API_KEY en .env)")
     p.add_argument("--region", default="", help="lat,lng,radius_m para acotar la zona")
     p.add_argument("--out-dir", default="out", help="Carpeta base de salida")
@@ -66,6 +66,49 @@ def build_parser() -> argparse.ArgumentParser:
 
 
 # ---------------------------------------------------------------- PASO 1: leads
+def _fetch_api(args: argparse.Namespace, sectors: list) -> list:
+    from leads.sources.google_maps import GoogleMapsSource
+    api_key = args.api_key or load_from_env()
+    if not api_key:
+        return []
+    src = GoogleMapsSource(api_key=api_key, default_country="57")
+    leads, seen = [], set()
+    for sector in sectors:
+        try:
+            for lead in src.fetch(sector, args.city, max_results=PER_SECTOR,
+                                  region=args.region or None):
+                key = (lead.name or "").strip().lower()
+                if key and key not in seen:
+                    seen.add(key)
+                    leads.append(lead)
+                    print(f"  [leads·api] {lead.name}")
+        except Exception as e:
+            print(f"  [warn] sector '{sector}': {e}")
+        if len(leads) >= args.max * 3:
+            break
+    return leads
+
+
+def _fetch_scrape(args: argparse.Namespace, sectors: list) -> list:
+    from leads.sources.maps_scrape import MapsScrapeSource
+    src = MapsScrapeSource(default_country="57", headless=True)
+    leads, seen = [], set()
+    for sector in sectors:
+        try:
+            for lead in src.fetch(sector, args.city, max_results=PER_SECTOR,
+                                  max_per_sector=PER_SECTOR):
+                key = (lead.name or "").strip().lower()
+                if key and key not in seen:
+                    seen.add(key)
+                    leads.append(lead)
+                    print(f"  [leads·scrape] {lead.name} | tel: {lead.phone}")
+        except Exception as e:
+            print(f"  [warn] sector '{sector}': {e}")
+        if len(leads) >= args.max * 3:
+            break
+    return leads
+
+
 def fetch_leads(args: argparse.Namespace) -> list:
     sectors = [s.strip() for s in args.sectors.split(",") if s.strip()] or DEFAULT_SECTORS
 
@@ -78,31 +121,29 @@ def fetch_leads(args: argparse.Namespace) -> list:
         cfg = args.source.split(":", 1)[1]
         return list(DirectorySource(cfg, default_country="57").fetch())
 
-    # api
-    from leads.sources.google_maps import GoogleMapsSource, load_from_env
+    if args.source == "scrape":
+        return _fetch_scrape(args, sectors)
+
+    # auto / api
+    from leads.sources.google_maps import load_from_env
     api_key = args.api_key or load_from_env()
-    if not api_key:
+    if args.source == "api" and not api_key:
         print("error: falta GOOGLE_MAPS_API_KEY. Pégala en .env (ver .env.example) "
               "o usa --source demo para probar.", file=sys.stderr)
         sys.exit(1)
-    src = GoogleMapsSource(api_key=api_key, default_country="57")
-    leads, seen = [], set()
-    for sector in sectors:
+
+    if api_key:
         try:
-            for lead in src.fetch(sector, args.city, max_results=PER_SECTOR, region=args.region or None):
-                key = (lead.name or "").strip().lower()
-                if key and key not in seen:
-                    seen.add(key)
-                    leads.append(lead)
-                    print(f"  [leads] {lead.name}")
+            leads = _fetch_api(args, sectors)
+            if leads or args.source == "api":
+                return leads
+            print("  [warn] la API no devolvió leads; probando scraper ...")
         except Exception as e:
-            print(f"  [warn] sector '{sector}': {e}")
-        if len(leads) >= args.max * 3:
-            break
-    if len(leads) < args.max:
-        print(f"  [warn] solo {len(leads)} leads únicos (objetivo {args.max}). "
-              "Agrega sectores o usa --region.")
-    return leads
+            print(f"  [warn] API falló ({e}); probando scraper ...")
+    else:
+        print("  [info] sin API key: usando scraper de Google Maps (respaldo)")
+
+    return _fetch_scrape(args, sectors)
 
 
 # ---------------------------------------------------------------- PASO 2: score
@@ -205,11 +246,13 @@ def publish(campaign_dir: str, no_deploy: bool) -> None:
 
     build = shutil.which("npm") and os.path.exists(os.path.join(ROOT, "package.json"))
     dist = os.path.join(ROOT, "dist")
+    npm = shutil.which("npm.cmd") or "npm"
+    npx = shutil.which("npx.cmd") or "npx"
     try:
         if build:
             print("  [publish] build dist/ ...")
-            subprocess.run(["npm", "run", "build"], cwd=ROOT, check=True,
-                           capture_output=True, text=True)
+            subprocess.run([npm, "run", "build"], cwd=ROOT, check=True,
+                           capture_output=True, text=True, encoding="utf-8", errors="replace")
         else:
             os.makedirs(dist, exist_ok=True)
         target = os.path.join(dist, "diagnostico")
@@ -219,8 +262,9 @@ def publish(campaign_dir: str, no_deploy: bool) -> None:
 
         print("  [publish] deploy a Netlify ...")
         res = subprocess.run(
-            ["npx", "--yes", "netlify-cli", "deploy", "--prod", "--dir", dist],
-            cwd=ROOT, capture_output=True, text=True, timeout=240)
+            [npx, "--yes", "netlify-cli", "deploy", "--prod", "--dir", dist],
+            cwd=ROOT, capture_output=True, text=True, timeout=240,
+            encoding="utf-8", errors="replace")
         print(res.stdout[-600:] if res.stdout else "")
         if res.returncode != 0:
             print("  [warn] deploy falló:", res.stderr[-400:])
