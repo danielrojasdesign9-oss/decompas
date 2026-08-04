@@ -1,0 +1,40 @@
+name: Campana semanal (nube)
+
+on:
+  schedule:
+    # martes 08:30 hora Colombia (UTC-5) = 13:30 UTC
+    - cron: "30 13 * * 2"
+  workflow_dispatch: {}
+
+permissions:
+  contents: read
+
+jobs:
+  campana:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Instalar dependencias
+        run: |
+          pip install --upgrade pip
+          pip install -r requirements.txt playwright
+          python -m playwright install chromium
+
+      - name: Correr campana
+        env:
+          GOOGLE_MAPS_API_KEY: ${{ secrets.GOOGLE_MAPS_API_KEY }}
+          NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
+          NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
+        run: python scripts/campaign.py --city Cali --max 15 --source auto
+
+      - name: Subir paquete de campana (privado)
+        uses: actions/upload-artifact@v4
+        with:
+          name: campana-semanal
+          path: out/campaign_*/
+          if-no-files-found: error

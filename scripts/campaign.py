@@ -1,6 +1,6 @@
 """Campaña semanal automática: leads -> DeCompas Score -> outreach -> deploy.
 
-Uso (cada lunes via Programador de tareas):
+Uso (cada martes 08:30 via Programador de tareas o GitHub Actions):
   python scripts/campaign.py --city Cali --max 15
 
 Qué hace:
@@ -10,13 +10,12 @@ Qué hace:
      score más bajo (peor presencia digital = más por ganar).
   4. Se queda con los `--max` mejores (mínimo 15 por defecto).
   5. Genera reportes HTML + mensajes + enlaces wa.me de un clic.
-  6. Publica los reportes en Netlify (salvo --no-deploy) para que los
-     enlaces del mensaje funcionen.
+  6. Importa los leads al tracker (data/crm.json) para seguimiento.
+  7. Publica los reportes en Netlify (salvo --no-deploy) para que los
+     enlaces del mensaje funcionen. En la nube usa NETLIFY_SITE_ID.
 
 Fuentes de datos:
-  --source api                  Places API (requiere GOOGLE_MAPS_API_KEY en .env)
-  --source demo                 Datos de ejemplo (para probar el flujo)
-  --source directory:<archivo>  Directorio público via config JSON
+  --source auto / api / scrape / demo / directory:<config.json>
 """
 from __future__ import annotations
 
@@ -234,6 +233,17 @@ def write_instructions(campaign_dir: str, city: str, count: int) -> None:
         )
 
 
+def seed_tracker(campaign_dir: str) -> None:
+    try:
+        import subprocess as sp
+        res = sp.run([sys.executable, os.path.join(ROOT, "scripts", "track.py"),
+                      "seed", "--from", campaign_dir],
+                     capture_output=True, text=True, encoding="utf-8", errors="replace")
+        print("  [tracker] " + (res.stdout.strip() or res.stderr.strip() or "ok"))
+    except Exception as e:
+        print(f"  [tracker] aviso: {e}")
+
+
 # ------------------------------------------------------- PASO 5: deploy reportes
 def publish(campaign_dir: str, no_deploy: bool) -> None:
     reports = os.path.join(campaign_dir, "reports")
@@ -261,9 +271,12 @@ def publish(campaign_dir: str, no_deploy: bool) -> None:
         print(f"  [publish] reportes copiados a {target}")
 
         print("  [publish] deploy a Netlify ...")
+        site_id = os.environ.get("NETLIFY_SITE_ID") or ""
+        cmd = [npx, "--yes", "netlify-cli", "deploy", "--prod", "--dir", dist]
+        if site_id:
+            cmd += ["--site", site_id]
         res = subprocess.run(
-            [npx, "--yes", "netlify-cli", "deploy", "--prod", "--dir", dist],
-            cwd=ROOT, capture_output=True, text=True, timeout=240,
+            cmd, cwd=ROOT, capture_output=True, text=True, timeout=240,
             encoding="utf-8", errors="replace")
         print(res.stdout[-600:] if res.stdout else "")
         if res.returncode != 0:
@@ -299,9 +312,10 @@ def main() -> int:
         print("[3/4] Seleccionando por potencial ...")
         selected = rank_and_select(scored, args.max)
 
-    print("[4/4] Generando reportes y mensajes ...")
+    print("[4/4] Generando reportes, mensajes y tracker ...")
     build_outreach(selected, campaign_dir, BASE_URL)
     write_instructions(campaign_dir, args.city, len(selected))
+    seed_tracker(campaign_dir)
     publish(campaign_dir, args.no_deploy)
 
     print("\n" + "=" * 60)
