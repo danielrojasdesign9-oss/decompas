@@ -1,0 +1,1453 @@
+[
+  {
+    "name": "Restaurante Mistiko",
+    "source": "maps_scrape",
+    "category": "",
+    "address": "",
+    "city": "Cali",
+    "website": "",
+    "phone": "319 2035577",
+    "whatsapp": "3192035577",
+    "whatsapp_url": "https://wa.me/3192035577",
+    "google_rating": null,
+    "google_reviews": null,
+    "social": {},
+    "notes": "",
+    "raw": {},
+    "captured_at": "2026-08-04T04:32:43.563526+00:00",
+    "decompas_score": {
+      "url": "",
+      "has_site": false,
+      "reachable": false,
+      "checks": {},
+      "score": 0,
+      "categories": {
+        "presencia": 0,
+        "diseno": 0,
+        "conversion": 0,
+        "seo": 0
+      },
+      "opportunities": [
+        "No tiene sitio web: oportunidad de crear su ecosistema digital desde cero."
+      ],
+      "recommendations": [
+        "Proponer creación de landing/ecosistema digital con identidad de marca y chat de ventas.",
+        "Oportunidad mayor: intervención integral de IA y diseño."
+      ],
+      "mobile": {},
+      "error": ""
+    }
+  },
+  {
+    "name": "La Comitiva",
+    "source": "maps_scrape",
+    "category": "",
+    "address": "",
+    "city": "Cali",
+    "website": "https://restaurantelacomitiva.com",
+    "phone": "318 3349364",
+    "whatsapp": "3183349364",
+    "whatsapp_url": "https://wa.me/3183349364",
+    "google_rating": null,
+    "google_reviews": null,
+    "social": {},
+    "notes": "",
+    "raw": {},
+    "captured_at": "2026-08-04T04:32:45.103400+00:00",
+    "decompas_score": {
+      "url": "https://restaurantelacomitiva.com",
+      "has_site": true,
+      "reachable": true,
+      "checks": {
+        "https": true,
+        "load_time_s": 0.84,
+        "page_kb": 18.0,
+        "status_code": 200,
+        "viewport": true,
+        "lang": true,
+        "title": true,
+        "meta_description": false,
+        "og_tags": true,
+        "generator": "",
+        "images": 17,
+        "images_without_alt": 17,
+        "scripts": 3,
+        "stylesheets": 4,
+        "forms": 0,
+        "tel_links": 0,
+        "whatsapp_links": 0,
+        "cta_links": 1,
+        "chat_widget": false,
+        "generic_template": false,
+        "whatsapp_number": "",
+        "media_queries": 0,
+        "responsive": true
+      },
+      "score": 57,
+      "categories": {
+        "presencia": 30,
+        "diseno": 15,
+        "conversion": 0,
+        "seo": 12
+      },
+      "opportunities": [
+        "Sin botón de WhatsApp: los prospectos no pueden contactar en 1 clic.",
+        "Sin chat/asistente de ventas: los leads se pierden fuera de horario."
+      ],
+      "recommendations": [
+        "Agregar botón de WhatsApp con saludo automático.",
+        "Implementar agente de atención 24/7 (chat de ventas con IA).",
+        "Faltan llamados a la acción claros (cotizar, agendar, pedir).",
+        "Imágenes sin alt text: perjudica SEO y accesibilidad.",
+        "Buen punto de partida: hay fugas de conversión concretas por cerrar."
+      ],
+      "mobile": {},
+      "error": ""
+    }
+  },
+  {
+    "name": "Antigua Contemporánea",
+    "source": "maps_scrape",
+    "category": "",
+    "address": "",
+    "city": "Cali",
+    "website": "https://www.facebook.com/antigua2013",
+    "phone": "(602) 8936809",
+    "whatsapp": "6028936809",
+    "whatsapp_url": "https://wa.me/6028936809",
+    "google_rating": null,
+    "google_reviews": null,
+    "social": {},
+    "notes": "",
+    "raw": {},
+    "captured_at": "2026-08-04T04:32:46.605241+00:00",
+    "decompas_score": {
+      "url": "https://www.facebook.com/antigua2013",
+      "has_site": true,
+      "reachable": true,
+      "checks": {
+        "https": true,
+        "load_time_s": 0.45,
+        "page_kb": 298.7,
+        "status_code": 200,
+        "viewport": true,
+        "lang": true,
+        "title": true,
+        "meta_description": false,
+        "og_tags": false,
+        "generator": "",
+        "images": 0,
+        "images_without_alt": 0,
+        "scripts": 40,
+        "stylesheets": 2,
+        "forms": 0,
+        "tel_links": 0,
+        "whatsapp_links": 0,
+        "cta_links": 0,
+        "chat_widget": false,
+        "generic_template": false,
+        "whatsapp_number": "",
+        "media_queries": 1,
+        "responsive": true
+      },
+      "score": 60,
+      "categories": {
+        "presencia": 30,
+        "diseno": 20,
+        "conversion": 0,
+        "seo": 10
+      },
+      "opportunities": [
+        "Sin botón de WhatsApp: los prospectos no pueden contactar en 1 clic.",
+        "Sin chat/asistente de ventas: los leads se pierden fuera de horario."
+      ],
+      "recommendations": [
+        "Agregar botón de WhatsApp con saludo automático.",
+        "Implementar agente de atención 24/7 (chat de ventas con IA).",
+        "Faltan llamados a la acción claros (cotizar, agendar, pedir).",
+        "Faltan Open Graph tags para compartir bien en WhatsApp/redes.",
+        "Buen punto de partida: hay fugas de conversión concretas por cerrar."
+      ],
+      "mobile": {},
+      "error": ""
+    }
+  },
+  {
+    "name": "Izumi Restaurant",
+    "source": "maps_scrape",
+    "category": "",
+    "address": "",
+    "city": "Cali",
+    "website": "",
+    "phone": "301 2019527",
+    "whatsapp": "3012019527",
+    "whatsapp_url": "https://wa.me/3012019527",
+    "google_rating": null,
+    "google_reviews": null,
+    "social": {},
+    "notes": "",
+    "raw": {},
+    "captured_at": "2026-08-04T04:32:48.057346+00:00",
+    "decompas_score": {
+      "url": "",
+      "has_site": false,
+      "reachable": false,
+      "checks": {},
+      "score": 0,
+      "categories": {
+        "presencia": 0,
+        "diseno": 0,
+        "conversion": 0,
+        "seo": 0
+      },
+      "opportunities": [
+        "No tiene sitio web: oportunidad de crear su ecosistema digital desde cero."
+      ],
+      "recommendations": [
+        "Proponer creación de landing/ecosistema digital con identidad de marca y chat de ventas.",
+        "Oportunidad mayor: intervención integral de IA y diseño."
+      ],
+      "mobile": {},
+      "error": ""
+    }
+  },
+  {
+    "name": "Fogón criollo la 28",
+    "source": "maps_scrape",
+    "category": "",
+    "address": "",
+    "city": "Cali",
+    "website": "",
+    "phone": "315 3439042",
+    "whatsapp": "3153439042",
+    "whatsapp_url": "https://wa.me/3153439042",
+    "google_rating": null,
+    "google_reviews": null,
+    "social": {},
+    "notes": "",
+    "raw": {},
+    "captured_at": "2026-08-04T04:32:49.580397+00:00",
+    "decompas_score": {
+      "url": "",
+      "has_site": false,
+      "reachable": false,
+      "checks": {},
+      "score": 0,
+      "categories": {
+        "presencia": 0,
+        "diseno": 0,
+        "conversion": 0,
+        "seo": 0
+      },
+      "opportunities": [
+        "No tiene sitio web: oportunidad de crear su ecosistema digital desde cero."
+      ],
+      "recommendations": [
+        "Proponer creación de landing/ecosistema digital con identidad de marca y chat de ventas.",
+        "Oportunidad mayor: intervención integral de IA y diseño."
+      ],
+      "mobile": {},
+      "error": ""
+    }
+  },
+  {
+    "name": "Platillos Voladores",
+    "source": "maps_scrape",
+    "category": "",
+    "address": "",
+    "city": "Cali",
+    "website": "http://www.platillosvoladores.com",
+    "phone": "(602) 6687750",
+    "whatsapp": "6026687750",
+    "whatsapp_url": "https://wa.me/6026687750",
+    "google_rating": null,
+    "google_reviews": null,
+    "social": {},
+    "notes": "",
+    "raw": {},
+    "captured_at": "2026-08-04T04:32:51.111072+00:00",
+    "decompas_score": {
+      "url": "http://www.platillosvoladores.com",
+      "has_site": true,
+      "reachable": true,
+      "checks": {
+        "https": false,
+        "load_time_s": 0.84,
+        "page_kb": 184.6,
+        "status_code": 200,
+        "viewport": true,
+        "lang": true,
+        "title": true,
+        "meta_description": false,
+        "og_tags": true,
+        "generator": "",
+        "images": 13,
+        "images_without_alt": 2,
+        "scripts": 45,
+        "stylesheets": 16,
+        "forms": 2,
+        "tel_links": 0,
+        "whatsapp_links": 1,
+        "cta_links": 6,
+        "chat_widget": false,
+        "generic_template": true,
+        "whatsapp_number": "573176393003",
+        "media_queries": 7,
+        "responsive": true
+      },
+      "score": 75,
+      "categories": {
+        "presencia": 25,
+        "diseno": 15,
+        "conversion": 20,
+        "seo": 15
+      },
+      "opportunities": [
+        "Detectada plantilla genérica: riesgo de estética de IA/estándar sin diferenciación.",
+        "Sin chat/asistente de ventas: los leads se pierden fuera de horario."
+      ],
+      "recommendations": [
+        "Rediseño con identidad de marca (frontend-design-system) y tipografía profesional.",
+        "Implementar agente de atención 24/7 (chat de ventas con IA).",
+        "Buen punto de partida: hay fugas de conversión concretas por cerrar."
+      ],
+      "mobile": {},
+      "error": ""
+    }
+  },
+  {
+    "name": "Palomulata Parrilla Boutique",
+    "source": "maps_scrape",
+    "category": "",
+    "address": "",
+    "city": "Cali",
+    "website": "https://palomulata.com",
+    "phone": "321 5616277",
+    "whatsapp": "3215616277",
+    "whatsapp_url": "https://wa.me/3215616277",
+    "google_rating": null,
+    "google_reviews": null,
+    "social": {},
+    "notes": "",
+    "raw": {},
+    "captured_at": "2026-08-04T04:32:52.604436+00:00",
+    "decompas_score": {
+      "url": "https://palomulata.com",
+      "has_site": true,
+      "reachable": true,
+      "checks": {
+        "https": true,
+        "load_time_s": 0.5,
+        "page_kb": 130.9,
+        "status_code": 200,
+        "viewport": true,
+        "lang": true,
+        "title": true,
+        "meta_description": true,
+        "og_tags": true,
+        "generator": "WordPress 6.7.5",
+        "images": 12,
+        "images_without_alt": 5,
+        "scripts": 39,
+        "stylesheets": 33,
+        "forms": 0,
+        "tel_links": 0,
+        "whatsapp_links": 0,
+        "cta_links": 4,
+        "chat_widget": false,
+        "generic_template": true,
+        "whatsapp_number": "",
+        "media_queries": 27,
+        "responsive": true
+      },
+      "score": 73,
+      "categories": {
+        "presencia": 30,
+        "diseno": 15,
+        "conversion": 10,
+        "seo": 18
+      },
+      "opportunities": [
+        "Detectada plantilla genérica: riesgo de estética de IA/estándar sin diferenciación.",
+        "Sin botón de WhatsApp: los prospectos no pueden contactar en 1 clic.",
+        "Sin chat/asistente de ventas: los leads se pierden fuera de horario."
+      ],
+      "recommendations": [
+        "Rediseño con identidad de marca (frontend-design-system) y tipografía profesional.",
+        "Agregar botón de WhatsApp con saludo automático.",
+        "Implementar agente de atención 24/7 (chat de ventas con IA).",
+        "Buen punto de partida: hay fugas de conversión concretas por cerrar."
+      ],
+      "mobile": {},
+      "error": ""
+    }
+  },
+  {
+    "name": "CEMETRI® Centro de Medicina Estética & Tricología",
+    "source": "maps_scrape",
+    "category": "",
+    "address": "",
+    "city": "Cali",
+    "website": "https://cemetri.co",
+    "phone": "300 6513819",
+    "whatsapp": "3006513819",
+    "whatsapp_url": "https://wa.me/3006513819",
+    "google_rating": null,
+    "google_reviews": null,
+    "social": {},
+    "notes": "",
+    "raw": {},
+    "captured_at": "2026-08-04T04:33:00.787089+00:00",
+    "decompas_score": {
+      "url": "https://cemetri.co",
+      "has_site": true,
+      "reachable": true,
+      "checks": {
+        "https": true,
+        "load_time_s": 6.3,
+        "page_kb": 360.5,
+        "status_code": 200,
+        "viewport": true,
+        "lang": true,
+        "title": true,
+        "meta_description": false,
+        "og_tags": false,
+        "generator": "WordPress 7.0.2",
+        "images": 20,
+        "images_without_alt": 7,
+        "scripts": 37,
+        "stylesheets": 42,
+        "forms": 0,
+        "tel_links": 2,
+        "whatsapp_links": 2,
+        "cta_links": 8,
+        "chat_widget": false,
+        "generic_template": true,
+        "whatsapp_number": "573245395828",
+        "media_queries": 2,
+        "responsive": true
+      },
+      "score": 73,
+      "categories": {
+        "presencia": 25,
+        "diseno": 15,
+        "conversion": 20,
+        "seo": 13
+      },
+      "opportunities": [
+        "Detectada plantilla genérica: riesgo de estética de IA/estándar sin diferenciación.",
+        "Sin chat/asistente de ventas: los leads se pierden fuera de horario."
+      ],
+      "recommendations": [
+        "Carga > 2.5s: optimizar imágenes, comprimir HTML/CSS/JS.",
+        "Rediseño con identidad de marca (frontend-design-system) y tipografía profesional.",
+        "Implementar agente de atención 24/7 (chat de ventas con IA).",
+        "Faltan Open Graph tags para compartir bien en WhatsApp/redes.",
+        "Buen punto de partida: hay fugas de conversión concretas por cerrar."
+      ],
+      "mobile": {},
+      "error": ""
+    }
+  },
+  {
+    "name": "Peluquería Franchesca",
+    "source": "maps_scrape",
+    "category": "",
+    "address": "",
+    "city": "Cali",
+    "website": "",
+    "phone": "24458873",
+    "whatsapp": "24458873",
+    "whatsapp_url": "https://wa.me/24458873",
+    "google_rating": null,
+    "google_reviews": null,
+    "social": {},
+    "notes": "",
+    "raw": {},
+    "captured_at": "2026-08-04T04:33:02.306377+00:00",
+    "decompas_score": {
+      "url": "",
+      "has_site": false,
+      "reachable": false,
+      "checks": {},
+      "score": 0,
+      "categories": {
+        "presencia": 0,
+        "diseno": 0,
+        "conversion": 0,
+        "seo": 0
+      },
+      "opportunities": [
+        "No tiene sitio web: oportunidad de crear su ecosistema digital desde cero."
+      ],
+      "recommendations": [
+        "Proponer creación de landing/ecosistema digital con identidad de marca y chat de ventas.",
+        "Oportunidad mayor: intervención integral de IA y diseño."
+      ],
+      "mobile": {},
+      "error": ""
+    }
+  },
+  {
+    "name": "Salón De Belleza Army",
+    "source": "maps_scrape",
+    "category": "",
+    "address": "",
+    "city": "Cali",
+    "website": "",
+    "phone": "317 8205008",
+    "whatsapp": "3178205008",
+    "whatsapp_url": "https://wa.me/3178205008",
+    "google_rating": null,
+    "google_reviews": null,
+    "social": {},
+    "notes": "",
+    "raw": {},
+    "captured_at": "2026-08-04T04:33:03.778891+00:00",
+    "decompas_score": {
+      "url": "",
+      "has_site": false,
+      "reachable": false,
+      "checks": {},
+      "score": 0,
+      "categories": {
+        "presencia": 0,
+        "diseno": 0,
+        "conversion": 0,
+        "seo": 0
+      },
+      "opportunities": [
+        "No tiene sitio web: oportunidad de crear su ecosistema digital desde cero."
+      ],
+      "recommendations": [
+        "Proponer creación de landing/ecosistema digital con identidad de marca y chat de ventas.",
+        "Oportunidad mayor: intervención integral de IA y diseño."
+      ],
+      "mobile": {},
+      "error": ""
+    }
+  },
+  {
+    "name": "Glamour Dorado Cali",
+    "source": "maps_scrape",
+    "category": "",
+    "address": "",
+    "city": "Cali",
+    "website": "https://link.agendapro.com/co/glamourdoradocali/4bc0eaf0",
+    "phone": "314 5463144",
+    "whatsapp": "3145463144",
+    "whatsapp_url": "https://wa.me/3145463144",
+    "google_rating": null,
+    "google_reviews": null,
+    "social": {},
+    "notes": "",
+    "raw": {},
+    "captured_at": "2026-08-04T04:33:05.244488+00:00",
+    "decompas_score": {
+      "url": "https://link.agendapro.com/co/glamourdoradocali/4bc0eaf0",
+      "has_site": true,
+      "reachable": true,
+      "checks": {
+        "https": true,
+        "load_time_s": 0.59,
+        "page_kb": 4.5,
+        "status_code": 200,
+        "viewport": true,
+        "lang": false,
+        "title": true,
+        "meta_description": true,
+        "og_tags": true,
+        "generator": "",
+        "images": 2,
+        "images_without_alt": 0,
+        "scripts": 12,
+        "stylesheets": 1,
+        "forms": 0,
+        "tel_links": 0,
+        "whatsapp_links": 0,
+        "cta_links": 1,
+        "chat_widget": false,
+        "generic_template": false,
+        "whatsapp_number": "",
+        "media_queries": 0,
+        "responsive": true
+      },
+      "score": 60,
+      "categories": {
+        "presencia": 30,
+        "diseno": 15,
+        "conversion": 0,
+        "seo": 15
+      },
+      "opportunities": [
+        "Sin botón de WhatsApp: los prospectos no pueden contactar en 1 clic.",
+        "Sin chat/asistente de ventas: los leads se pierden fuera de horario."
+      ],
+      "recommendations": [
+        "Agregar botón de WhatsApp con saludo automático.",
+        "Implementar agente de atención 24/7 (chat de ventas con IA).",
+        "Faltan llamados a la acción claros (cotizar, agendar, pedir).",
+        "Buen punto de partida: hay fugas de conversión concretas por cerrar."
+      ],
+      "mobile": {},
+      "error": ""
+    }
+  },
+  {
+    "name": "La Sala - Peluqueria y Barberia",
+    "source": "maps_scrape",
+    "category": "",
+    "address": "",
+    "city": "Cali",
+    "website": "https://www.facebook.com/lasalapeluqueriaybarberia",
+    "phone": "23936978",
+    "whatsapp": "23936978",
+    "whatsapp_url": "https://wa.me/23936978",
+    "google_rating": null,
+    "google_reviews": null,
+    "social": {},
+    "notes": "",
+    "raw": {},
+    "captured_at": "2026-08-04T04:33:06.706459+00:00",
+    "decompas_score": {
+      "url": "https://www.facebook.com/lasalapeluqueriaybarberia",
+      "has_site": true,
+      "reachable": true,
+      "checks": {
+        "https": true,
+        "load_time_s": 0.75,
+        "page_kb": 482.6,
+        "status_code": 200,
+        "viewport": true,
+        "lang": true,
+        "title": true,
+        "meta_description": true,
+        "og_tags": true,
+        "generator": "",
+        "images": 0,
+        "images_without_alt": 0,
+        "scripts": 45,
+        "stylesheets": 2,
+        "forms": 0,
+        "tel_links": 0,
+        "whatsapp_links": 0,
+        "cta_links": 0,
+        "chat_widget": false,
+        "generic_template": false,
+        "whatsapp_number": "",
+        "media_queries": 1,
+        "responsive": true
+      },
+      "score": 65,
+      "categories": {
+        "presencia": 30,
+        "diseno": 20,
+        "conversion": 0,
+        "seo": 15
+      },
+      "opportunities": [
+        "Sin botón de WhatsApp: los prospectos no pueden contactar en 1 clic.",
+        "Sin chat/asistente de ventas: los leads se pierden fuera de horario."
+      ],
+      "recommendations": [
+        "Agregar botón de WhatsApp con saludo automático.",
+        "Implementar agente de atención 24/7 (chat de ventas con IA).",
+        "Faltan llamados a la acción claros (cotizar, agendar, pedir).",
+        "Buen punto de partida: hay fugas de conversión concretas por cerrar."
+      ],
+      "mobile": {},
+      "error": ""
+    }
+  },
+  {
+    "name": "Avant-garde salón",
+    "source": "maps_scrape",
+    "category": "",
+    "address": "",
+    "city": "Cali",
+    "website": "https://www.instagram.com/avantgarde_cali/?hl=es-la",
+    "phone": "(602) 3905049",
+    "whatsapp": "6023905049",
+    "whatsapp_url": "https://wa.me/6023905049",
+    "google_rating": null,
+    "google_reviews": null,
+    "social": {},
+    "notes": "",
+    "raw": {},
+    "captured_at": "2026-08-04T04:33:08.175398+00:00",
+    "decompas_score": {
+      "url": "https://www.instagram.com/avantgarde_cali/?hl=es-la",
+      "has_site": true,
+      "reachable": true,
+      "checks": {
+        "https": true,
+        "load_time_s": 0.38,
+        "page_kb": 660.7,
+        "status_code": 200,
+        "viewport": true,
+        "lang": true,
+        "title": true,
+        "meta_description": true,
+        "og_tags": true,
+        "generator": "",
+        "images": 0,
+        "images_without_alt": 0,
+        "scripts": 39,
+        "stylesheets": 1,
+        "forms": 0,
+        "tel_links": 0,
+        "whatsapp_links": 0,
+        "cta_links": 0,
+        "chat_widget": false,
+        "generic_template": false,
+        "whatsapp_number": "",
+        "media_queries": 2,
+        "responsive": true
+      },
+      "score": 65,
+      "categories": {
+        "presencia": 30,
+        "diseno": 20,
+        "conversion": 0,
+        "seo": 15
+      },
+      "opportunities": [
+        "Sin botón de WhatsApp: los prospectos no pueden contactar en 1 clic.",
+        "Sin chat/asistente de ventas: los leads se pierden fuera de horario."
+      ],
+      "recommendations": [
+        "Agregar botón de WhatsApp con saludo automático.",
+        "Implementar agente de atención 24/7 (chat de ventas con IA).",
+        "Faltan llamados a la acción claros (cotizar, agendar, pedir).",
+        "Buen punto de partida: hay fugas de conversión concretas por cerrar."
+      ],
+      "mobile": {},
+      "error": ""
+    }
+  },
+  {
+    "name": "Ebano's Peluquería y Salón de Belleza",
+    "source": "maps_scrape",
+    "category": "",
+    "address": "",
+    "city": "Cali",
+    "website": "",
+    "phone": "320 6878204",
+    "whatsapp": "3206878204",
+    "whatsapp_url": "https://wa.me/3206878204",
+    "google_rating": null,
+    "google_reviews": null,
+    "social": {},
+    "notes": "",
+    "raw": {},
+    "captured_at": "2026-08-04T04:33:09.638181+00:00",
+    "decompas_score": {
+      "url": "",
+      "has_site": false,
+      "reachable": false,
+      "checks": {},
+      "score": 0,
+      "categories": {
+        "presencia": 0,
+        "diseno": 0,
+        "conversion": 0,
+        "seo": 0
+      },
+      "opportunities": [
+        "No tiene sitio web: oportunidad de crear su ecosistema digital desde cero."
+      ],
+      "recommendations": [
+        "Proponer creación de landing/ecosistema digital con identidad de marca y chat de ventas.",
+        "Oportunidad mayor: intervención integral de IA y diseño."
+      ],
+      "mobile": {},
+      "error": ""
+    }
+  },
+  {
+    "name": "WOLF GYM",
+    "source": "maps_scrape",
+    "category": "",
+    "address": "",
+    "city": "Cali",
+    "website": "",
+    "phone": "304 2064580",
+    "whatsapp": "3042064580",
+    "whatsapp_url": "https://wa.me/3042064580",
+    "google_rating": null,
+    "google_reviews": null,
+    "social": {},
+    "notes": "",
+    "raw": {},
+    "captured_at": "2026-08-04T04:33:17.767709+00:00",
+    "decompas_score": {
+      "url": "",
+      "has_site": false,
+      "reachable": false,
+      "checks": {},
+      "score": 0,
+      "categories": {
+        "presencia": 0,
+        "diseno": 0,
+        "conversion": 0,
+        "seo": 0
+      },
+      "opportunities": [
+        "No tiene sitio web: oportunidad de crear su ecosistema digital desde cero."
+      ],
+      "recommendations": [
+        "Proponer creación de landing/ecosistema digital con identidad de marca y chat de ventas.",
+        "Oportunidad mayor: intervención integral de IA y diseño."
+      ],
+      "mobile": {},
+      "error": ""
+    }
+  },
+  {
+    "name": "Tauros GYM",
+    "source": "maps_scrape",
+    "category": "",
+    "address": "",
+    "city": "Cali",
+    "website": "http://www.facebook.com/tauros.caf",
+    "phone": "316 3078907",
+    "whatsapp": "3163078907",
+    "whatsapp_url": "https://wa.me/3163078907",
+    "google_rating": null,
+    "google_reviews": null,
+    "social": {},
+    "notes": "",
+    "raw": {},
+    "captured_at": "2026-08-04T04:33:19.286658+00:00",
+    "decompas_score": {
+      "url": "http://www.facebook.com/tauros.caf",
+      "has_site": true,
+      "reachable": true,
+      "checks": {
+        "https": false,
+        "load_time_s": 0.41,
+        "page_kb": 478.7,
+        "status_code": 200,
+        "viewport": true,
+        "lang": true,
+        "title": true,
+        "meta_description": true,
+        "og_tags": true,
+        "generator": "",
+        "images": 0,
+        "images_without_alt": 0,
+        "scripts": 45,
+        "stylesheets": 2,
+        "forms": 0,
+        "tel_links": 0,
+        "whatsapp_links": 0,
+        "cta_links": 0,
+        "chat_widget": false,
+        "generic_template": false,
+        "whatsapp_number": "",
+        "media_queries": 1,
+        "responsive": true
+      },
+      "score": 60,
+      "categories": {
+        "presencia": 25,
+        "diseno": 20,
+        "conversion": 0,
+        "seo": 15
+      },
+      "opportunities": [
+        "Sin botón de WhatsApp: los prospectos no pueden contactar en 1 clic.",
+        "Sin chat/asistente de ventas: los leads se pierden fuera de horario."
+      ],
+      "recommendations": [
+        "Agregar botón de WhatsApp con saludo automático.",
+        "Implementar agente de atención 24/7 (chat de ventas con IA).",
+        "Faltan llamados a la acción claros (cotizar, agendar, pedir).",
+        "Buen punto de partida: hay fugas de conversión concretas por cerrar."
+      ],
+      "mobile": {},
+      "error": ""
+    }
+  },
+  {
+    "name": "NovaGym Cali",
+    "source": "maps_scrape",
+    "category": "",
+    "address": "",
+    "city": "Cali",
+    "website": "",
+    "phone": "317 8488533",
+    "whatsapp": "3178488533",
+    "whatsapp_url": "https://wa.me/3178488533",
+    "google_rating": null,
+    "google_reviews": null,
+    "social": {},
+    "notes": "",
+    "raw": {},
+    "captured_at": "2026-08-04T04:33:20.744148+00:00",
+    "decompas_score": {
+      "url": "",
+      "has_site": false,
+      "reachable": false,
+      "checks": {},
+      "score": 0,
+      "categories": {
+        "presencia": 0,
+        "diseno": 0,
+        "conversion": 0,
+        "seo": 0
+      },
+      "opportunities": [
+        "No tiene sitio web: oportunidad de crear su ecosistema digital desde cero."
+      ],
+      "recommendations": [
+        "Proponer creación de landing/ecosistema digital con identidad de marca y chat de ventas.",
+        "Oportunidad mayor: intervención integral de IA y diseño."
+      ],
+      "mobile": {},
+      "error": ""
+    }
+  },
+  {
+    "name": "Sagitarius Gym",
+    "source": "maps_scrape",
+    "category": "",
+    "address": "",
+    "city": "Cali",
+    "website": "",
+    "phone": "310 3748068",
+    "whatsapp": "3103748068",
+    "whatsapp_url": "https://wa.me/3103748068",
+    "google_rating": null,
+    "google_reviews": null,
+    "social": {},
+    "notes": "",
+    "raw": {},
+    "captured_at": "2026-08-04T04:33:22.208884+00:00",
+    "decompas_score": {
+      "url": "",
+      "has_site": false,
+      "reachable": false,
+      "checks": {},
+      "score": 0,
+      "categories": {
+        "presencia": 0,
+        "diseno": 0,
+        "conversion": 0,
+        "seo": 0
+      },
+      "opportunities": [
+        "No tiene sitio web: oportunidad de crear su ecosistema digital desde cero."
+      ],
+      "recommendations": [
+        "Proponer creación de landing/ecosistema digital con identidad de marca y chat de ventas.",
+        "Oportunidad mayor: intervención integral de IA y diseño."
+      ],
+      "mobile": {},
+      "error": ""
+    }
+  },
+  {
+    "name": "Élite gym sede el jardin",
+    "source": "maps_scrape",
+    "category": "",
+    "address": "",
+    "city": "Cali",
+    "website": "",
+    "phone": "",
+    "whatsapp": "",
+    "whatsapp_url": "",
+    "google_rating": null,
+    "google_reviews": null,
+    "social": {},
+    "notes": "",
+    "raw": {},
+    "captured_at": "2026-08-04T04:33:23.670763+00:00",
+    "decompas_score": {
+      "url": "",
+      "has_site": false,
+      "reachable": false,
+      "checks": {},
+      "score": 0,
+      "categories": {
+        "presencia": 0,
+        "diseno": 0,
+        "conversion": 0,
+        "seo": 0
+      },
+      "opportunities": [
+        "No tiene sitio web: oportunidad de crear su ecosistema digital desde cero."
+      ],
+      "recommendations": [
+        "Proponer creación de landing/ecosistema digital con identidad de marca y chat de ventas.",
+        "Oportunidad mayor: intervención integral de IA y diseño."
+      ],
+      "mobile": {},
+      "error": ""
+    }
+  },
+  {
+    "name": "Body Factory Gym",
+    "source": "maps_scrape",
+    "category": "",
+    "address": "",
+    "city": "Cali",
+    "website": "",
+    "phone": "",
+    "whatsapp": "",
+    "whatsapp_url": "",
+    "google_rating": null,
+    "google_reviews": null,
+    "social": {},
+    "notes": "",
+    "raw": {},
+    "captured_at": "2026-08-04T04:33:25.135531+00:00",
+    "decompas_score": {
+      "url": "",
+      "has_site": false,
+      "reachable": false,
+      "checks": {},
+      "score": 0,
+      "categories": {
+        "presencia": 0,
+        "diseno": 0,
+        "conversion": 0,
+        "seo": 0
+      },
+      "opportunities": [
+        "No tiene sitio web: oportunidad de crear su ecosistema digital desde cero."
+      ],
+      "recommendations": [
+        "Proponer creación de landing/ecosistema digital con identidad de marca y chat de ventas.",
+        "Oportunidad mayor: intervención integral de IA y diseño."
+      ],
+      "mobile": {},
+      "error": ""
+    }
+  },
+  {
+    "name": "Smart Fit Primavera Cali",
+    "source": "maps_scrape",
+    "category": "",
+    "address": "",
+    "city": "Cali",
+    "website": "https://www.smartfit.com.co/sedes/primavera-cali?utm_campaign=CO_SMART-FIT_RD_PRIMAVERACALI_25-10-20_AON_IDU-SCOVACMPR19_GBM_TFR&utm_medium=GBM&utm_source=GBM",
+    "phone": "323 4583063",
+    "whatsapp": "3234583063",
+    "whatsapp_url": "https://wa.me/3234583063",
+    "google_rating": null,
+    "google_reviews": null,
+    "social": {},
+    "notes": "",
+    "raw": {},
+    "captured_at": "2026-08-04T04:33:26.597274+00:00",
+    "decompas_score": {
+      "url": "https://www.smartfit.com.co/sedes/primavera-cali?utm_campaign=CO_SMART-FIT_RD_PRIMAVERACALI_25-10-20_AON_IDU-SCOVACMPR19_GBM_TFR&utm_medium=GBM&utm_source=GBM",
+      "has_site": true,
+      "reachable": true,
+      "checks": {
+        "https": true,
+        "load_time_s": 0.38,
+        "page_kb": 343.4,
+        "status_code": 200,
+        "viewport": true,
+        "lang": true,
+        "title": true,
+        "meta_description": true,
+        "og_tags": true,
+        "generator": "",
+        "images": 24,
+        "images_without_alt": 0,
+        "scripts": 8,
+        "stylesheets": 2,
+        "forms": 0,
+        "tel_links": 0,
+        "whatsapp_links": 4,
+        "cta_links": 3,
+        "chat_widget": true,
+        "generic_template": false,
+        "whatsapp_number": "573234583063",
+        "media_queries": 0,
+        "responsive": true
+      },
+      "score": 95,
+      "categories": {
+        "presencia": 30,
+        "diseno": 15,
+        "conversion": 30,
+        "seo": 20
+      },
+      "opportunities": [],
+      "recommendations": [
+        "Presencia digital sólida: proponer optimización y automatización avanzada (Fractional AI & Design Officer)."
+      ],
+      "mobile": {},
+      "error": ""
+    }
+  },
+  {
+    "name": "Odontologo Cali | Dra Alejandra",
+    "source": "maps_scrape",
+    "category": "",
+    "address": "",
+    "city": "Cali",
+    "website": "https://odontologocali.dondeseria.com",
+    "phone": "304 3931909",
+    "whatsapp": "3043931909",
+    "whatsapp_url": "https://wa.me/3043931909",
+    "google_rating": null,
+    "google_reviews": null,
+    "social": {},
+    "notes": "",
+    "raw": {},
+    "captured_at": "2026-08-04T04:33:35.048234+00:00",
+    "decompas_score": {
+      "url": "https://odontologocali.dondeseria.com",
+      "has_site": true,
+      "reachable": true,
+      "checks": {
+        "https": true,
+        "load_time_s": 0.55,
+        "page_kb": 15.2,
+        "status_code": 200,
+        "viewport": true,
+        "lang": true,
+        "title": true,
+        "meta_description": true,
+        "og_tags": false,
+        "generator": "",
+        "images": 5,
+        "images_without_alt": 0,
+        "scripts": 3,
+        "stylesheets": 3,
+        "forms": 1,
+        "tel_links": 1,
+        "whatsapp_links": 2,
+        "cta_links": 3,
+        "chat_widget": false,
+        "generic_template": false,
+        "whatsapp_number": "573043931909",
+        "media_queries": 0,
+        "responsive": true
+      },
+      "score": 83,
+      "categories": {
+        "presencia": 30,
+        "diseno": 15,
+        "conversion": 20,
+        "seo": 18
+      },
+      "opportunities": [
+        "Sin chat/asistente de ventas: los leads se pierden fuera de horario."
+      ],
+      "recommendations": [
+        "Implementar agente de atención 24/7 (chat de ventas con IA).",
+        "Faltan Open Graph tags para compartir bien en WhatsApp/redes.",
+        "Presencia digital sólida: proponer optimización y automatización avanzada (Fractional AI & Design Officer)."
+      ],
+      "mobile": {},
+      "error": ""
+    }
+  },
+  {
+    "name": "Clínica Odontológica Dr Jhon Diaz E.",
+    "source": "maps_scrape",
+    "category": "",
+    "address": "",
+    "city": "Cali",
+    "website": "",
+    "phone": "23939298",
+    "whatsapp": "23939298",
+    "whatsapp_url": "https://wa.me/23939298",
+    "google_rating": null,
+    "google_reviews": null,
+    "social": {},
+    "notes": "",
+    "raw": {},
+    "captured_at": "2026-08-04T04:33:36.564911+00:00",
+    "decompas_score": {
+      "url": "",
+      "has_site": false,
+      "reachable": false,
+      "checks": {},
+      "score": 0,
+      "categories": {
+        "presencia": 0,
+        "diseno": 0,
+        "conversion": 0,
+        "seo": 0
+      },
+      "opportunities": [
+        "No tiene sitio web: oportunidad de crear su ecosistema digital desde cero."
+      ],
+      "recommendations": [
+        "Proponer creación de landing/ecosistema digital con identidad de marca y chat de ventas.",
+        "Oportunidad mayor: intervención integral de IA y diseño."
+      ],
+      "mobile": {},
+      "error": ""
+    }
+  },
+  {
+    "name": "SALUD DENTAL",
+    "source": "maps_scrape",
+    "category": "",
+    "address": "",
+    "city": "Cali",
+    "website": "",
+    "phone": "313 7326906",
+    "whatsapp": "3137326906",
+    "whatsapp_url": "https://wa.me/3137326906",
+    "google_rating": null,
+    "google_reviews": null,
+    "social": {},
+    "notes": "",
+    "raw": {},
+    "captured_at": "2026-08-04T04:33:38.031470+00:00",
+    "decompas_score": {
+      "url": "",
+      "has_site": false,
+      "reachable": false,
+      "checks": {},
+      "score": 0,
+      "categories": {
+        "presencia": 0,
+        "diseno": 0,
+        "conversion": 0,
+        "seo": 0
+      },
+      "opportunities": [
+        "No tiene sitio web: oportunidad de crear su ecosistema digital desde cero."
+      ],
+      "recommendations": [
+        "Proponer creación de landing/ecosistema digital con identidad de marca y chat de ventas.",
+        "Oportunidad mayor: intervención integral de IA y diseño."
+      ],
+      "mobile": {},
+      "error": ""
+    }
+  },
+  {
+    "name": "Amatista Odontología Integral",
+    "source": "maps_scrape",
+    "category": "",
+    "address": "",
+    "city": "Cali",
+    "website": "",
+    "phone": "312 8719857",
+    "whatsapp": "3128719857",
+    "whatsapp_url": "https://wa.me/3128719857",
+    "google_rating": null,
+    "google_reviews": null,
+    "social": {},
+    "notes": "",
+    "raw": {},
+    "captured_at": "2026-08-04T04:33:39.494983+00:00",
+    "decompas_score": {
+      "url": "",
+      "has_site": false,
+      "reachable": false,
+      "checks": {},
+      "score": 0,
+      "categories": {
+        "presencia": 0,
+        "diseno": 0,
+        "conversion": 0,
+        "seo": 0
+      },
+      "opportunities": [
+        "No tiene sitio web: oportunidad de crear su ecosistema digital desde cero."
+      ],
+      "recommendations": [
+        "Proponer creación de landing/ecosistema digital con identidad de marca y chat de ventas.",
+        "Oportunidad mayor: intervención integral de IA y diseño."
+      ],
+      "mobile": {},
+      "error": ""
+    }
+  },
+  {
+    "name": "ODONTOLOGÍA | CLÍNICA SONRISA A TU ALCANCE | CALI",
+    "source": "maps_scrape",
+    "category": "",
+    "address": "",
+    "city": "Cali",
+    "website": "",
+    "phone": "316 3482136",
+    "whatsapp": "3163482136",
+    "whatsapp_url": "https://wa.me/3163482136",
+    "google_rating": null,
+    "google_reviews": null,
+    "social": {},
+    "notes": "",
+    "raw": {},
+    "captured_at": "2026-08-04T04:33:41.010594+00:00",
+    "decompas_score": {
+      "url": "",
+      "has_site": false,
+      "reachable": false,
+      "checks": {},
+      "score": 0,
+      "categories": {
+        "presencia": 0,
+        "diseno": 0,
+        "conversion": 0,
+        "seo": 0
+      },
+      "opportunities": [
+        "No tiene sitio web: oportunidad de crear su ecosistema digital desde cero."
+      ],
+      "recommendations": [
+        "Proponer creación de landing/ecosistema digital con identidad de marca y chat de ventas.",
+        "Oportunidad mayor: intervención integral de IA y diseño."
+      ],
+      "mobile": {},
+      "error": ""
+    }
+  },
+  {
+    "name": "CLINICA ODONTOLOGICA DENTAL WHITE",
+    "source": "maps_scrape",
+    "category": "",
+    "address": "",
+    "city": "Cali",
+    "website": "",
+    "phone": "(602) 3866240",
+    "whatsapp": "6023866240",
+    "whatsapp_url": "https://wa.me/6023866240",
+    "google_rating": null,
+    "google_reviews": null,
+    "social": {},
+    "notes": "",
+    "raw": {},
+    "captured_at": "2026-08-04T04:33:42.471248+00:00",
+    "decompas_score": {
+      "url": "",
+      "has_site": false,
+      "reachable": false,
+      "checks": {},
+      "score": 0,
+      "categories": {
+        "presencia": 0,
+        "diseno": 0,
+        "conversion": 0,
+        "seo": 0
+      },
+      "opportunities": [
+        "No tiene sitio web: oportunidad de crear su ecosistema digital desde cero."
+      ],
+      "recommendations": [
+        "Proponer creación de landing/ecosistema digital con identidad de marca y chat de ventas.",
+        "Oportunidad mayor: intervención integral de IA y diseño."
+      ],
+      "mobile": {},
+      "error": ""
+    }
+  },
+  {
+    "name": "Clínica Tascón",
+    "source": "maps_scrape",
+    "category": "",
+    "address": "",
+    "city": "Cali",
+    "website": "https://clinicatasconodontologia.com",
+    "phone": "302 2354864",
+    "whatsapp": "3022354864",
+    "whatsapp_url": "https://wa.me/3022354864",
+    "google_rating": null,
+    "google_reviews": null,
+    "social": {},
+    "notes": "",
+    "raw": {},
+    "captured_at": "2026-08-04T04:33:43.945346+00:00",
+    "decompas_score": {
+      "url": "https://clinicatasconodontologia.com",
+      "has_site": true,
+      "reachable": true,
+      "checks": {
+        "https": true,
+        "load_time_s": 1.15,
+        "page_kb": 2.6,
+        "status_code": 500,
+        "viewport": true,
+        "lang": true,
+        "title": true,
+        "meta_description": false,
+        "og_tags": false,
+        "generator": "",
+        "images": 0,
+        "images_without_alt": 0,
+        "scripts": 0,
+        "stylesheets": 0,
+        "forms": 0,
+        "tel_links": 0,
+        "whatsapp_links": 0,
+        "cta_links": 0,
+        "chat_widget": false,
+        "generic_template": false,
+        "whatsapp_number": "",
+        "media_queries": 0,
+        "responsive": true
+      },
+      "score": 55,
+      "categories": {
+        "presencia": 30,
+        "diseno": 15,
+        "conversion": 0,
+        "seo": 10
+      },
+      "opportunities": [
+        "Sin botón de WhatsApp: los prospectos no pueden contactar en 1 clic.",
+        "Sin chat/asistente de ventas: los leads se pierden fuera de horario."
+      ],
+      "recommendations": [
+        "Agregar botón de WhatsApp con saludo automático.",
+        "Implementar agente de atención 24/7 (chat de ventas con IA).",
+        "Faltan llamados a la acción claros (cotizar, agendar, pedir).",
+        "Faltan Open Graph tags para compartir bien en WhatsApp/redes.",
+        "Buen punto de partida: hay fugas de conversión concretas por cerrar."
+      ],
+      "mobile": {},
+      "error": ""
+    }
+  },
+  {
+    "name": "SALUD BUCAL cali calle 32-No.32-26",
+    "source": "maps_scrape",
+    "category": "",
+    "address": "",
+    "city": "Cali",
+    "website": "",
+    "phone": "314 5653623",
+    "whatsapp": "3145653623",
+    "whatsapp_url": "https://wa.me/3145653623",
+    "google_rating": null,
+    "google_reviews": null,
+    "social": {},
+    "notes": "",
+    "raw": {},
+    "captured_at": "2026-08-04T04:33:45.450308+00:00",
+    "decompas_score": {
+      "url": "",
+      "has_site": false,
+      "reachable": false,
+      "checks": {},
+      "score": 0,
+      "categories": {
+        "presencia": 0,
+        "diseno": 0,
+        "conversion": 0,
+        "seo": 0
+      },
+      "opportunities": [
+        "No tiene sitio web: oportunidad de crear su ecosistema digital desde cero."
+      ],
+      "recommendations": [
+        "Proponer creación de landing/ecosistema digital con identidad de marca y chat de ventas.",
+        "Oportunidad mayor: intervención integral de IA y diseño."
+      ],
+      "mobile": {},
+      "error": ""
+    }
+  }
+]

@@ -1,0 +1,621 @@
+[
+  {
+    "id": "1",
+    "name": "Restaurante Mistiko",
+    "sector": "",
+    "city": "Cali",
+    "phone": "319 2035577",
+    "whatsapp": "3192035577",
+    "website": "",
+    "score": 0,
+    "status": "enviado",
+    "last_update": "2026-08-03",
+    "campaign": "campaign_Cali_20260803_233234",
+    "note": "Listo para envío (whatsapp_links.txt de la campaña)",
+    "events": [
+      {
+        "date": "2026-08-03",
+        "status": "enviado",
+        "note": "Se importó de la campaña campaign_Cali_20260803_233234"
+      },
+      {
+        "date": "2026-08-03",
+        "status": "respondio",
+        "note": "Pidió que lo llame mañana"
+      },
+      {
+        "date": "2026-08-03",
+        "status": "enviado",
+        "note": "Listo para envío (whatsapp_links.txt de la campaña)"
+      }
+    ]
+  },
+  {
+    "id": "2",
+    "name": "La Comitiva",
+    "sector": "",
+    "city": "Cali",
+    "phone": "318 3349364",
+    "whatsapp": "3183349364",
+    "website": "https://restaurantelacomitiva.com",
+    "score": 57,
+    "status": "enviado",
+    "last_update": "2026-08-03",
+    "campaign": "campaign_Cali_20260803_233234",
+    "note": "Listo para envío (whatsapp_links.txt de la campaña)",
+    "events": [
+      {
+        "date": "2026-08-03",
+        "status": "enviado",
+        "note": "Se importó de la campaña campaign_Cali_20260803_233234"
+      }
+    ]
+  },
+  {
+    "id": "3",
+    "name": "Antigua Contemporánea",
+    "sector": "",
+    "city": "Cali",
+    "phone": "(602) 8936809",
+    "whatsapp": "6028936809",
+    "website": "https://www.facebook.com/antigua2013",
+    "score": 60,
+    "status": "enviado",
+    "last_update": "2026-08-03",
+    "campaign": "campaign_Cali_20260803_233234",
+    "note": "Listo para envío (whatsapp_links.txt de la campaña)",
+    "events": [
+      {
+        "date": "2026-08-03",
+        "status": "enviado",
+        "note": "Se importó de la campaña campaign_Cali_20260803_233234"
+      }
+    ]
+  },
+  {
+    "id": "4",
+    "name": "Izumi Restaurant",
+    "sector": "",
+    "city": "Cali",
+    "phone": "301 2019527",
+    "whatsapp": "3012019527",
+    "website": "",
+    "score": 0,
+    "status": "enviado",
+    "last_update": "2026-08-03",
+    "campaign": "campaign_Cali_20260803_233234",
+    "note": "Listo para envío (whatsapp_links.txt de la campaña)",
+    "events": [
+      {
+        "date": "2026-08-03",
+        "status": "enviado",
+        "note": "Se importó de la campaña campaign_Cali_20260803_233234"
+      }
+    ]
+  },
+  {
+    "id": "5",
+    "name": "Fogón criollo la 28",
+    "sector": "",
+    "city": "Cali",
+    "phone": "315 3439042",
+    "whatsapp": "3153439042",
+    "website": "",
+    "score": 0,
+    "status": "enviado",
+    "last_update": "2026-08-03",
+    "campaign": "campaign_Cali_20260803_233234",
+    "note": "Listo para envío (whatsapp_links.txt de la campaña)",
+    "events": [
+      {
+        "date": "2026-08-03",
+        "status": "enviado",
+        "note": "Se importó de la campaña campaign_Cali_20260803_233234"
+      }
+    ]
+  },
+  {
+    "id": "6",
+    "name": "Platillos Voladores",
+    "sector": "",
+    "city": "Cali",
+    "phone": "(602) 6687750",
+    "whatsapp": "6026687750",
+    "website": "http://www.platillosvoladores.com",
+    "score": 75,
+    "status": "enviado",
+    "last_update": "2026-08-03",
+    "campaign": "campaign_Cali_20260803_233234",
+    "note": "Listo para envío (whatsapp_links.txt de la campaña)",
+    "events": [
+      {
+        "date": "2026-08-03",
+        "status": "enviado",
+        "note": "Se importó de la campaña campaign_Cali_20260803_233234"
+      }
+    ]
+  },
+  {
+    "id": "7",
+    "name": "Palomulata Parrilla Boutique",
+    "sector": "",
+    "city": "Cali",
+    "phone": "321 5616277",
+    "whatsapp": "3215616277",
+    "website": "https://palomulata.com",
+    "score": 73,
+    "status": "enviado",
+    "last_update": "2026-08-03",
+    "campaign": "campaign_Cali_20260803_233234",
+    "note": "Listo para envío (whatsapp_links.txt de la campaña)",
+    "events": [
+      {
+        "date": "2026-08-03",
+        "status": "enviado",
+        "note": "Se importó de la campaña campaign_Cali_20260803_233234"
+      }
+    ]
+  },
+  {
+    "id": "8",
+    "name": "CEMETRI® Centro de Medicina Estética & Tricología",
+    "sector": "",
+    "city": "Cali",
+    "phone": "300 6513819",
+    "whatsapp": "3006513819",
+    "website": "https://cemetri.co",
+    "score": 73,
+    "status": "enviado",
+    "last_update": "2026-08-03",
+    "campaign": "campaign_Cali_20260803_233234",
+    "note": "Listo para envío (whatsapp_links.txt de la campaña)",
+    "events": [
+      {
+        "date": "2026-08-03",
+        "status": "enviado",
+        "note": "Se importó de la campaña campaign_Cali_20260803_233234"
+      }
+    ]
+  },
+  {
+    "id": "9",
+    "name": "Peluquería Franchesca",
+    "sector": "",
+    "city": "Cali",
+    "phone": "24458873",
+    "whatsapp": "24458873",
+    "website": "",
+    "score": 0,
+    "status": "enviado",
+    "last_update": "2026-08-03",
+    "campaign": "campaign_Cali_20260803_233234",
+    "note": "Listo para envío (whatsapp_links.txt de la campaña)",
+    "events": [
+      {
+        "date": "2026-08-03",
+        "status": "enviado",
+        "note": "Se importó de la campaña campaign_Cali_20260803_233234"
+      }
+    ]
+  },
+  {
+    "id": "10",
+    "name": "Salón De Belleza Army",
+    "sector": "",
+    "city": "Cali",
+    "phone": "317 8205008",
+    "whatsapp": "3178205008",
+    "website": "",
+    "score": 0,
+    "status": "enviado",
+    "last_update": "2026-08-03",
+    "campaign": "campaign_Cali_20260803_233234",
+    "note": "Listo para envío (whatsapp_links.txt de la campaña)",
+    "events": [
+      {
+        "date": "2026-08-03",
+        "status": "enviado",
+        "note": "Se importó de la campaña campaign_Cali_20260803_233234"
+      }
+    ]
+  },
+  {
+    "id": "11",
+    "name": "Glamour Dorado Cali",
+    "sector": "",
+    "city": "Cali",
+    "phone": "314 5463144",
+    "whatsapp": "3145463144",
+    "website": "https://link.agendapro.com/co/glamourdoradocali/4bc0eaf0",
+    "score": 60,
+    "status": "enviado",
+    "last_update": "2026-08-03",
+    "campaign": "campaign_Cali_20260803_233234",
+    "note": "Listo para envío (whatsapp_links.txt de la campaña)",
+    "events": [
+      {
+        "date": "2026-08-03",
+        "status": "enviado",
+        "note": "Se importó de la campaña campaign_Cali_20260803_233234"
+      }
+    ]
+  },
+  {
+    "id": "12",
+    "name": "La Sala - Peluqueria y Barberia",
+    "sector": "",
+    "city": "Cali",
+    "phone": "23936978",
+    "whatsapp": "23936978",
+    "website": "https://www.facebook.com/lasalapeluqueriaybarberia",
+    "score": 65,
+    "status": "enviado",
+    "last_update": "2026-08-03",
+    "campaign": "campaign_Cali_20260803_233234",
+    "note": "Listo para envío (whatsapp_links.txt de la campaña)",
+    "events": [
+      {
+        "date": "2026-08-03",
+        "status": "enviado",
+        "note": "Se importó de la campaña campaign_Cali_20260803_233234"
+      }
+    ]
+  },
+  {
+    "id": "13",
+    "name": "Avant-garde salón",
+    "sector": "",
+    "city": "Cali",
+    "phone": "(602) 3905049",
+    "whatsapp": "6023905049",
+    "website": "https://www.instagram.com/avantgarde_cali/?hl=es-la",
+    "score": 65,
+    "status": "enviado",
+    "last_update": "2026-08-03",
+    "campaign": "campaign_Cali_20260803_233234",
+    "note": "Listo para envío (whatsapp_links.txt de la campaña)",
+    "events": [
+      {
+        "date": "2026-08-03",
+        "status": "enviado",
+        "note": "Se importó de la campaña campaign_Cali_20260803_233234"
+      }
+    ]
+  },
+  {
+    "id": "14",
+    "name": "Ebano's Peluquería y Salón de Belleza",
+    "sector": "",
+    "city": "Cali",
+    "phone": "320 6878204",
+    "whatsapp": "3206878204",
+    "website": "",
+    "score": 0,
+    "status": "enviado",
+    "last_update": "2026-08-03",
+    "campaign": "campaign_Cali_20260803_233234",
+    "note": "Listo para envío (whatsapp_links.txt de la campaña)",
+    "events": [
+      {
+        "date": "2026-08-03",
+        "status": "enviado",
+        "note": "Se importó de la campaña campaign_Cali_20260803_233234"
+      }
+    ]
+  },
+  {
+    "id": "15",
+    "name": "WOLF GYM",
+    "sector": "",
+    "city": "Cali",
+    "phone": "304 2064580",
+    "whatsapp": "3042064580",
+    "website": "",
+    "score": 0,
+    "status": "enviado",
+    "last_update": "2026-08-03",
+    "campaign": "campaign_Cali_20260803_233234",
+    "note": "Listo para envío (whatsapp_links.txt de la campaña)",
+    "events": [
+      {
+        "date": "2026-08-03",
+        "status": "enviado",
+        "note": "Se importó de la campaña campaign_Cali_20260803_233234"
+      }
+    ]
+  },
+  {
+    "id": "16",
+    "name": "Tauros GYM",
+    "sector": "",
+    "city": "Cali",
+    "phone": "316 3078907",
+    "whatsapp": "3163078907",
+    "website": "http://www.facebook.com/tauros.caf",
+    "score": 60,
+    "status": "enviado",
+    "last_update": "2026-08-03",
+    "campaign": "campaign_Cali_20260803_233234",
+    "note": "Listo para envío (whatsapp_links.txt de la campaña)",
+    "events": [
+      {
+        "date": "2026-08-03",
+        "status": "enviado",
+        "note": "Se importó de la campaña campaign_Cali_20260803_233234"
+      }
+    ]
+  },
+  {
+    "id": "17",
+    "name": "NovaGym Cali",
+    "sector": "",
+    "city": "Cali",
+    "phone": "317 8488533",
+    "whatsapp": "3178488533",
+    "website": "",
+    "score": 0,
+    "status": "enviado",
+    "last_update": "2026-08-03",
+    "campaign": "campaign_Cali_20260803_233234",
+    "note": "Listo para envío (whatsapp_links.txt de la campaña)",
+    "events": [
+      {
+        "date": "2026-08-03",
+        "status": "enviado",
+        "note": "Se importó de la campaña campaign_Cali_20260803_233234"
+      }
+    ]
+  },
+  {
+    "id": "18",
+    "name": "Sagitarius Gym",
+    "sector": "",
+    "city": "Cali",
+    "phone": "310 3748068",
+    "whatsapp": "3103748068",
+    "website": "",
+    "score": 0,
+    "status": "enviado",
+    "last_update": "2026-08-03",
+    "campaign": "campaign_Cali_20260803_233234",
+    "note": "Listo para envío (whatsapp_links.txt de la campaña)",
+    "events": [
+      {
+        "date": "2026-08-03",
+        "status": "enviado",
+        "note": "Se importó de la campaña campaign_Cali_20260803_233234"
+      }
+    ]
+  },
+  {
+    "id": "19",
+    "name": "Élite gym sede el jardin",
+    "sector": "",
+    "city": "Cali",
+    "phone": "",
+    "whatsapp": "",
+    "website": "",
+    "score": 0,
+    "status": "enviado",
+    "last_update": "2026-08-03",
+    "campaign": "campaign_Cali_20260803_233234",
+    "note": "Listo para envío (whatsapp_links.txt de la campaña)",
+    "events": [
+      {
+        "date": "2026-08-03",
+        "status": "enviado",
+        "note": "Se importó de la campaña campaign_Cali_20260803_233234"
+      }
+    ]
+  },
+  {
+    "id": "20",
+    "name": "Body Factory Gym",
+    "sector": "",
+    "city": "Cali",
+    "phone": "",
+    "whatsapp": "",
+    "website": "",
+    "score": 0,
+    "status": "enviado",
+    "last_update": "2026-08-03",
+    "campaign": "campaign_Cali_20260803_233234",
+    "note": "Listo para envío (whatsapp_links.txt de la campaña)",
+    "events": [
+      {
+        "date": "2026-08-03",
+        "status": "enviado",
+        "note": "Se importó de la campaña campaign_Cali_20260803_233234"
+      }
+    ]
+  },
+  {
+    "id": "21",
+    "name": "Smart Fit Primavera Cali",
+    "sector": "",
+    "city": "Cali",
+    "phone": "323 4583063",
+    "whatsapp": "3234583063",
+    "website": "https://www.smartfit.com.co/sedes/primavera-cali?utm_campaign=CO_SMART-FIT_RD_PRIMAVERACALI_25-10-20_AON_IDU-SCOVACMPR19_GBM_TFR&utm_medium=GBM&utm_source=GBM",
+    "score": 95,
+    "status": "enviado",
+    "last_update": "2026-08-03",
+    "campaign": "campaign_Cali_20260803_233234",
+    "note": "Listo para envío (whatsapp_links.txt de la campaña)",
+    "events": [
+      {
+        "date": "2026-08-03",
+        "status": "enviado",
+        "note": "Se importó de la campaña campaign_Cali_20260803_233234"
+      }
+    ]
+  },
+  {
+    "id": "22",
+    "name": "Odontologo Cali | Dra Alejandra",
+    "sector": "",
+    "city": "Cali",
+    "phone": "304 3931909",
+    "whatsapp": "3043931909",
+    "website": "https://odontologocali.dondeseria.com",
+    "score": 83,
+    "status": "enviado",
+    "last_update": "2026-08-03",
+    "campaign": "campaign_Cali_20260803_233234",
+    "note": "Listo para envío (whatsapp_links.txt de la campaña)",
+    "events": [
+      {
+        "date": "2026-08-03",
+        "status": "enviado",
+        "note": "Se importó de la campaña campaign_Cali_20260803_233234"
+      }
+    ]
+  },
+  {
+    "id": "23",
+    "name": "Clínica Odontológica Dr Jhon Diaz E.",
+    "sector": "",
+    "city": "Cali",
+    "phone": "23939298",
+    "whatsapp": "23939298",
+    "website": "",
+    "score": 0,
+    "status": "enviado",
+    "last_update": "2026-08-03",
+    "campaign": "campaign_Cali_20260803_233234",
+    "note": "Listo para envío (whatsapp_links.txt de la campaña)",
+    "events": [
+      {
+        "date": "2026-08-03",
+        "status": "enviado",
+        "note": "Se importó de la campaña campaign_Cali_20260803_233234"
+      }
+    ]
+  },
+  {
+    "id": "24",
+    "name": "SALUD DENTAL",
+    "sector": "",
+    "city": "Cali",
+    "phone": "313 7326906",
+    "whatsapp": "3137326906",
+    "website": "",
+    "score": 0,
+    "status": "enviado",
+    "last_update": "2026-08-03",
+    "campaign": "campaign_Cali_20260803_233234",
+    "note": "Listo para envío (whatsapp_links.txt de la campaña)",
+    "events": [
+      {
+        "date": "2026-08-03",
+        "status": "enviado",
+        "note": "Se importó de la campaña campaign_Cali_20260803_233234"
+      }
+    ]
+  },
+  {
+    "id": "25",
+    "name": "Amatista Odontología Integral",
+    "sector": "",
+    "city": "Cali",
+    "phone": "312 8719857",
+    "whatsapp": "3128719857",
+    "website": "",
+    "score": 0,
+    "status": "enviado",
+    "last_update": "2026-08-03",
+    "campaign": "campaign_Cali_20260803_233234",
+    "note": "Listo para envío (whatsapp_links.txt de la campaña)",
+    "events": [
+      {
+        "date": "2026-08-03",
+        "status": "enviado",
+        "note": "Se importó de la campaña campaign_Cali_20260803_233234"
+      }
+    ]
+  },
+  {
+    "id": "26",
+    "name": "ODONTOLOGÍA | CLÍNICA SONRISA A TU ALCANCE | CALI",
+    "sector": "",
+    "city": "Cali",
+    "phone": "316 3482136",
+    "whatsapp": "3163482136",
+    "website": "",
+    "score": 0,
+    "status": "enviado",
+    "last_update": "2026-08-03",
+    "campaign": "campaign_Cali_20260803_233234",
+    "note": "Listo para envío (whatsapp_links.txt de la campaña)",
+    "events": [
+      {
+        "date": "2026-08-03",
+        "status": "enviado",
+        "note": "Se importó de la campaña campaign_Cali_20260803_233234"
+      }
+    ]
+  },
+  {
+    "id": "27",
+    "name": "CLINICA ODONTOLOGICA DENTAL WHITE",
+    "sector": "",
+    "city": "Cali",
+    "phone": "(602) 3866240",
+    "whatsapp": "6023866240",
+    "website": "",
+    "score": 0,
+    "status": "enviado",
+    "last_update": "2026-08-03",
+    "campaign": "campaign_Cali_20260803_233234",
+    "note": "Listo para envío (whatsapp_links.txt de la campaña)",
+    "events": [
+      {
+        "date": "2026-08-03",
+        "status": "enviado",
+        "note": "Se importó de la campaña campaign_Cali_20260803_233234"
+      }
+    ]
+  },
+  {
+    "id": "28",
+    "name": "Clínica Tascón",
+    "sector": "",
+    "city": "Cali",
+    "phone": "302 2354864",
+    "whatsapp": "3022354864",
+    "website": "https://clinicatasconodontologia.com",
+    "score": 55,
+    "status": "enviado",
+    "last_update": "2026-08-03",
+    "campaign": "campaign_Cali_20260803_233234",
+    "note": "Listo para envío (whatsapp_links.txt de la campaña)",
+    "events": [
+      {
+        "date": "2026-08-03",
+        "status": "enviado",
+        "note": "Se importó de la campaña campaign_Cali_20260803_233234"
+      }
+    ]
+  },
+  {
+    "id": "29",
+    "name": "SALUD BUCAL cali calle 32-No.32-26",
+    "sector": "",
+    "city": "Cali",
+    "phone": "314 5653623",
+    "whatsapp": "3145653623",
+    "website": "",
+    "score": 0,
+    "status": "enviado",
+    "last_update": "2026-08-03",
+    "campaign": "campaign_Cali_20260803_233234",
+    "note": "Listo para envío (whatsapp_links.txt de la campaña)",
+    "events": [
+      {
+        "date": "2026-08-03",
+        "status": "enviado",
+        "note": "Se importó de la campaña campaign_Cali_20260803_233234"
+      }
+    ]
+  }
+]

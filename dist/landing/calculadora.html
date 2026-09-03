@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>Calculadora de Impacto de IA para Pymes | Daniel Rojas</title>
+<meta name="description" content="Calcula cuántas horas y dinero puede ahorrar tu Pyme automatizando procesos con IA."/>
+<meta property="og:title" content="Calculadora de Impacto de IA para Pymes"/>
+<meta property="og:description" content="Cuántas horas y dinero puede ahorrar tu Pyme automatizando con IA."/>
+<meta name="og:url" content="https://danielrojasdesign.netlify.app"/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet"/>
+<style>
+:root{--ink:#16222e;--muted:#5b6b7c;--cream:#faf7f2;--card:#ffffff;--amber:#e07b39;--amber-soft:#fdeee2;
+--green:#2e7d5b;--green-soft:#e8f3ee;--line:#e9e2d7;}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Inter',system-ui,sans-serif;background:var(--cream);color:var(--ink);line-height:1.6;-webkit-font-smoothing:antialiased}
+.serif{font-family:'Fraunces',Georgia,serif}
+.wrap{max-width:1040px;margin:0 auto;padding:48px 20px 90px}
+.brand{display:flex;align-items:center;gap:10px;font-weight:800;letter-spacing:.02em;font-size:1.05rem}
+.brand .dot{width:12px;height:12px;border-radius:3px;background:var(--amber)}
+.hero{max-width:700px;margin:44px auto 34px;text-align:center}
+.tag{display:inline-block;background:var(--amber-soft);color:var(--amber);font-size:.72rem;font-weight:700;
+text-transform:uppercase;letter-spacing:.08em;padding:6px 12px;border-radius:999px}
+h1{font-size:clamp(2rem,4.5vw,3rem);line-height:1.12;margin:18px 0 12px}
+.hero p{color:var(--muted);font-size:1.05rem}
+.card{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:32px;
+box-shadow:0 12px 34px rgba(22,34,46,.06)}
+label{display:block;font-weight:600;font-size:.9rem;margin:22px 0 8px}
+.sectors{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:10px}
+.sector{border:2px solid var(--line);background:#fff;border-radius:12px;padding:14px;cursor:pointer;
+text-align:left;font:inherit;color:var(--ink);transition:border-color .15s,transform .15s}
+.sector:hover{transform:translateY(-2px)}
+.sector.active{border-color:var(--amber);background:var(--amber-soft)}
+.sector b{display:block;font-size:.9rem}
+.sector span{font-size:.75rem;color:var(--muted)}
+.row{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+@media(max-width:640px){.row{grid-template-columns:1fr}}
+.input{border:2px solid var(--line);border-radius:10px;padding:12px 14px;font-size:1.05rem;width:100%;
+font-family:inherit;background:#fff;color:var(--ink)}
+.input:focus{outline:none;border-color:var(--amber)}
+.rate-row{display:flex;gap:8px}
+.rate-row .input:first-child{flex:1}
+.rate-row select.input{max-width:96px;cursor:pointer}
+.hint{font-size:.78rem;color:var(--muted);margin-top:5px}
+.results{margin-top:26px;display:none;gap:16px;grid-template-columns:1fr 1fr}
+@media(max-width:640px){.results{grid-template-columns:1fr}}
+@media(min-width:641px){.results{grid-template-columns:1fr 1fr 1fr}}
+.stat{background:var(--green-soft);border:1px solid #cfe6da;border-radius:14px;padding:20px;text-align:center}
+.stat b{display:block;font-size:1.7rem;color:var(--green);font-weight:800}
+.stat span{font-size:.82rem;color:var(--muted)}
+.stat.alt{background:var(--amber-soft);border-color:#f5d8c3}
+.stat.alt b{color:var(--amber)}
+.solution{margin-top:22px;display:none;background:var(--ink);color:#fff;border-radius:14px;padding:22px 24px}
+.solution h3{font-size:1.05rem;margin-bottom:8px}
+.solution p{font-size:.92rem;color:#cdd7e0}
+.cta{display:block;margin-top:26px;background:var(--amber);color:#fff;text-align:center;text-decoration:none;
+font-weight:800;font-size:1.05rem;padding:16px 22px;border-radius:12px;transition:transform .15s}
+.cta:hover{transform:translateY(-2px)}
+.foot{margin-top:46px;text-align:center;color:var(--muted);font-size:.84rem}
+.foot a{color:var(--amber);font-weight:600;text-decoration:none}
+.note{font-size:.78rem;color:var(--muted);margin-top:12px;text-align:center}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="brand"><span class="dot"></span>DANIEL ROJAS<span style="color:var(--muted);font-weight:500">/impacto-ia</span></div>
+
+  <div class="hero">
+    <span class="tag">Calculadora de impacto</span>
+    <h1 class="serif">¿Cuánto dinero le está costando a tu negocio no usar IA?</h1>
+    <p>Selecciona tu sector y calcula cuántas horas y dinero puedes recuperar automatizando tareas repetitivas.</p>
+  </div>
+
+  <div class="card">
+    <label>¿A qué se dedica tu negocio?</label>
+    <div class="sectors" id="sectors"></div>
+
+    <div class="row">
+      <div>
+        <label for="employees">Personas en tu equipo</label>
+        <input class="input" id="employees" type="number" min="1" max="500" value="3"/>
+      </div>
+      <div>
+        <label for="hours">Horas semanales por persona en tareas repetitivas</label>
+        <input class="input" id="hours" type="number" min="0" max="80" step="0.5"/>
+        <p class="hint" id="hoursHint"></p>
+      </div>
+    </div>
+
+    <div class="row">
+      <div>
+        <label for="rate">Costo por hora de tu equipo</label>
+        <div class="rate-row">
+          <input class="input" id="rate" type="number" min="3000" max="200000" value="8000"/>
+          <select class="input" id="currency" aria-label="Moneda">
+            <option value="COP" selected>COP</option>
+            <option value="USD">USD</option>
+            <option value="MXN">MXN</option>
+          </select>
+        </div>
+        <p class="hint" id="rateHint">Costo por hora en COP · tasas de referencia</p>
+      </div>
+      <div>
+        <label for="cta24">Leads perdidos fuera de horario al mes</label>
+        <input class="input" id="cta24" type="number" min="0" max="10000" value="15"/>
+        <p class="hint">Personas que contactan en horarios donde nadie responde</p>
+      </div>
+    </div>
+
+    <div class="results" id="results">
+      <div class="stat"><b id="rHours">0</b><span>horas recuperadas / mes</span></div>
+      <div class="stat alt"><b id="rMoney">$0</b><span>ahorro estimado / mes</span></div>
+      <div class="stat"><b id="rLeads">0</b><span>leads recuperados / mes</span></div>
+    </div>
+
+    <div class="solution" id="solution">
+      <h3 class="serif" id="sTitle"></h3>
+      <p id="sDesc"></p>
+    </div>
+
+    <a class="cta" href="https://danielrojasdesign.netlify.app" target="_blank" rel="noopener">Quiero conversar sobre mi negocio →</a>
+    <p class="note">Estimado conservador con base en la automatización del 60% del tiempo repetitivo. Cada negocio es diferente: esto es solo un punto de partida para nuestra conversación.</p>
+  </div>
+
+  <div class="foot">
+    <p>Consultor de IA y Diseño para Pymes · <a href="https://danielrojasdesign.netlify.app">danielrojasdesign.netlify.app</a></p>
+    <p style="margin-top:6px">Auditoría de procesos primero, código después.</p>
+  </div>
+</div>
+
+<script>
+const SECTORS = {
+  restaurantes:{name:"Restaurante / Café",pct:30,leadsPer100:8,
+    sol:{t:"Agente de WhatsApp que toma pedidos y reservas 24/7",
+         d:"Atiende mensajes, toma pedidos y confirma reservas en minutos, incluso a las 2 a.m. Ningún cliente se queda sin respuesta."}},
+  clinicas:{name:"Clínica / Consultorio",pct:28,leadsPer100:12,
+    sol:{t:"Agenda inteligente con recordatorios y confirmación",
+         d:"Automatiza la gestión de citas, envía recordatorios y reduce los 'no show' que hoy pierdes cada semana."}},
+  retail:{name:"Retail / Tienda",pct:25,leadsPer100:10,
+    sol:{t:"Chatbot de ventas + inventario conectado",
+         d:"Responde precios, disponibilidad y cierra ventas por WhatsApp, sincronizado con tu stock real."}},
+  profesionales:{name:"Firma profesional / Consultoría",pct:35,leadsPer100:15,
+    sol:{t:"Asistente que cotiza y da seguimiento",
+         d:"Elabora cotizaciones y da seguimiento automático a cada prospecto hasta convertir la venta."}},
+  belleza:{name:"Salón / Spa / Gimnasio",pct:30,leadsPer100:14,
+    sol:{t:"Agente de reservas y confirmación 24/7",
+         d:"Aparta citas, confirma asistencia y avisa a tu equipo, eliminando el teléfono como cuello de botella."}},
+  hogar:{name:"Servicios a domicilio / Mantenimiento",pct:25,leadsPer100:9,
+    sol:{t:"Agente de cotización y agenda de visitas",
+         d:"Cotiza y agenda visitas automáticamente, dándole respuestas inmediatas a tus clientes."}}
+};
+
+const CURR = {
+  COP:{fmt:new Intl.NumberFormat("es-CO"), min:3000, max:200000, def:8000, label:"Peso colombiano"},
+  USD:{fmt:new Intl.NumberFormat("en-US"), min:1, max:300, def:2, label:"Dólar"},
+  MXN:{fmt:new Intl.NumberFormat("es-MX"), min:20, max:6000, def:42, label:"Peso mexicano"}
+};
+let currency = "COP";
+let copPerUnit = {COP:1, USD:1/3200, MXN:1/184};
+fetch("https://open.er-api.com/v6/latest/COP")
+  .then(r=>r.json()).then(d=>{
+    if (d && d.result === "success" && d.rates) {
+      copPerUnit.USD = d.rates.USD;
+      copPerUnit.MXN = d.rates.MXN;
+    }
+  }).catch(()=>{});
+
+const money = n => currency + " " + CURR[currency].fmt.format(Math.round(n));
+
+function toCurrency(value, from, to){
+  return value / copPerUnit[from] * copPerUnit[to];
+}
+
+function setCurrency(next){
+  if (next === currency) return;
+  const cur = +document.getElementById("rate").value || 0;
+  const el = document.getElementById("rate");
+  el.value = cur ? Math.round(toCurrency(cur, currency, next)*100)/100 : CURR[next].def;
+  el.min = CURR[next].min;
+  el.max = CURR[next].max;
+  currency = next;
+  document.getElementById("rateHint").textContent =
+    "Costo por hora en " + next + " · tasas de referencia";
+  compute();
+}
+
+function buildSectors(){
+  const box = document.getElementById("sectors");
+  box.innerHTML = "";
+  Object.keys(SECTORS).forEach((k,i)=>{
+    const s = SECTORS[k];
+    const b = document.createElement("button");
+    b.type = "button";
+    b.className = "sector" + (i===0 ? " active":"");
+    b.dataset.key = k;
+    b.innerHTML = "<b>" + s.name + "</b><span>" + s.pct + "% del tiempo en tareas repetitivas</span>";
+    b.addEventListener("click", ()=>selectSector(k));
+    box.appendChild(b);
+  });
+}
+
+function selectSector(key){
+  document.querySelectorAll(".sector").forEach(el=>el.classList.toggle("active", el.dataset.key===key));
+  const s = SECTORS[key];
+  document.getElementById("hours").value = Math.round(40*s.pct/100*2)/2;
+  document.getElementById("hoursHint").textContent = "≈ " + s.pct + "% de una jornada de 40h semanales";
+  compute();
+}
+
+function compute(){
+  const key = (document.querySelector(".sector.active")||{dataset:{key:"restaurantes"}}).dataset.key;
+  const s = SECTORS[key];
+  const employees = Math.max(1, +document.getElementById("employees").value || 0);
+  const hours = Math.max(0, +document.getElementById("hours").value || 0);
+  const rate = Math.max(0, +document.getElementById("rate").value || 0);
+  const leads = Math.max(0, +document.getElementById("cta24").value || 0);
+
+  const hoursSavedMonth = employees*hours*4.33*0.6;
+  const moneySavedMonth = hoursSavedMonth*rate;
+  const moneySavedYear = moneySavedMonth*12;
+  const leadsSaved = Math.round(leads*0.6);
+
+  document.getElementById("rHours").textContent = Math.round(hoursSavedMonth) + "h";
+  document.getElementById("rMoney").textContent = money(moneySavedMonth);
+  document.getElementById("rLeads").textContent = leadsSaved;
+  document.getElementById("rMoney").textContent = money(moneySavedMonth);
+  document.getElementById("results").style.display = "grid";
+
+  document.getElementById("sTitle").textContent = "Tu recomendación: " + s.sol.t;
+  document.getElementById("sDesc").textContent = s.sol.d + " En una conversación vemos si es viable para tu negocio.";
+  document.getElementById("solution").style.display = "block";
+}
+
+["employees","hours","rate","cta24"].forEach(id=>{
+  document.getElementById(id).addEventListener("input", compute);
+});
+document.getElementById("currency").addEventListener("change", e=>setCurrency(e.target.value));
+
+buildSectors();
+selectSector("restaurantes");
+compute();
+</script>
+</body>
+</html>

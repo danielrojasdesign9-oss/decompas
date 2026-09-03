@@ -1,0 +1,4 @@
+﻿id,name,source,category,address,city,website,phone,whatsapp,whatsapp_url,google_rating,google_reviews,facebook,instagram,tiktok,x,linkedin,captured_at
+2040830b6400,Taquería El Buen Sabor,demo,Restaurante,"Av. Juárez 120, Centro",Monterrey,https://elbuensabor.example,+52 81 1234 5678,528112345678,https://wa.me/528112345678,4.6,320,,,,,,2026-08-01T05:08:49.657834+00:00
+e49f5b9c4321,Clínica Dental Sonrisa,demo,Clínica dental,"Col. Roma, Monterrey",Monterrey,,+52 81 8765 4321,528187654321,https://wa.me/528187654321,4.9,88,,,,,,2026-08-01T05:08:49.657893+00:00
+88361d5b497d,DulceMomento Pastelería,demo,Pastelería,San Pedro,Monterrey,https://dulcemomento.example,8123456789,528123456789,https://wa.me/528123456789,4.3,45,,,,,,2026-08-01T05:08:49.657910+00:00

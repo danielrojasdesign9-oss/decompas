@@ -1,30 +1,30 @@
-# Node / Vite (landing web)
-node_modules/
-build/
-dist/
-coverage/
-.DS_Store
-*.log
-
-# Python (Lead Engine, Score, Outreach)
-__pycache__/
-*.pyc
-.venv/
-venv/
-
-# Entorno / secretos
+# Variables de entorno (no subir a GitHub)
+*.env
 .env
-.env.local
-.env.*
 
-# Datos generados y salidas de scripts
-data/*.json
-data/*.csv
-data/wa_probes/
-out/
+# Archivos de configuración con tokens
+webhook_server.py
+webhook_server_v2.py
+webhook_client.py
+bridge_bot.py
+opencode_bot.py
+opencode_bot_v2.py
+opencode_bot_v3.py
+discord_listener.py
+listener.py
+listen_hermes.py
+hermes_poll.py
+hermes_auto_poll.py
+polling.py
+send.py
+enviar.py
+sync_context.py
+auto_process.py
 
-# Mantener plantillas de entorno en el repo
-!.env.example
+# Archivos de contexto
+contexto_discord.md
+shared_context.json
+hermes_instructions.md
 
-# Local Netlify folder
-.netlify
+# Logs
+*.log

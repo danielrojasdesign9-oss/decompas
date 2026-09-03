@@ -1,0 +1,5 @@
+[lun. 03/08/2026  8:25:09,77] Inicio de campana 
+error: falta GOOGLE_MAPS_API_KEY. Pégala en .env (ver .env.example) o usa --source demo para probar.
+== CAMPAÑA | ciudad=Cali | objetivo=15 | fuente=api ==
+[1/4] Buscando leads ...
+[lun. 03/08/2026  8:25:28,73] Fin de campana 

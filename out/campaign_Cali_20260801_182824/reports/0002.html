@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>Taquería El Buen Sabor — Diagnóstico IA</title>
+<style>
+:root{--ink:#16222e;--muted:#5b6b7c;--cream:#faf7f2;--card:#ffffff;--amber:#e07b39;
+--amber-soft:#fdeee2;--green:#2e7d5b;--red:#c0403a;--line:#e9e2d7;}
+*{box-sizing:border-box;margin:0;padding:0;}
+body{font-family:'Inter',-apple-system,'Segoe UI',Roboto,sans-serif;background:var(--cream);
+color:var(--ink);line-height:1.55;-webkit-font-smoothing:antialiased;}
+.serif{font-family:'Fraunces',Georgia,serif;}
+.wrap{max-width:760px;margin:0 auto;padding:40px 20px 80px;}
+.brand{display:flex;align-items:center;gap:10px;font-weight:800;letter-spacing:.02em;font-size:1.05rem;}
+.brand .dot{width:12px;height:12px;border-radius:3px;background:var(--amber);}
+.hero{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:34px 30px;margin-top:26px;
+box-shadow:0 10px 30px rgba(22,34,46,.06);}
+.tag{display:inline-block;background:var(--amber-soft);color:var(--amber);font-size:.72rem;font-weight:700;
+text-transform:uppercase;letter-spacing:.08em;padding:5px 10px;border-radius:999px;}
+h1{font-size:2rem;line-height:1.15;margin:14px 0 6px;}
+.meta{color:var(--muted);font-size:.92rem;margin-bottom:22px;}
+.scorebar{display:flex;align-items:center;gap:20px;flex-wrap:wrap;}
+.ring{position:relative;width:120px;height:120px;flex:none;}
+.ring svg{transform:rotate(-90deg);}
+.ring .num{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;
+font-size:1.9rem;font-weight:800;}
+.scorelab{font-size:.78rem;color:var(--muted);}
+.cats{flex:1;min-width:220px;display:grid;gap:10px;}
+.cat{display:grid;grid-template-columns:1fr auto;font-size:.86rem;gap:4px 12px;}
+.cat b{font-weight:600;}
+.track{grid-column:1/-1;height:8px;background:var(--line);border-radius:99px;overflow:hidden;}
+.fill{height:100%;border-radius:99px;background:var(--amber);}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:26px;}
+@media(max-width:640px){.grid{grid-template-columns:1fr;}}
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:22px;}
+.card h3{font-size:1rem;margin-bottom:14px;display:flex;align-items:center;gap:8px;}
+.card ul{list-style:none;display:grid;gap:10px;}
+.card li{font-size:.9rem;color:#2a3644;padding-left:22px;position:relative;}
+.card li::before{position:absolute;left:0;top:0;content:"•";font-weight:800;}
+.opp li::before{color:var(--red);}
+.rec li::before{color:var(--green);}
+.cta{display:block;text-align:center;margin-top:28px;background:var(--ink);color:#fff;text-decoration:none;
+padding:16px 22px;border-radius:12px;font-weight:700;font-size:1rem;transition:transform .15s;}
+.cta:hover{transform:translateY(-2px);}
+.wa{background:#25d366;color:#062b16;}
+.sub{text-align:center;color:var(--muted);font-size:.85rem;margin-top:14px;}
+.foot{margin-top:46px;text-align:center;color:var(--muted);font-size:.82rem;}
+.foot a{color:var(--amber);font-weight:600;text-decoration:none;}
+.err{background:#fdeeee;border:1px solid #f3c6c4;color:var(--red);border-radius:12px;padding:14px 16px;
+font-size:.9rem;margin-top:20px;}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="brand"><span class="dot"></span>DANIEL ROJAS<span style="color:var(--muted);font-weight:500">/diagnóstico</span></div>
+  <div class="hero">
+    <span class="tag">Diagnóstico IA de tu negocio</span>
+    <h1 class="serif">Taquería El Buen Sabor</h1>
+    
+    <p class='sub'>Preparado por Daniel Rojas · Monterrey · Restaurante</p>
+    <div class="scorebar">
+      
+    <div class="ring">
+      <svg width="120" height="120" viewBox="0 0 120 120">
+        <circle cx="60" cy="60" r="52" fill="none" stroke="#e9e2d7" stroke-width="12"/>
+        <circle cx="60" cy="60" r="52" fill="none" stroke="var(--red)" stroke-width="12"
+          stroke-linecap="round" stroke-dasharray="326.72535999999997" stroke-dashoffset="261.380288"/>
+      </svg>
+      <div class="num">20</div>
+    </div>
+      <div class="cats">
+    <div class="cat">
+      <b>Presencia digital</b><span>20/30</span>
+      <div class="track"><div class="fill" style="width:66%"></div></div>
+    </div>
+
+    <div class="cat">
+      <b>Diseño responsivo</b><span>0/20</span>
+      <div class="track"><div class="fill" style="width:0%"></div></div>
+    </div>
+
+    <div class="cat">
+      <b>Conversión y captura</b><span>0/30</span>
+      <div class="track"><div class="fill" style="width:0%"></div></div>
+    </div>
+
+    <div class="cat">
+      <b>SEO y accesibilidad</b><span>0/20</span>
+      <div class="track"><div class="fill" style="width:0%"></div></div>
+    </div></div>
+    </div>
+    <div class="err">⚠ Error al cargar https://elbuensabor.example: HTTPSConnectionPool(host=&#x27;elbuensabor.example&#x27;, port=443): Max retries exceeded with url: / (Caused by NameResolutionError(&quot;HTTPSConnection(host=&#x27;elbuensabor.example&#x27;, port=443): Failed to resolve &#x27;elbuensabor.example&#x27; ([Errno 11001] getaddrinfo failed)&quot;))</div>
+  </div>
+  <div class="grid">
+    <div class="card opp"><h3 class="serif">Oportunidades para tu negocio</h3><ul><li>El sitio no responde o está caído: se pierden clientes desde el primer contacto.</li></ul></div>
+    <div class="card rec"><h3 class="serif">Qué recomendamos hacer</h3><ul><li>Revisar hosting/uptime; garantizar HTTPS y tiempos de carga &lt; 2.5s.</li>
+<li>Carga &gt; 2.5s: optimizar imágenes, comprimir HTML/CSS/JS.</li>
+<li>Oportunidad mayor: intervención integral de IA y diseño.</li></ul></div>
+  </div>
+  <a class="cta wa" href="https://wa.me/573001234567?text=Hola%20Daniel%2C%20vi%20el%20diagn%C3%B3stico%20de%20mi%20negocio.%20%C2%BFC%C3%B3mo%20puedo%20mejorar%20mi%20puntaje%3F" target="_blank" rel="noopener">Quiero mejorar mi puntaje →</a>
+  <a class="cta" href="" target="_blank" rel="noopener">Quiero conversar sobre esto →</a>
+  <div class="foot">
+    <p>Consultor de IA y Diseño para Pymes · <a href="https://danielrojasdesign.netlify.app">danielrojasdesign.netlify.app</a></p>
+    <p style="margin-top:6px">Auditoría de procesos primero, código después.</p>
+  </div>
+</div>
+</body>
+</html>

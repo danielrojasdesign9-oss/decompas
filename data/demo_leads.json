@@ -1,0 +1,53 @@
+[
+  {
+    "name": "Taquería El Buen Sabor",
+    "source": "demo",
+    "category": "Restaurante",
+    "address": "Av. Juárez 120, Centro",
+    "city": "Monterrey",
+    "website": "https://elbuensabor.example",
+    "phone": "+52 81 1234 5678",
+    "whatsapp": "528112345678",
+    "whatsapp_url": "https://wa.me/528112345678",
+    "google_rating": 4.6,
+    "google_reviews": 320,
+    "social": {},
+    "notes": "",
+    "raw": {},
+    "captured_at": "2026-08-01T05:08:49.657834+00:00"
+  },
+  {
+    "name": "Clínica Dental Sonrisa",
+    "source": "demo",
+    "category": "Clínica dental",
+    "address": "Col. Roma, Monterrey",
+    "city": "Monterrey",
+    "website": "",
+    "phone": "+52 81 8765 4321",
+    "whatsapp": "528187654321",
+    "whatsapp_url": "https://wa.me/528187654321",
+    "google_rating": 4.9,
+    "google_reviews": 88,
+    "social": {},
+    "notes": "",
+    "raw": {},
+    "captured_at": "2026-08-01T05:08:49.657893+00:00"
+  },
+  {
+    "name": "DulceMomento Pastelería",
+    "source": "demo",
+    "category": "Pastelería",
+    "address": "San Pedro",
+    "city": "Monterrey",
+    "website": "https://dulcemomento.example",
+    "phone": "8123456789",
+    "whatsapp": "528123456789",
+    "whatsapp_url": "https://wa.me/528123456789",
+    "google_rating": 4.3,
+    "google_reviews": 45,
+    "social": {},
+    "notes": "",
+    "raw": {},
+    "captured_at": "2026-08-01T05:08:49.657910+00:00"
+  }
+]

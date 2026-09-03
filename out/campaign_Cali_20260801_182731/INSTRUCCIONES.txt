@@ -1,0 +1,15 @@
+CAMPAÑA Cali · 3 leads · 01/08/2026 18:27
+============================================================
+
+1. Abre 'whatsapp_links.txt'. Cada línea es un lead con su enlace de un clic.
+2. Haz clic: se abre WhatsApp Web con el mensaje listo. Revisa, personaliza
+   el nombre si hace falta y envía.
+3. Ritmo: 10-15 mensajes/día (lunes a miércoles). No envíes todos de golpe.
+4. Seguimiento a los 2-3 días a quien no respondió (réplica corta).
+5. Quien responda → agenda la revisión de dolores de 15 min.
+6. En la llamada: identifica dolores y, si hay fit, usa la calculadora
+   (danielrojasdesign.netlify.app) para mostrar el ROI y proponer sociedad.
+
+Los reportes por lead están publicados en:
+  https://danielrojasdesign.netlify.app/diagnostico
+Métricas del día: revisa cuántos respondieron y qué sector funcionó mejor.
