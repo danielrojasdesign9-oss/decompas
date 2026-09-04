@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>Diagnóstico — Daniel Rojas</title>
+<style>
+@page{size:A4;margin:0}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Segoe UI',system-ui,sans-serif;color:#1a2332;line-height:1.6;-webkit-font-smoothing:antialiased}
+.page{width:210mm;min-height:297mm;padding:40px 50px;background:#fff;font-family:'Segoe UI',system-ui,sans-serif}
+/* Header */
+.header{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:40px;padding-bottom:24px;border-bottom:2px solid #e2ddd5}
+.header-left h1{font-size:1.8rem;font-weight:700;color:#1a2332;letter-spacing:-.02em}
+.header-left p{color:#6b7a8d;font-size:.9rem;margin-top:4px}
+.header-right{text-align:right}
+.header-right .logo{font-size:1.2rem;font-weight:700;color:#1a2332;letter-spacing:.03em}
+.header-right .date{color:#6b7a8d;font-size:.82rem;margin-top:4px}
+/* Client info */
+.client{background:#f8f6f3;border-radius:10px;padding:24px;margin-bottom:32px}
+.client h2{font-size:.78rem;text-transform:uppercase;letter-spacing:.08em;color:#6b7a8d;margin-bottom:12px}
+.client-info{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.client-info div{font-size:.88rem}
+.client-info strong{display:block;color:#1a2332;font-weight:600}
+.client-info span{color:#6b7a8d}
+/* Sections */
+.section{margin-bottom:32px}
+.section h2{font-size:1.1rem;font-weight:700;color:#1a2332;margin-bottom:12px;padding-bottom:8px;border-bottom:1px solid #e2ddd5}
+.section p{color:#4a5568;font-size:.9rem;line-height:1.7}
+/* Opportunities */
+.op{border:1px solid #e2ddd5;border-radius:10px;padding:20px;margin-bottom:20px;background:#fff}
+.op-header{display:flex;align-items:center;gap:12px;margin-bottom:16px}
+.op-number{background:#2c4a6e;color:#fff;width:32px;height:32px;border-radius:8px;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:.9rem;flex-shrink:0}
+.op-title{font-size:1rem;font-weight:600;color:#1a2332}
+.op-body{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.op-body .item{font-size:.85rem}
+.op-body .label{color:#6b7a8d;font-size:.75rem;text-transform:uppercase;letter-spacing:.06em}
+.op-body .value{color:#1a2332;font-weight:500}
+.op-body .value.problem{color:#dc2626}
+.op-body .value.solution{color:#16a34a}
+/* Summary */
+.summary{background:#f8f6f3;border-radius:10px;padding:24px;margin-top:24px;border-left:4px solid #2c4a6e}
+.summary h3{font-size:.78rem;text-transform:uppercase;letter-spacing:.08em;color:#2c4a6e;margin-bottom:12px}
+.summary p{font-size:.9rem;color:#4a5568;line-height:1.7}
+/* Footer */
+.footer{margin-top:40px;padding-top:20px;border-top:2px solid #e2ddd5;text-align:center;color:#6b7a8d;font-size:.8rem}
+/* Print */
+@media print{
+  body{background:#fff}
+  .page{box-shadow:none}
+  .op{border:1px solid #ccc}
+}
+</style>
+</head>
+<body>
+<div class="page">
+  <!-- HEADER -->
+  <div class="header">
+    <div class="header-left">
+      <h1>📊 Diagnóstico Rápido</h1>
+      <p>Auditoría de Atención al Cliente</p>
+    </div>
+    <div class="header-right">
+      <div class="logo">Daniel Rojas</div>
+      <div class="date">Consultor de IA y Diseño | danielrojascali.netlify.app</div>
+    </div>
+  </div>
+
+  <!-- CLIENT INFO -->
+  <div class="client">
+    <h2>Datos del Negocio</h2>
+    <div class="client-info">
+      <div><strong>Nombre del Negocio</strong><span>[Nombre]</span></div>
+      <div><strong>Tipo de Negocio</strong><span>[Restaurante / Clínica / Tienda / Servicios]</span></div>
+      <div><strong>Ciudad</strong><span>Cali, Colombia</span></div>
+      <div><strong>Fecha de Auditoría</strong><span>[Día/Mes/Año]</span></div>
+      <div><strong>Canal Evaluado</strong><span>[WhatsApp / Web / Redes]</span></div>
+      <div><strong>Auditor</strong><span>Daniel Rojas</span></div>
+    </div>
+  </div>
+
+  <!-- OPPORTUNITIES -->
+  <div class="section">
+    <h2>3 Oportunidades Detectadas</h2>
+
+    <div class="op">
+      <div class="op-header">
+        <div class="op-number">1</div>
+        <div class="op-title">[Problema Principal]</div>
+      </div>
+      <div class="op-body">
+        <div class="item"><div class="label">Qué está pasando</div><div class="value problem">[Descripción específica]</div></div>
+        <div class="item"><div class="label">Impacto estimado</div><div class="value problem">[~X clientes/mes perdidos]</div></div>
+        <div class="item"><div class="label">Solución</div><div class="value solution">Agente de IA 24/7 → Resuelto en [X] semanas</div></div>
+      </div>
+    </div>
+
+    <div class="op">
+      <div class="op-header">
+        <div class="op-number">2</div>
+        <div class="op-title">[Segundo Problema]</div>
+      </div>
+      <div class="op-body">
+        <div class="item"><div class="label">Qué está pasando</div><div class="value problem">[Descripción específica]</div></div>
+        <div class="item"><div class="label">Impacto estimado</div><div class="value problem">[Tiempo de respuesta / clientes]</div></div>
+        <div class="item"><div class="label">Solución</div><div class="value solution">[Descripción]</div></div>
+      </div>
+    </div>
+
+    <div class="op">
+      <div class="op-header">
+        <div class="op-number">3</div>
+        <div class="op-title">[Tercer Problema]</div>
+      </div>
+      <div class="op-body">
+        <div class="item"><div class="label">Qué está pasando</div><div class="value problem">[Descripción específica]</div></div>
+        <div class="item"><div class="label">Impacto estimado</div><div class="value problem">[$/clientes perdidos]</div></div>
+        <div class="item"><div class="label">Solución</div><div class="value solution">[Descripción]</div></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SUMMARY -->
+  <div class="summary">
+    <h3>Resumen Ejecutivo</h3>
+    <p>
+      Basándome en lo que me cuentas, estas son las 3 oportunidades más grandes:<br><br>
+      <strong>1.</strong> [Problema] → Pierdes aproximadamente [X] clientes/mes<br>
+      <strong>2.</strong> [Problema] → Tu tiempo de respuesta es de [X] minutos cuando debería ser <1 min<br>
+      <strong>3.</strong> [Problema] → Estás dejando de ganar aproximadamente $[X]/mes<br><br>
+      Con un agente de IA, esto se resuelve en 2-3 semanas.
+    </p>
+  </div>
+
+  <!-- CLOSE -->
+  <div class="section" style="margin-top:32px">
+    <h2>Siguiente Paso</h2>
+    <p>
+      <strong>¿Te gustaría que te prepare una propuesta concreta con tiempos y costos?</strong><br><br>
+      Si SÍ → Te envío la propuesta por WhatsApp o email.<br>
+      Si NO → "Sin presión, aquí estoy cuando necesites."
+    </p>
+  </div>
+
+  <!-- FOOTER -->
+  <div class="footer">
+    <p>Daniel Rojas — Consultor de IA y Diseño | danielrojascali.netlify.app</p>
+    <p>Cali, Colombia · +57 317 444 6641</p>
+  </div>
+</div>
+</body>
+</html>
