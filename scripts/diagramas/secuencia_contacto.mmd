@@ -1,0 +1,75 @@
+%%{init: {'theme': 'dark', 'themeVariables': {'actorBkg': '#2c4a6e', 'actorTextColor': '#fff', 'actorBorder': '#3d5a80', 'activationBkgColor': '#1a2332', 'activationTextColor': '#fff', 'signalColor': '#6b7a8d', 'signalTextColor': '#e2e8f0', 'noteBkgColor': '#e8eef4', 'noteTextColor': '#1a2332', 'noteBorderColor': '#3d5a80'}}}%%
+sequenceDiagram
+    autonumber
+    participant D as 🧑‍💼 Daniel
+    participant L as 👤 Lead
+    participant H as 🤖 Hermes
+    participant N as ⚙️ n8n
+    participant W as 📱 WhatsApp
+
+    rect rgb(26, 35, 50)
+    Note over D,W: FASE 1: BÚSQUEDA Y PRIMER CONTACTO
+    D->>D: Identifica lead en LinkedIn/Instagram/físico
+    D->>D: Selecciona template de mensaje por canal
+    D->>L: Envía mensaje personalizado
+    end
+
+    rect rgb(44, 74, 110)
+    Note over L,W: FASE 2: RESPUESTA
+    alt Lead responde "Sí, me interesa"
+        L->>W: Responde positivo
+        W->>H: Webhook con mensaje
+        H->>H: Analiza intención (positiva)
+        H->>D: Notifica en Discord: "Lead interesado"
+        D->>L: Propone 2 horarios
+    else Lead pregunta "¿Cuánto cobra?"
+        L->>W: Pregunta por precio
+        W->>H: Webhook con mensaje
+        H->>H: Detecta objeción de precio
+        H->>D: Notifica: "Lead pregunta precio"
+        D->>L: "La auditoría es gratis, ¿te interesa?"
+    else Lead no responde
+        Note over D,L: Espera 3 días
+        D->>L: Seguimiento: "¿Te interesa la auditoría?"
+    end
+    end
+
+    rect rgb(37, 211, 102)
+    Note over D,W: FASE 3: AGENDAMIENTO
+    D->>L: Propone día y hora
+    L->>W: Confirma
+    D->>N: Webhook: agendar reunión
+    N->>N: Crea evento en calendario
+    N->>L: Confirmación por WhatsApp
+    N->>D: Recordatorio 1h antes
+    end
+
+    rect rgb(224, 123, 57)
+    Note over D,L: FASE 4: REUNIÓN (15 min)
+    D->>L: "Gracias por tu tiempo"
+    D->>L: Pregunta: "¿Cómo llegan tus clientes?"
+    D->>L: Pregunta: "¿Qué pasa fuera de horario?"
+    D->>L: Pregunta: "¿Cuánto tiempo en responder?"
+    D->>L: Pregunta: "¿Has perdido clientes?"
+    D->>L: Pregunta: "¿Qué herramientas usas?"
+    D->>D: Diagnóstico: 3 oportunidades
+    D->>L: Presenta diagnóstico concreto
+    D->>L: "¿Te preparo una propuesta?"
+    end
+
+    rect rgb(44, 74, 110)
+    Note over D,L: FASE 5: PROPUESTA
+    D->>D: Genera PDF con propuesta
+    D->>L: Envía propuesta por WhatsApp
+    Note over D,L: Espera 48h
+    D->>L: Seguimiento: "¿Qué te pareció?"
+    alt Acepta
+        L->>W: "Acepto"
+        D->>L: Contrato y anticipo
+        D->>D: Inicia proyecto
+    else Necesita pensarlo
+        L->>W: "Déjame pensarlo"
+        D->>L: "Sin presión, aquí estoy"
+        Note over D,L: Seguimiento 7 días
+    end
+    end

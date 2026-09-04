@@ -1,0 +1,57 @@
+%%{init: {'theme': 'dark', 'themeVariables': {'primaryColor': '#2c4a6e', 'primaryTextColor': '#fff', 'primaryBorderColor': '#3d5a80', 'lineColor': '#6b7a8d', 'secondaryColor': '#1a2332', 'tertiaryColor': '#e8eef4'}}}%%
+flowchart LR
+    subgraph LUNES["📅 LUNES - MOBILIZACIÓN"]
+        L1["🔍 Buscar 10 contactos en LinkedIn"]
+        L2["📱 Enviar 10 mensajes personalizados"]
+        L3["📊 Registrar en CRM"]
+    end
+
+    subgraph MARTES["📅 MARTES - PRESENCIA"]
+        M1["📝 Publicar en 3 grupos Facebook/WhatsApp"]
+        M2["💬 Comentar en posts de negocios Cali"]
+        M3["📱 Responder interacciones"]
+    end
+
+    subgraph MIERCOLES["📅 MIÉRCOLES - FÍSICO"]
+        W1["🚶 Visitar 2 negocios locales"]
+        W2["☕ Restaurantes o tiendas"]
+        W3["📋 Dejar tarjeta + QR a la landing"]
+    end
+
+    subgraph JUEVES["📅 JUEVES - DIGITAL"]
+        J1["📸 Enviar 10 DMs en Instagram"]
+        J2["🎯 Negocios con @restaurantescali"]
+        J3["💬 Comentar con valor genuino"]
+    end
+
+    subgraph VIERNES["📅 VIERNES - SEGUIMIENTO"]
+        V1["📞 Seguimiento a todos los que respondieron"]
+        V2["📅 Agendar reuniones pendientes"]
+        V3["📧 Enviar propuestas listas"]
+    end
+
+    subgraph SABADO["📅 SÁBADO - CIERRE"]
+        S1["🤝 Reuniones / demos"]
+        S2["📋 Enviar propuestas"]
+        S3["🎉 Cerrar 1-2 clientes"]
+    end
+
+    LUNES -->|"10 contactos"| MARTES
+    MARTES -->|"2-3 respuestas"| MIERCOLES
+    MIERCOLES -->|"1 reunión"| JUEVES
+    JUEVES -->|"2-3 respuestas"| VIERNES
+    VIERNES -->|"2 reuniones"| SABADO
+
+    subgraph META["🎯 META SEMANAL"]
+        MT1["10 mensajes diarios"]
+        MT2["5 auditorías gratuitas"]
+        MT3["4 reuniones"]
+        MT4["1-2 clientes cerrados"]
+    end
+
+    classDef day fill:#2c4a6e,stroke:#3d5a80,color:#fff
+    classDef meta fill:#e8eef4,stroke:#3d5a80,color:#1a2332
+    classDef action fill:#1a2332,stroke:#3d5a80,color:#fff
+
+    class L1,L2,L3,M1,M2,M3,W1,W2,W3,J1,J2,J3,V1,V2,V3,S1,S2,S3 action
+    class MT1,MT2,MT3,MT4 meta

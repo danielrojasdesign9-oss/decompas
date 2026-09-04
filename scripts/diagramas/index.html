@@ -1,0 +1,566 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>Diagramas — Flujo de Ventas Daniel Rojas</title>
+<script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
+<style>
+:root{--ink:#1a2332;--ink-light:#2d3a4a;--muted:#6b7a8d;--cream:#f8f6f3;--card:#fff;--accent:#3d5a80;--accent-soft:#e8eef4;--line:#e2ddd5}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'DM Sans',system-ui,sans-serif;background:var(--ink);color:var(--cream);min-height:100vh}
+.header{padding:24px 32px;border-bottom:1px solid #3d4f63;display:flex;align-items:center;justify-content:space-between}
+.header h1{font-size:1.1rem;font-weight:600}
+.header p{color:var(--muted);font-size:.82rem}
+.tabs{display:flex;gap:4px;padding:16px 32px;background:var(--ink-light);border-bottom:1px solid #3d4f63;overflow-x:auto}
+.tab{padding:10px 20px;border-radius:8px;cursor:pointer;font-size:.88rem;font-weight:500;color:var(--muted);transition:all .2s;border:1px solid transparent;white-space:nowrap}
+.tab:hover{color:var(--cream);background:rgba(255,255,255,.05)}
+.tab.active{color:var(--cream);background:var(--accent);border-color:var(--accent)}
+.diagram-container{padding:32px;overflow:auto;height:calc(100vh - 140px)}
+.diagram-panel{display:none;animation:fadeIn .3s ease}
+.diagram-panel.active{display:block}
+@keyframes fadeIn{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:translateY(0)}}
+.diagram-card{background:var(--ink-light);border:1px solid #3d4f63;border-radius:12px;padding:32px;max-width:1400px;margin:0 auto}
+.diagram-card h2{font-size:1.2rem;font-weight:600;margin-bottom:8px}
+.diagram-card .desc{color:var(--muted);font-size:.88rem;margin-bottom:24px;line-height:1.6}
+.mermaid{display:flex;justify-content:center;padding:20px 0;overflow:auto}
+.mermaid svg{max-width:100%;height:auto}
+.legend{margin-top:24px;padding:16px 20px;background:rgba(255,255,255,.03);border-radius:8px;border:1px solid #3d4f63}
+.legend h3{font-size:.82rem;text-transform:uppercase;letter-spacing:.06em;color:var(--muted);margin-bottom:12px}
+.legend-items{display:flex;flex-wrap:wrap;gap:16px}
+.legend-item{display:flex;align-items:center;gap:8px;font-size:.82rem}
+.legend-dot{width:12px;height:12px;border-radius:3px}
+.info-box{margin-top:20px;padding:16px 20px;background:rgba(61,90,128,.15);border:1px solid var(--accent);border-radius:8px}
+.info-box h3{font-size:.82rem;text-transform:uppercase;letter-spacing:.06em;color:var(--accent);margin-bottom:8px}
+.info-box p{font-size:.85rem;color:var(--muted);line-height:1.6}
+.controls{display:flex;gap:8px;margin-bottom:16px}
+.controls button{padding:8px 16px;border-radius:6px;border:1px solid #3d4f63;background:var(--ink-light);color:var(--cream);font-size:.82rem;cursor:pointer;transition:all .2s}
+.controls button:hover{background:var(--accent);border-color:var(--accent)}
+@media(max-width:768px){
+  .header{padding:16px 20px;flex-direction:column;gap:8px;text-align:center}
+  .tabs{padding:12px 16px}
+  .diagram-container{padding:16px}
+  .diagram-card{padding:20px}
+  .legend-items{flex-direction:column}
+}
+</style>
+</head>
+<body>
+
+<div class="header">
+  <div>
+    <h1>Flujo de Ventas — Daniel Rojas</h1>
+    <p>Diagramas interactivos del proceso de ventas y generación de leads</p>
+  </div>
+  <div style="color:var(--muted);font-size:.82rem">4 diagramas · Mermaid.js</div>
+</div>
+
+<div class="tabs">
+  <div class="tab active" onclick="showDiagram(0)">Flujo de Leads</div>
+  <div class="tab" onclick="showDiagram(1)">Secuencia de Contacto</div>
+  <div class="tab" onclick="showDiagram(2)">Decision Tree</div>
+  <div class="tab" onclick="showDiagram(3)">Timeline Semanal</div>
+</div>
+
+<div class="diagram-container">
+
+  <!-- DIAGRAMA 1: FLUJO DE LEADS -->
+  <div class="diagram-panel active" id="panel-0">
+    <div class="diagram-card">
+      <h2>Flujo Completo de Leads</h2>
+      <p class="desc">El recorrido completo desde que identificas un lead hasta que se convierte en cliente. Cada paso incluye las acciones concretas que debes tomar.</p>
+      <div class="controls">
+        <button onclick="zoomIn(0)">+ Zoom</button>
+        <button onclick="zoomOut(0)">- Zoom</button>
+        <button onclick="resetZoom(0)">Reset</button>
+      </div>
+      <div class="mermaid" id="diagram-0">
+flowchart TD
+    subgraph BUSQUEDA["🔍 BÚSQUEDA DE LEADS"]
+        A1["LinkedIn: Contactos con negocios"] 
+        A2["Instagram: Negocios locales Cali"]
+        A3["WhatsApp: Grupos de emprendedores"]
+        A4["Físico: Restaurantes, clínicas, tiendas"]
+    end
+
+    subgraph CONTACTO["📞 PRIMER CONTACTO"]
+        B1{"¿Canal?"}
+        B2["LinkedIn: Mensaje profesional"]
+        B3["WhatsApp: Mensaje cercano"]
+        B4["Instagram: DM casual"]
+        B5["Físico: Visita directa"]
+    end
+
+    subgraph RESPUESTA["💬 RESPUESTA DEL LEAD"]
+        C1{"¿Qué dice?"}
+        C2["Sí me interesa"]
+        C3["¿Cuánto cobra?"]
+        C4["Necesito pensarlo"]
+        C5["No responde"]
+    end
+
+    subgraph AGENDAMIENTO["📅 AGENDAMIENTO"]
+        D1["Proponer 2 horarios"]
+        D2["Confirmar por WhatsApp"]
+        D3["Enviar recordatorio 1h antes"]
+    end
+
+    subgraph REUNION["🤝 REUNIÓN 15 MIN"]
+        E1["0-3 min: Apertura"]
+        E2["3-8 min: Escucha activa"]
+        E3["8-12 min: Diagnóstico"]
+        E4["12-15 min: Cierre"]
+    end
+
+    subgraph PROPUESTA["📋 PROPUESTA"]
+        F1["Generar PDF"]
+        F2["Enviar por WhatsApp"]
+        F3["Seguimiento 48h"]
+    end
+
+    subgraph CLIENTE["🎉 CLIENTE"]
+        G1["Firmar contrato"]
+        G2["Cobrar 50% anticipo"]
+        G3["Iniciar proyecto"]
+    end
+
+    BUSQUEDA --> CONTACTO
+    CONTACTO --> B1
+    B1 -->|LinkedIn| B2
+    B1 -->|WhatsApp| B3
+    B1 -->|Instagram| B4
+    B1 -->|Físico| B5
+    
+    B2 --> RESPUESTA
+    B3 --> RESPUESTA
+    B4 --> RESPUESTA
+    B5 --> RESPUESTA
+    
+    RESPUESTA --> C1
+    C1 -->|"Sí, me interesa"| C2
+    C1 -->|"¿Cuánto cobra?"| C3
+    C1 -->|"Necesito pensarlo"| C4
+    C1 -->|"No responde"| C5
+    
+    C2 --> AGENDAMIENTO
+    C3 -->|"Auditoría es gratis"| C2
+    C4 -->|"Sin presión"| C5
+    C5 -->|"Seguimiento 7d"| CONTACTO
+    
+    AGENDAMIENTO --> D1
+    D1 --> D2
+    D2 --> D3
+    D3 --> REUNION
+    
+    REUNION --> E1
+    E1 --> E2
+    E2 --> E3
+    E3 --> E4
+    
+    E4 -->|"Quiere propuesta"| PROPUESTA
+    E4 -->|"No está listo"| C5
+    
+    PROPUESTA --> F1
+    F1 --> F2
+    F2 --> F3
+    F3 -->|"Acepta"| CLIENTE
+    F3 -->|"Rechaza"| C5
+
+    classDef search fill:#1a2332,stroke:#3d5a80,color:#fff
+    classDef contact fill:#2c4a6e,stroke:#3d5a80,color:#fff
+    classDef response fill:#e8eef4,stroke:#3d5a80,color:#1a2332
+    classDef meeting fill:#25d366,stroke:#1da851,color:#fff
+    classDef proposal fill:#e07b39,stroke:#c46a2e,color:#fff
+    classDef client fill:#2c4a6e,stroke:#3d5a80,color:#fff
+
+    class A1,A2,A3,A4 search
+    class B1,B2,B3,B4,B5 contact
+    class C1,C2,C3,C4,C5 response
+    class D1,D2,D3,E1,E2,E3,E4 meeting
+    class F1,F2,F3 proposal
+    class G1,G2,G3 client
+      </div>
+      <div class="legend">
+        <h3>Leyenda</h3>
+        <div class="legend-items">
+          <div class="legend-item"><div class="legend-dot" style="background:#1a2332;border:1px solid #3d5a80"></div> Búsqueda</div>
+          <div class="legend-item"><div class="legend-dot" style="background:#2c4a6e"></div> Contacto</div>
+          <div class="legend-item"><div class="legend-dot" style="background:#e8eef4;border:1px solid #3d5a80"></div> Respuesta</div>
+          <div class="legend-item"><div class="legend-dot" style="background:#25d366"></div> Reunión/Agendamiento</div>
+          <div class="legend-item"><div class="legend-dot" style="background:#e07b39"></div> Propuesta</div>
+          <div class="legend-item"><div class="legend-dot" style="background:#2c4a6e"></div> Cliente</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- DIAGRAMA 2: SECUENCIA DE CONTACTO -->
+  <div class="diagram-panel" id="panel-1">
+    <div class="diagram-card">
+      <h2>Secuencia de Contacto</h2>
+      <p class="desc">Interacciones entre tú, el lead, Hermes y n8n durante todo el proceso. Muestra quién hace qué y cuándo en cada fase.</p>
+      <div class="controls">
+        <button onclick="zoomIn(1)">+ Zoom</button>
+        <button onclick="zoomOut(1)">- Zoom</button>
+        <button onclick="resetZoom(1)">Reset</button>
+      </div>
+      <div class="mermaid" id="diagram-1">
+sequenceDiagram
+    autonumber
+    participant D as 🧑‍💼 Daniel
+    participant L as 👤 Lead
+    participant H as 🤖 Hermes
+    participant N as ⚙️ n8n
+    participant W as 📱 WhatsApp
+
+    rect rgb(26, 35, 50)
+    Note over D,W: FASE 1: BÚSQUEDA Y PRIMER CONTACTO
+    D->>D: Identifica lead en LinkedIn/Instagram
+    D->>D: Selecciona template de mensaje
+    D->>L: Envía mensaje personalizado
+    end
+
+    rect rgb(44, 74, 110)
+    Note over L,W: FASE 2: RESPUESTA
+    alt Lead responde positivo
+        L->>W: "Sí, me interesa"
+        W->>H: Webhook con mensaje
+        H->>D: Notifica en Discord
+        D->>L: Propone 2 horarios
+    else Lead pregunta precio
+        L->>W: "¿Cuánto cobra?"
+        W->>H: Webhook con mensaje
+        H->>D: Notifica: "pregunta precio"
+        D->>L: "La auditoría es gratis"
+    else No responde
+        Note over D,L: Espera 3 días
+        D->>L: Seguimiento
+    end
+    end
+
+    rect rgb(37, 211, 102)
+    Note over D,W: FASE 3: AGENDAMIENTO
+    D->>L: Propone día y hora
+    L->>W: Confirma
+    D->>N: Webhook: agendar
+    N->>N: Crea evento calendario
+    N->>L: Confirmación WhatsApp
+    N->>D: Recordatorio 1h antes
+    end
+
+    rect rgb(224, 123, 57)
+    Note over D,L: FASE 4: REUNIÓN 15 MIN
+    D->>L: Apertura (3 min)
+    D->>L: Escucha: 5 preguntas (5 min)
+    D->>L: Diagnóstico (4 min)
+    D->>L: Cierre: "¿Propuesta?" (3 min)
+    end
+
+    rect rgb(44, 74, 110)
+    Note over D,L: FASE 5: PROPUESTA
+    D->>D: Genera PDF propuesta
+    D->>L: Envía por WhatsApp
+    Note over D,L: Espera 48h
+    D->>L: Seguimiento
+    alt Acepta
+        L->>W: "Acepto"
+        D->>L: Contrato + anticipo
+    else Piensa
+        L->>W: "Déjame pensarlo"
+        D->>L: "Sin presión"
+    end
+    end
+      </div>
+      <div class="info-box">
+        <h3>Automatización con Hermes + n8n</h3>
+        <p>Hermes detecta la intención del lead y te notifica en Discord. n8n maneja los recordatorios, confirmaciones y seguimientos automáticos. Tú solo enfocas en las reuniones y propuestas.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- DIAGRAMA 3: DECISION TREE -->
+  <div class="diagram-panel" id="panel-2">
+    <div class="diagram-card">
+      <h2>Decision Tree — Qué Responder</h2>
+      <p class="desc">Guía de respuestas según lo que el lead diga. Cada camino tiene el mensaje exacto que debes enviar.</p>
+      <div class="controls">
+        <button onclick="zoomIn(2)">+ Zoom</button>
+        <button onclick="zoomOut(2)">- Zoom</button>
+        <button onclick="resetZoom(2)">Reset</button>
+      </div>
+      <div class="mermaid" id="diagram-2">
+flowchart TD
+    START(["🎯 Lead recibe mensaje"]) --> RESP{"¿Qué responde?"}
+
+    RESP -->|"Sí, me interesa"| INTERESADO
+    RESP -->|"¿Cuánto cobra?"| PRECIO
+    RESP -->|"¿Qué haces?"| DETALLE
+    RESP -->|"No me interesa"| RECHAZO
+    RESP -->|"No responde"| SILENCIO
+
+    subgraph INTERESADO["✅ INTERESADO"]
+        I1["\"Sí, me interesa\""]
+        I2["\"Dale, cuéntame más\""]
+    end
+
+    subgraph PRECIO["💰 PRECIO"]
+        P1["\"¿Cuánto cobra?\""]
+        P2["\"¿Es caro?\""]
+    end
+
+    subgraph DETALLE["❓ DETALLE"]
+        D1["\"¿Qué haces exactamente?\""]
+        D2["\"¿Cómo funciona?\""]
+    end
+
+    subgraph RECHAZO["❌ RECHAZO"]
+        R1["\"No me interesa\""]
+        R2["\"Ya tengo alguien\""]
+    end
+
+    subgraph SILENCIO["🔇 SILENCIO"]
+        S1["No responde en 3 días"]
+    end
+
+    INTERESADO -->|"Quiere hablar"| AGENDAR
+
+    PRECIO -->|"¿Es gratis?"| GRATIS
+    PRECIO -->|"Sí, me interesa"| AGENDAR
+
+    DETALLE -->|"Quiero ver ejemplos"| EJEMPLOS
+    DETALLE -->|"Ok, hablemos"| AGENDAR
+
+    RECHAZO -->|"Tiene alguien"| SEGUIR
+    RECHAZO -->|"No es momento"| SEGUIR
+
+    SILENCIO -->|"7 días después"| SEGUIR
+
+    subgraph AGENDAR["📅 AGENDAR"]
+        A1["Proponer 2 horarios"]
+        A2["Confirmar por WhatsApp"]
+    end
+
+    subgraph GRATIS["🆓 AUDITORÍA GRATIS"]
+        G1["\"Sí, es gratuita\""]
+        G2["\"Sin compromiso, 15 min\""]
+    end
+
+    subgraph EJEMPLOS["📊 EJEMPLOS"]
+        X1["UTAP: -80% tiempo respuesta"]
+        X2["Paycool: +45% adopción"]
+    end
+
+    subgraph SEGUIR["🔄 SEGUIR EN 7 DÍAS"]
+        SF1["Enviar valor sin vender"]
+        SF2["Esperar momento correcto"]
+    end
+
+    AGENDAR --> REUNION
+    GRATIS --> AGENDAR
+    EJEMPLOS --> AGENDAR
+    SEGUIR -->|"7 días"| START
+
+    REUNION(["🤝 Reunión 15 min"])
+
+    classDef positive fill:#25d366,stroke:#1da851,color:#fff
+    classDef price fill:#e07b39,stroke:#c46a2e,color:#fff
+    classDef detail fill:#3d5a80,stroke:#2c4a6e,color:#fff
+    classDef reject fill:#dc2626,stroke:#b91c1c,color:#fff
+    classDef silence fill:#6b7a8d,stroke:#4a5568,color:#fff
+    classDef action fill:#2c4a6e,stroke:#3d5a80,color:#fff
+
+    class I1,I2 positive
+    class P1,P2 price
+    class D1,D2 detail
+    class R1,R2 reject
+    class S1 silence
+    class A1,A2,G1,G2,X1,X2 action
+      </div>
+      <div class="legend">
+        <h3>Leyenda</h3>
+        <div class="legend-items">
+          <div class="legend-item"><div class="legend-dot" style="background:#25d366"></div> Interesado</div>
+          <div class="legend-item"><div class="legend-dot" style="background:#e07b39"></div> Pregunta precio</div>
+          <div class="legend-item"><div class="legend-dot" style="background:#3d5a80"></div> Necesita detalle</div>
+          <div class="legend-item"><div class="legend-dot" style="background:#dc2626"></div> Rechazo</div>
+          <div class="legend-item"><div class="legend-dot" style="background:#6b7a8d"></div> Sin respuesta</div>
+          <div class="legend-item"><div class="legend-dot" style="background:#2c4a6e"></div> Acción a tomar</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- DIAGRAMA 4: TIMELINE SEMANAL -->
+  <div class="diagram-panel" id="panel-3">
+    <div class="diagram-card">
+      <h2>Timeline Semanal — Plan de Acción</h2>
+      <p class="desc">Plan día por día para conseguir 4 clientes la próxima semana. Cada día tiene tareas concretas y medibles.</p>
+      <div class="controls">
+        <button onclick="zoomIn(3)">+ Zoom</button>
+        <button onclick="zoomOut(3)">- Zoom</button>
+        <button onclick="resetZoom(3)">Reset</button>
+      </div>
+      <div class="mermaid" id="diagram-3">
+flowchart LR
+    subgraph LUNES["📅 LUNES"]
+        L1["🔍 10 contactos LinkedIn"]
+        L2["📱 10 mensajes personalizados"]
+        L3["📊 Registrar en CRM"]
+    end
+
+    subgraph MARTES["📅 MARTES"]
+        M1["📝 Publicar en 3 grupos"]
+        M2["💬 Comentar en posts"]
+        M3["📱 Responder interacciones"]
+    end
+
+    subgraph MIERCOLES["📅 MIÉRCOLES"]
+        W1["🚶 Visitar 2 negocios"]
+        W2["☕ Restaurantes/tiendas"]
+        W3["📋 Dejar tarjeta + QR"]
+    end
+
+    subgraph JUEVES["📅 JUEVES"]
+        J1["📸 10 DMs Instagram"]
+        J2["🎯 Negocios locales Cali"]
+        J3["💬 Comentar con valor"]
+    end
+
+    subgraph VIERNES["📅 VIERNES"]
+        V1["📞 Seguimiento leads"]
+        V2["📅 Agendar reuniones"]
+        V3["📧 Enviar propuestas"]
+    end
+
+    subgraph SABADO["📅 SÁBADO"]
+        S1["🤝 Reuniones/demos"]
+        S2["📋 Enviar propuestas"]
+        S3["🎉 Cerrar clientes"]
+    end
+
+    LUNES --> MARTES
+    MARTES --> MIERCOLES
+    MIERCOLES --> JUEVES
+    JUEVES --> VIERNES
+    VIERNES --> SABADO
+
+    subgraph META["🎯 META"]
+        MT1["10 mensajes/día"]
+        MT2["5 auditorías gratis"]
+        MT3["4 reuniones"]
+        MT4["1-2 clientes"]
+    end
+
+    classDef day fill:#2c4a6e,stroke:#3d5a80,color:#fff
+    classDef meta fill:#e8eef4,stroke:#3d5a80,color:#1a2332
+    classDef action fill:#1a2332,stroke:#3d5a80,color:#fff
+
+    class L1,L2,L3,M1,M2,M3,W1,W2,W3,J1,J2,J3,V1,V2,V3,S1,S2,S3 action
+    class MT1,MT2,MT3,MT4 meta
+      </div>
+      <div class="info-box">
+        <h3>Meta de la semana</h3>
+        <p><strong>10 mensajes diarios</strong> → 5 auditorías gratuitas → 4 reuniones → <strong>1-2 clientes cerrados</strong>. El objetivo es generar $2M-$5M COP en la primera semana.</p>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<script>
+mermaid.initialize({
+  startOnLoad: false,
+  theme: 'dark',
+  securityLevel: 'loose',
+  flowchart: { 
+    useMaxWidth: true, 
+    htmlLabels: true,
+    curve: 'basis'
+  },
+  sequence: {
+    useMaxWidth: true,
+    diagramMarginX: 30,
+    diagramMarginY: 20,
+    actorMargin: 80,
+    width: 200,
+    height: 65,
+    boxMargin: 10,
+    boxTextMargin: 5,
+    noteMargin: 10,
+    messageMargin: 40,
+    mirrorActors: true,
+    useMaxWidth: true
+  },
+  themeVariables: {
+    primaryColor: '#2c4a6e',
+    primaryTextColor: '#fff',
+    primaryBorderColor: '#3d5a80',
+    lineColor: '#6b7a8d',
+    secondaryColor: '#1a2332',
+    tertiaryColor: '#e8eef4',
+    noteBkgColor: '#e8eef4',
+    noteTextColor: '#1a2332',
+    noteBorderColor: '#3d5a80',
+    actorBkg: '#2c4a6e',
+    actorTextColor: '#fff',
+    actorBorder: '#3d5a80',
+    signalColor: '#6b7a8d',
+    signalTextColor: '#e2e8f0'
+  }
+});
+
+const zoomLevels = [1, 1, 1, 1];
+
+async function renderDiagrams() {
+  const panels = document.querySelectorAll('.mermaid');
+  for (let i = 0; i < panels.length; i++) {
+    const el = panels[i];
+    const graphDefinition = el.textContent;
+    const id = 'mermaid-graph-' + i;
+    try {
+      const { svg } = await mermaid.render(id, graphDefinition);
+      el.innerHTML = svg;
+    } catch (e) {
+      console.error('Mermaid render error:', e);
+      el.innerHTML = '<p style="color:#dc2626">Error rendering diagram</p>';
+    }
+  }
+}
+
+function showDiagram(index) {
+  document.querySelectorAll('.diagram-panel').forEach((p, i) => {
+    p.classList.toggle('active', i === index);
+  });
+  document.querySelectorAll('.tab').forEach((t, i) => {
+    t.classList.toggle('active', i === index);
+  });
+}
+
+function zoomIn(index) {
+  zoomLevels[index] = Math.min(zoomLevels[index] * 1.2, 3);
+  applyZoom(index);
+}
+
+function zoomOut(index) {
+  zoomLevels[index] = Math.max(zoomLevels[index] / 1.2, 0.3);
+  applyZoom(index);
+}
+
+function resetZoom(index) {
+  zoomLevels[index] = 1;
+  applyZoom(index);
+}
+
+function applyZoom(index) {
+  const panel = document.getElementById('diagram-' + index);
+  const svg = panel.querySelector('svg');
+  if (svg) {
+    svg.style.transform = 'scale(' + zoomLevels[index] + ')';
+    svg.style.transformOrigin = 'top center';
+  }
+}
+
+renderDiagrams();
+</script>
+</body>
+</html>

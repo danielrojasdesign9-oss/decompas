@@ -1,0 +1,106 @@
+%%{init: {'theme': 'dark', 'themeVariables': {'primaryColor': '#2c4a6e', 'primaryTextColor': '#fff', 'primaryBorderColor': '#3d5a80', 'lineColor': '#6b7a8d', 'secondaryColor': '#1a2332', 'tertiaryColor': '#e8eef4'}}}%%
+flowchart TD
+    subgraph BUSQUEDA["🔍 BÚSQUEDA DE LEADS"]
+        A1[LinkedIn: Contactos con negocios] 
+        A2[Instagram: Negocios locales Cali]
+        A3[WhatsApp: Grupos de emprendedores]
+        A4[Físico: Restaurantes, clínicas, tiendas]
+    end
+
+    subgraph CONTACTO["📞 PRIMER CONTACTO"]
+        B1{¿Canal?}
+        B2[LinkedIn: Mensaje profesional]
+        B3[WhatsApp: Mensaje cercano]
+        B4[Instagram: DM casual]
+        B5[Físico: Visita directa]
+    end
+
+    subgraph RESPUESTA["💬 RESPUESTA DEL LEAD"]
+        C1{¿Qué dice?}
+        C2["Sí me interesa"]
+        C3["¿Cuánto cobra?"]
+        C4["Necesito pensarlo"]
+        C5["No responde"]
+    end
+
+    subgraph AGENDAMIENTO["📅 AGENDAMIENTO"]
+        D1[Proponer 2 horarios]
+        D2[Confirmar por WhatsApp]
+        D3[Enviar recordatorio 1h antes]
+    end
+
+    subgraph REUNION["🤝 REUNIÓN 15 MIN"]
+        E1["0-3 min: Apertura y qué hago"]
+        E2["3-8 min: Escucha activa (5 preguntas)"]
+        E3["8-12 min: Diagnóstico concreto"]
+        E4["12-15 min: Cierre y siguiente paso"]
+    end
+
+    subgraph PROPUESTA["📋 PROPUESTA"]
+        F1[Generar PDF con propuesta]
+        F2[Enviar por WhatsApp/email]
+        F3[Seguimiento en 48h]
+    end
+
+    subgraph CLIENTE["🎉 CLIENTE"]
+        G1[Firmar contrato]
+        G2[Cobrar 50% anticipo]
+        G3[Iniciar proyecto]
+    end
+
+    BUSQUEDA --> CONTACTO
+    CONTACTO --> B1
+    B1 -->|LinkedIn| B2
+    B1 -->|WhatsApp| B3
+    B1 -->|Instagram| B4
+    B1 -->|Físico| B5
+    
+    B2 --> RESPUESTA
+    B3 --> RESPUESTA
+    B4 --> RESPUESTA
+    B5 --> RESPUESTA
+    
+    RESPUESTA --> C1
+    C1 -->|"Sí, me interesa"| C2
+    C1 -->|"¿Cuánto cobra?"| C3
+    C1 -->|"Necesito pensarlo"| C4
+    C1 -->|"No responde (3 días)"| C5
+    
+    C2 --> AGENDAMIENTO
+    C3 -->|"La auditoría es gratis"| C2
+    C4 -->|"Sin presión, aquí estoy"| C5
+    
+    C5 -->|"Seguimiento 7 días"| CONTACTO
+    
+    AGENDAMIENTO --> D1
+    D1 --> D2
+    D2 --> D3
+    D3 --> REUNION
+    
+    REUNION --> E1
+    E1 --> E2
+    E2 --> E3
+    E3 --> E4
+    
+    E4 -->|"Quiere propuesta"| PROPUESTA
+    E4 -->|"No está listo"| C5
+    
+    PROPUESTA --> F1
+    F1 --> F2
+    F2 --> F3
+    F3 -->|"Acepta"| CLIENTE
+    F3 -->|"Rechaza"| C5
+
+    classDef search fill:#1a2332,stroke:#3d5a80,color:#fff
+    classDef contact fill:#2c4a6e,stroke:#3d5a80,color:#fff
+    classDef response fill:#e8eef4,stroke:#3d5a80,color:#1a2332
+    classDef meeting fill:#25d366,stroke:#1da851,color:#fff
+    classDef proposal fill:#e07b39,stroke:#c46a2e,color:#fff
+    classDef client fill:#2c4a6e,stroke:#3d5a80,color:#fff
+
+    class A1,A2,A3,A4 search
+    class B1,B2,B3,B4,B5 contact
+    class C1,C2,C3,C4,C5 response
+    class D1,D2,D3,E1,E2,E3,E4 meeting
+    class F1,F2,F3 proposal
+    class G1,G2,G3 client

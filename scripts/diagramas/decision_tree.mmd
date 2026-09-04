@@ -1,0 +1,126 @@
+%%{init: {'theme': 'dark', 'themeVariables': {'primaryColor': '#2c4a6e', 'primaryTextColor': '#fff', 'primaryBorderColor': '#3d5a80', 'lineColor': '#6b7a8d', 'secondaryColor': '#1a2332', 'tertiaryColor': '#e8eef4'}}}%%
+flowchart TD
+    START([🎯 Lead recibe mensaje]) --> RESP{¿Qué responde?}
+
+    RESP -->|"% positive"| INTERESADO
+    RESP -->|"¿Cuánto cobra?"| PRECIO
+    RESP -->|"¿Qué haces exactamente?"| DETALLE
+    RESP -->|"No me interesa"| RECHAZO
+    RESP -->|"No responde"| SILENCIO
+
+    subgraph INTERESADO["✅ INTERESADO"]
+        I1["\"Sí, me interesa\""]
+        I2["\"Dale, cuéntame más\""]
+        I3["\"¿Cuándo podemos hablar?\""]
+    end
+
+    subgraph PRECIO["💰 PRECIO"]
+        P1["\"¿Cuánto cobra?\""]
+        P2["\"¿Es caro?\""]
+        P3["\"¿Hay opciones?\""]
+    end
+
+    subgraph DETALLE["❓ DETALLE"]
+        D1["\"¿Qué haces exactamente?\""]
+        D2["\"¿Cómo funciona?\""]
+        D3["\"¿Qué incluye?\""]
+    end
+
+    subgraph RECHAZO["❌ RECHAZO"]
+        R1["\"No me interesa\""]
+        R2["\"No es para mí\""]
+        R3["\"Ya tengo alguien\""]
+    end
+
+    subgraph SILENCIO["🔇 SILENCIO"]
+        S1["No responde en 3 días"]
+        S2["Lee pero no responde"]
+    end
+
+    INTERESADO --> RESP_I{¿Quiere hablar?}
+    RESP_I -->|"Sí"| AGENDAR
+    RESP_I -->|"Primero cuéntame"| EXPLICAR
+
+    PRECIO --> RESP_P{¿Qué responde?}
+    RESP_P -->|"¿Es gratis?"| GRATIS
+    RESP_P -->|"Sí, me interesa"| AGENDAR
+    RESP_P -->|"Es caro"| VALOR
+
+    DETALLE --> RESP_D{¿Qué necesita?}
+    RESP_D -->|"Quiero ver ejemplos"| EJEMPLOS
+    RESP_D -->|"Ok, hablemos"| AGENDAR
+
+    RECHAZO --> RESP_R{¿Por qué?}
+    RESP_R -->|"Tiene alguien"| SEGUIR
+    RESP_R -->|"No es momento"| SEGUIR
+    RESP_R -->|"No le interesa"| AGRADECER
+
+    SILENCIO --> RESP_S{¿Después de 7 días?}
+    RESP_S -->|"Todavía no"| SEGUIR
+    RESP_S -->|"Responde"| RESP
+
+    subgraph AGENDAR["📅 AGENDAR"]
+        A1["Proponer 2 horarios"]
+        A2["Confirmar por WhatsApp"]
+        A3["Enviar recordatorio"]
+    end
+
+    subgraph EXPLICAR["💡 EXPLICAR"]
+        E1["\"Ayudo a negocios de Cali\""]
+        E2["\"Automatizo WhatsApp 24/7\""]
+        E3["\"La auditoría es gratis\""]
+        E4["Volver a INTERESADO"]
+    end
+
+    subgraph GRATIS["🆓 GRATIS"]
+        G1["\"Sí, la auditoría es gratuita\""]
+        G2["\"Sin compromiso, 15 minutos\""]
+        G3["Volver a INTERESADO"]
+    end
+
+    subgraph VALOR["💎 VALOR"]
+        V1["\"El 70% de clientes se enfrían\""]
+        V2["\"Cuánto pierdes sin responder\""]
+        V3["\"La auditoría es gratis\""]
+        V4["Volver a INTERESADO"]
+    end
+
+    subgraph EJEMPLOS["📊 EJEMPLOS"]
+        X1["Mostrar caso UTAP: -80% tiempo"]
+        X2["Mostrar caso Paycool: +45% adopción"]
+        X3["Volver a INTERESADO"]
+    end
+
+    subgraph SEGUIR["🔄 SEGUIR"]
+        SF1["Seguimiento en 7 días"]
+        SF2["Enviar valor sin vender"]
+        SF3["Esperar momento correcto"]
+    end
+
+    subgraph AGRADECER["🙏 AGRADECER"]
+        AR1["\"Gracias por tu tiempo\""]
+        AR2["\"Si cambias de opinión, aquí estoy\""]
+    end
+
+    AGENDAR --> REUNION
+    EXPLICAR --> RESP
+    GRATIS --> RESP
+    VALOR --> RESP
+    EJEMPLOS --> RESP
+    SEGUIR -->|"7 días después"| START
+
+    REUNION([🤝 Reunión 15 min])
+
+    classDef positive fill:#25d366,stroke:#1da851,color:#fff
+    classDef price fill:#e07b39,stroke:#c46a2e,color:#fff
+    classDef detail fill:#3d5a80,stroke:#2c4a6e,color:#fff
+    classDef reject fill:#dc2626,stroke:#b91c1c,color:#fff
+    classDef silence fill:#6b7a8d,stroke:#4a5568,color:#fff
+    classDef action fill:#2c4a6e,stroke:#3d5a80,color:#fff
+
+    class I1,I2,I3 positive
+    class P1,P2,P3 price
+    class D1,D2,D3 detail
+    class R1,R2,R3 reject
+    class S1,S2 silence
+    class A1,A2,A3,E1,E2,E3,G1,G2,V1,V2,X1,X2 action
