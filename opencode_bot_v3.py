@@ -10,7 +10,7 @@ from datetime import datetime
 # Configuración
 TOKEN = os.getenv("DISCORD_BOT_TOKEN", "")
 if not TOKEN:
-    print("⚠️ DISCORD_BOT_TOKEN no configurado. Exporta la variable de entorno.")
+    print("DISCORD_BOT_TOKEN no configurado. Exporta la variable de entorno.")
     print("   Ejemplo: $env:DISCORD_BOT_TOKEN='tu_token_aqui'")
 WEBHOOK_URL = "http://localhost:8765"
 CHANNEL_ID = 1544195974023352415  # Canal general
