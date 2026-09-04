@@ -108,7 +108,7 @@ async def encendido(ctx):
         
         # Iniciar el servidor en background (shell=True para encontrar opencode en PATH)
         opencode_process = subprocess.Popen(
-            f"npx opencode-ai web --port {OPENCODE_PORT} --hostname 0.0.0.0",
+            f"set OPENCODE_SERVER_USERNAME=danielremoto && set OPENCODE_SERVER_PASSWORD=makiMa12* && npx opencode-ai web --port {OPENCODE_PORT} --hostname 0.0.0.0",
             stdout=subprocess.PIPE,
             stderr=subprocess.PIPE,
             shell=True,
