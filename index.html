@@ -4,438 +4,238 @@
 <meta charset="utf-8"/>
 <meta name="viewport" content="width=device-width,initial-scale=1"/>
 <title>Daniel Rojas — Consultor de IA y Diseño para Pymes</title>
-<meta name="description" content="Consultor de IA y diseño para Pymes. Auditoría de procesos primero, código después. Una conversación estratégica para encontrar dónde tu negocio pierde tiempo y dinero."/>
+<meta name="description" content="Consultor de IA y diseño para Pymes. Encuentro dónde tu negocio pierde tiempo y dinero, y lo resolvemos con IA y diseño a tu medida."/>
 <meta property="og:title" content="Daniel Rojas — Consultor de IA y Diseño"/>
-<meta property="og:description" content="Auditoría de procesos primero, código después. Agentes de ventas 24/7, automatización conectada y diseño con identidad para Pymes."/>
+<meta property="og:description" content="Agentes de ventas 24/7, automatización conectada y diseño con identidad para Pymes."/>
 <meta name="og:url" content="https://danielrojasdesign.netlify.app"/>
 <link rel="icon" type="image/svg+xml" href="/favicon.svg"/>
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet"/>
 <style>
-:root{--ink:#16222e;--muted:#5b6b7c;--cream:#faf7f2;--card:#ffffff;--amber:#e07b39;--amber-soft:#fdeee2;
---green:#2e7d5b;--green-soft:#e8f3ee;--line:#e9e2d7;}
+:root{
+  --ink:#1a2332;
+  --ink-light:#2d3a4a;
+  --muted:#6b7a8d;
+  --cream:#f8f6f3;
+  --card:#ffffff;
+  --accent:#3d5a80;
+  --accent-soft:#e8eef4;
+  --line:#e2ddd5;
+}
 *{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth}
-body{font-family:'Inter',system-ui,sans-serif;background:var(--cream);color:var(--ink);line-height:1.6;-webkit-font-smoothing:antialiased}
-.serif{font-family:'Fraunces',Georgia,serif}
-.wrap{max-width:1080px;margin:0 auto;padding:0 20px}
+body{font-family:'DM Sans',system-ui,sans-serif;background:var(--cream);color:var(--ink);line-height:1.7;-webkit-font-smoothing:antialiased}
+.wrap{max-width:960px;margin:0 auto;padding:0 24px}
 a{color:inherit}
-/* NAV */
-nav{position:sticky;top:0;z-index:50;background:rgba(250,247,242,.92);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
-nav .wrap{display:flex;align-items:center;justify-content:space-between;height:64px}
-.brand{display:flex;align-items:center;gap:10px;font-weight:800;letter-spacing:.02em}
-.brand .dot{width:12px;height:12px;border-radius:3px;background:var(--amber)}
-.navlinks{display:flex;gap:26px;font-size:.9rem;font-weight:600}
-.navlinks a{text-decoration:none;color:var(--muted);transition:color .15s}
+nav{position:sticky;top:0;z-index:50;background:rgba(248,246,243,.94);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+nav .wrap{display:flex;align-items:center;justify-content:space-between;height:60px}
+.brand{font-weight:700;font-size:1rem;letter-spacing:.03em;color:var(--ink)}
+.navlinks{display:flex;gap:28px;font-size:.88rem;font-weight:500}
+.navlinks a{text-decoration:none;color:var(--muted);transition:color .2s}
 .navlinks a:hover{color:var(--ink)}
-.btn{display:inline-block;background:var(--ink);color:#fff;text-decoration:none;font-weight:700;
-padding:12px 22px;border-radius:10px;font-size:.95rem;transition:transform .15s,background .15s}
-.btn:hover{transform:translateY(-2px)}
-.btn.amber{background:var(--amber)}
-.btn.wa{background:#25d366;color:#062b16}
+.btn{display:inline-block;background:var(--ink);color:#fff;text-decoration:none;font-weight:600;
+padding:14px 28px;border-radius:8px;font-size:.92rem;transition:all .2s;border:none;cursor:pointer}
+.btn:hover{background:var(--ink-light);transform:translateY(-1px)}
+.btn.outline{background:transparent;color:var(--ink);border:1.5px solid var(--ink)}
+.btn.outline:hover{background:var(--ink);color:#fff}
+.btn.wa{background:#25d366;color:#fff}
+.btn.wa:hover{background:#1da851}
 @media(max-width:760px){.navlinks{display:none}}
-/* HERO */
-.hero{padding:84px 0 70px;text-align:center}
-.tag{display:inline-block;background:var(--amber-soft);color:var(--amber);font-size:.72rem;font-weight:700;
-text-transform:uppercase;letter-spacing:.1em;padding:6px 14px;border-radius:999px}
-h1{font-size:clamp(2.2rem,5.5vw,3.6rem);line-height:1.1;margin:22px 0 18px;letter-spacing:-.01em}
-.hero p{max-width:640px;margin:0 auto 30px;color:var(--muted);font-size:1.1rem}
-.ctas{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
-.proof{margin-top:38px;display:flex;gap:12px;justify-content:center;flex-wrap:wrap;color:var(--muted);font-size:.85rem}
-.proof span{padding:8px 14px;background:var(--card);border:1px solid var(--line);border-radius:999px}
-/* SECTION HEAD */
+.hero{padding:100px 0 80px;text-align:center}
+.tag{display:inline-block;background:var(--accent-soft);color:var(--accent);font-size:.78rem;font-weight:600;
+letter-spacing:.06em;padding:8px 16px;border-radius:6px;margin-bottom:24px}
+h1{font-size:clamp(2rem,5vw,3.2rem);line-height:1.15;margin:0 0 20px;font-weight:700;letter-spacing:-.02em}
+.hero p{max-width:580px;margin:0 auto 36px;color:var(--muted);font-size:1.05rem}
+.ctas{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
 .section{padding:80px 0}
-.section h2{font-size:clamp(1.7rem,3.5vw,2.5rem);text-align:center;margin-bottom:14px}
-.section .lead{text-align:center;color:var(--muted);max-width:620px;margin:0 auto 44px}
-/* PROBLEMA */
-.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:18px}
-.stat{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:26px;text-align:center}
-.stat b{display:block;font-size:2rem;color:var(--amber);font-weight:800}
-.stat span{font-size:.9rem;color:var(--muted)}
-/* SERVICIOS */
-.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:20px}
-.svc{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:28px;transition:transform .18s}
-.svc:hover{transform:translateY(-4px)}
-.svc .ico{width:44px;height:44px;border-radius:10px;background:var(--amber-soft);display:flex;align-items:center;justify-content:center;font-size:1.3rem;margin-bottom:16px}
-.svc h3{font-size:1.1rem;margin-bottom:8px}
-.svc p{color:var(--muted);font-size:.92rem}
-.svc .mini{margin-top:14px;font-size:.8rem;color:var(--green);font-weight:600}
-/* CALCULADORA */
-.calc-bg{background:var(--card);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
-.calc-card{background:#fff;border:1px solid var(--line);border-radius:18px;padding:32px;box-shadow:0 12px 34px rgba(22,34,46,.07)}
-label{display:block;font-weight:600;font-size:.9rem;margin:22px 0 8px}
-.sectors{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:10px}
-.sector{border:2px solid var(--line);background:#fff;border-radius:12px;padding:14px;cursor:pointer;text-align:left;font:inherit;color:var(--ink);transition:border-color .15s,transform .15s}
-.sector:hover{transform:translateY(-2px)}
-.sector.active{border-color:var(--amber);background:var(--amber-soft)}
-.sector b{display:block;font-size:.9rem}
-.sector span{font-size:.75rem;color:var(--muted)}
-.row{display:grid;grid-template-columns:1fr 1fr;gap:18px}
-@media(max-width:640px){.row{grid-template-columns:1fr}}
-.input{border:2px solid var(--line);border-radius:10px;padding:12px 14px;font-size:1.05rem;width:100%;font-family:inherit;background:#fff;color:var(--ink)}
-.input:focus{outline:none;border-color:var(--amber)}
-.rate-row{display:flex;gap:8px}
-.rate-row .input:first-child{flex:1}
-.rate-row select.input{max-width:96px;cursor:pointer}
-.hint{font-size:.78rem;color:var(--muted);margin-top:5px}
-.results{margin-top:26px;display:none;gap:16px;grid-template-columns:repeat(auto-fit,minmax(200px,1fr))}
-.stat2{background:var(--green-soft);border:1px solid #cfe6da;border-radius:14px;padding:20px;text-align:center}
-.stat2 b{display:block;font-size:1.5rem;color:var(--green);font-weight:800}
-.stat2 span{font-size:.82rem;color:var(--muted)}
-.stat2.alt{background:var(--amber-soft);border-color:#f5d8c3}
-.stat2.alt b{color:var(--amber)}
-.solution{margin-top:22px;display:none;background:var(--ink);color:#fff;border-radius:14px;padding:22px 24px}
-.solution h3{font-size:1.05rem;margin-bottom:8px}
-.solution p{font-size:.92rem;color:#cdd7e0}
-.note{font-size:.78rem;color:var(--muted);margin-top:12px;text-align:center}
-/* DIAGNOSTICO */
-.diag-bg{background:var(--ink);color:#fff}
-.diag-bg .section .lead{color:#aeb8c2}
-.diag-form{max-width:560px;margin:0 auto;background:#1d2b39;border-radius:18px;padding:32px}
-.diag-form label{color:#cdd7e0}
-.diag-form .input{background:#14202c;border-color:#2c3b4c;color:#fff}
-.diag-form .input:focus{border-color:var(--amber)}
-/* CASOS */
-.cases{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:20px}
-.case{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:26px;display:flex;flex-direction:column}
-.case .result{font-size:1.6rem;color:var(--green);font-weight:800;margin-bottom:10px}
-.case h3{font-size:1rem;margin-bottom:8px}
-.case p{color:var(--muted);font-size:.9rem}
-/* PILARES */
-.pilares{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:20px}
-.pilar{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:26px}
-.pilar h3{font-size:1.05rem;margin-bottom:8px}
-.pilar p{color:var(--muted);font-size:.9rem}
-.pilar .n{font-size:2rem;color:var(--amber);font-weight:800;display:block;margin-bottom:8px}
-/* CTA FINAL */
-.final{text-align:center;padding:90px 0}
-.final h2{font-size:clamp(1.8rem,4vw,2.8rem);margin-bottom:16px}
-.final p{color:var(--muted);max-width:560px;margin:0 auto 28px}
-/* FOOTER */
-footer{border-top:1px solid var(--line);padding:40px 0;text-align:center;color:var(--muted);font-size:.85rem}
-footer .brand{justify-content:center;margin-bottom:10px;color:var(--ink)}
-footer a{color:var(--amber);font-weight:600;text-decoration:none}
+.section h2{font-size:clamp(1.6rem,3.5vw,2.3rem);text-align:center;margin-bottom:16px;font-weight:700}
+.section .lead{text-align:center;color:var(--muted);max-width:580px;margin:0 auto 48px;font-size:1rem}
+.services{display:grid;grid-template-columns:1fr;gap:24px;max-width:720px;margin:0 auto}
+.svc{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:32px;transition:transform .2s}
+.svc:hover{transform:translateY(-2px)}
+.svc h3{font-size:1.15rem;margin-bottom:10px;font-weight:600}
+.svc p{color:var(--muted);font-size:.95rem;line-height:1.7}
+.cases{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:24px}
+.case{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:28px;display:flex;flex-direction:column}
+.case .tag-sm{font-size:.72rem;font-weight:600;color:var(--accent);text-transform:uppercase;letter-spacing:.08em;margin-bottom:12px}
+.case h3{font-size:1.05rem;margin-bottom:10px;font-weight:600}
+.case p{color:var(--muted);font-size:.9rem;line-height:1.6}
+.pilares{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:24px}
+.pilar{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:28px}
+.pilar h3{font-size:1.05rem;margin-bottom:10px;font-weight:600}
+.pilar p{color:var(--muted);font-size:.9rem;line-height:1.6}
+.cta-bg{background:var(--ink);color:#fff}
+.cta-bg .section .lead{color:#a0aec0}
+.cta-bg h2{color:#fff}
+.cta-form{max-width:520px;margin:0 auto;background:var(--ink-light);border-radius:14px;padding:32px}
+.cta-form label{color:#cbd5e0;display:block;font-weight:500;font-size:.88rem;margin:18px 0 8px}
+.cta-form .input{background:#1a2332;border:1.5px solid #3d4f63;border-radius:8px;padding:12px 14px;font-size:.95rem;width:100%;font-family:inherit;color:#fff}
+.cta-form .input:focus{outline:none;border-color:var(--accent)}
+.cta-form .btn{width:100%;margin-top:20px}
+.final{text-align:center;padding:100px 0}
+.final h2{font-size:clamp(1.7rem,4vw,2.6rem);margin-bottom:16px;font-weight:700}
+.final p{color:var(--muted);max-width:520px;margin:0 auto 32px;font-size:1rem}
+footer{border-top:1px solid var(--line);padding:40px 0;text-align:center;color:var(--muted);font-size:.82rem}
+footer .brand{margin-bottom:8px;color:var(--ink);font-weight:700}
 </style>
 </head>
 <body>
 
 <nav>
   <div class="wrap">
-    <div class="brand"><span class="dot"></span>DANIEL ROJAS</div>
+    <div class="brand">DANIEL ROJAS</div>
     <div class="navlinks">
       <a href="#servicios">Servicios</a>
-      <a href="#calculadora">Calculadora</a>
-      <a href="#conversacion">Conversación</a>
+      <a href="#casos">Casos</a>
       <a href="#proceso">Proceso</a>
+      <a href="#contacto">Contacto</a>
     </div>
-    <a class="btn amber" href="#conversacion">Agendar conversación</a>
+    <a class="btn" href="#contacto">Hablemos</a>
   </div>
 </nav>
 
-<!-- HERO -->
 <header class="hero">
   <div class="wrap">
     <span class="tag">Consultor de IA y Diseño para Pymes</span>
-    <h1 class="serif">Entiendo tu negocio a fondo.<br/>Después le aplico IA y diseño.</h1>
-    <p>No vendo "páginas web". Trabajo contigo para encontrar dónde tu negocio pierde tiempo y dinero, y lo resolvemos con IA y diseño a tu medida — sin obligarte a cambiar de software.</p>
+    <h1>Tu negocio tiene un problema de tiempo.<br/>Yo tengo la solución.</h1>
+    <p>No vendo páginas web ni automatizaciones por vender. Me siento contigo, entiendo cómo opera tu negocio, y juntos encontramos dónde la IA y el diseño pueden hacer que todo funcione mejor.</p>
     <div class="ctas">
-      <a class="btn amber" href="#conversacion">Agendar una conversación</a>
-      <a class="btn" href="#calculadora">Calcular mi impacto →</a>
-    </div>
-    <div class="proof">
-      <span>Auditoría primero, código después</span>
-      <span>Agentes 24/7</span>
-      <span>Relación de socio, no de proveedor</span>
+      <a class="btn" href="#contacto">Agendar una conversación</a>
+      <a class="btn outline" href="#casos">Ver casos de estudio</a>
     </div>
   </div>
 </header>
 
-<!-- PROBLEMA -->
-<section class="section" id="problema">
+<section class="section" id="servicios">
   <div class="wrap">
-    <h2 class="serif">Cada semana, tu negocio pierde dinero que nadie está midiendo</h2>
-    <p class="lead">Los clientes ya deciden por teléfono antes de llegar a tu puerta. Si tu negocio no responde en el momento exacto, la competencia lo hace por ti. Juntos vamos a ver dónde pasa esto.</p>
-    <div class="stats">
-      <div class="stat"><b>&gt;15 min</b><span>tardan muchas Pymes en responder un mensaje de WhatsApp en horario hábil</span></div>
-      <div class="stat"><b>53%</b><span>de las visitas móviles se pierden si la web tarda más de 3 segundos en cargar</span></div>
-      <div class="stat"><b>70%</b><span>de los prospectos se enfrían cuando no reciben seguimiento en las primeras 24 horas</span></div>
-    </div>
-  </div>
-</section>
-
-<!-- SERVICIOS -->
-<section class="section" id="servicios" style="padding-top:0">
-  <div class="wrap">
-    <h2 class="serif">Soluciones que venden mientras tu equipo trabaja</h2>
-    <p class="lead">Tres frentes para cerrar tus fugas de conversión. Siempre conectados a lo que ya usas.</p>
-    <div class="cards">
+    <h2>Qué puedo hacer por tu negocio</h2>
+    <p class="lead">Cada negocio es diferente, pero la mayoría pierde tiempo y dinero en los mismos puntos. Estas son las tres áreas donde puedo ayudarte.</p>
+    <div class="services">
       <div class="svc">
-        <div class="ico">⚡</div>
-        <h3>Agentes de ventas 24/7</h3>
-        <p>Te construyo un asistente de IA en WhatsApp y tu web que responde al instante, cotiza, agenda y captura cada lead — incluso a las 3 a.m.</p>
-        <p class="mini">→ Recupera los leads que se pierden fuera de horario</p>
+        <h3>Agentes de atención y ventas</h3>
+        <p>Un asistente de IA que responde WhatsApp, web y redes sociales las 24 horas. Atiende consultas, cotiza, agenda citas y captura leads mientras duermes. No reemplaza a tu equipo, lo complementa.</p>
       </div>
       <div class="svc">
-        <div class="ico">🔗</div>
-        <h3>Automatización conectada</h3>
-        <p>Conecto la IA a tu CRM, inventario o bases de datos mediante agentes MCP. Tu software actual sigue siendo el dueño de la verdad.</p>
-        <p class="mini">→ Sin cambiar de sistema, sin migraciones dolorosas</p>
+        <h3>Automatización de procesos</h3>
+        <p>Conecto tu CRM, inventario, correo y herramientas actuales para que se hablen entre sí. Lo que antes tomaba horas de copiar y pegar, ahora funciona solo. Sin cambiar de sistema, sin migraciones.</p>
       </div>
       <div class="svc">
-        <div class="ico">🎨</div>
-        <h3>Diseño con identidad</h3>
-        <p>Adiós a la estética genérica de IA. Diseño tu presencia digital con paletas y tipografías profesionales que generan confianza.</p>
-        <p class="mini">→ Tu negocio se ve tan profesional como tus servicios</p>
+        <h3>Diseño con identidad propia</h3>
+        <p>Tu presencia digital debe verse tan profesional como lo que ofreces. Diseño interfaces, páginas y sistemas visuales que generan confianza desde el primer vistazo. Nada de estética genérica.</p>
       </div>
     </div>
   </div>
 </section>
 
-<!-- CALCULADORA -->
-<section class="section calc-bg" id="calculadora">
+<section class="section" id="casos" style="background:var(--card);border-top:1px solid var(--line);border-bottom:1px solid var(--line)">
   <div class="wrap">
-    <h2 class="serif">¿Cuánto te está costando no usar IA?</h2>
-    <p class="lead">Selecciona tu sector y calcula en 10 segundos cuántas horas y pesos puedes recuperar automatizando tareas repetitivas.</p>
-    <div class="calc-card">
-      <label>¿A qué se dedica tu negocio?</label>
-      <div class="sectors" id="sectors"></div>
-      <div class="row">
-        <div>
-          <label for="employees">Personas en tu equipo</label>
-          <input class="input" id="employees" type="number" min="1" max="500" value="3"/>
-        </div>
-        <div>
-          <label for="hours">Horas semanales por persona en tareas repetitivas</label>
-          <input class="input" id="hours" type="number" min="0" max="80" step="0.5"/>
-          <p class="hint" id="hoursHint"></p>
-        </div>
+    <h2>Casos de estudio</h2>
+    <p class="lead">Proyectos reales donde la IA y el diseño resolvieron problemas concretos.</p>
+    <div class="cases">
+      <div class="case">
+        <span class="tag-sm">Fintech · App móvil</span>
+        <h3>RappiPay</h3>
+        <p>Diseño de interfaz para una billetera digital. El reto era hacer que operaciones financieras complejas se sintieran simples y seguras para el usuario promedio.</p>
       </div>
-      <div class="row">
-        <div>
-          <label for="rate">Costo por hora de tu equipo</label>
-          <div class="rate-row">
-            <input class="input" id="rate" type="number" min="3000" max="200000" value="8000"/>
-            <select class="input" id="currency" aria-label="Moneda">
-              <option value="COP" selected>COP</option>
-              <option value="USD">USD</option>
-              <option value="MXN">MXN</option>
-            </select>
-          </div>
-          <p class="hint" id="rateHint">Costo por hora en COP · tasas de referencia</p>
-        </div>
-        <div>
-          <label for="cta24">Leads perdidos fuera de horario al mes</label>
-          <input class="input" id="cta24" type="number" min="0" max="10000" value="15"/>
-          <p class="hint">Personas que contactan cuando nadie responde</p>
-        </div>
+      <div class="case">
+        <span class="tag-sm">Legaltech · Plataforma web</span>
+        <h3>E-Signer</h3>
+        <p>Plataforma de firma electrónica de documentos. Diseñé el flujo completo de carga, revisión y firma, reduciendo los pasos necesarios para cerrar un contrato.</p>
       </div>
-      <div class="results" id="results">
-        <div class="stat2"><b id="rHours">0</b><span>horas recuperadas / mes</span></div>
-        <div class="stat2 alt"><b id="rMoney">$0</b><span>ahorro estimado / mes</span></div>
-        <div class="stat2"><b id="rLeads">0</b><span>leads recuperados / mes</span></div>
+      <div class="case">
+        <span class="tag-sm">SaaS · Herramienta de productividad</span>
+        <h3>Silin</h3>
+        <p>Sistema de diseño para una plataforma de gestión de equipos. Creé componentes reutilizables que aceleraron el desarrollo del producto sin sacrificar consistencia visual.</p>
       </div>
-      <div class="solution" id="solution">
-        <h3 class="serif" id="sTitle"></h3>
-        <p id="sDesc"></p>
+      <div class="case">
+        <span class="tag-sm">Retail · E-commerce</span>
+        <h3>Paycool</h3>
+        <p>Diseño de tienda online para una marca de moda. El enfoque estuvo en la experiencia de compra móvil y en reflejar la identidad de la marca en cada pantalla.</p>
       </div>
-      <p class="note">Estimado conservador automatizando el 60% del tiempo repetitivo. Cada negocio es diferente: esto es solo un punto de partida para nuestra conversación.</p>
+      <div class="case">
+        <span class="tag-sm">Edtech · Plataforma educativa</span>
+        <h3>Innu</h3>
+        <p>Interfaz para una plataforma de cursos online. Diseñé el dashboard del estudiante y el reproductor de video priorizando la claridad y el aprendizaje continuo.</p>
+      </div>
+      <div class="case">
+        <span class="tag-sm">Fintech · Comparador</span>
+        <h3>Linklight</h3>
+        <p>Comparador de productos financieros. El diseño debía transmitir transparencia y confianza para que el usuario pudiera tomar decisiones informadas sin sentirse abrumado.</p>
+      </div>
     </div>
   </div>
 </section>
 
-<!-- CONVERSACION -->
-<section class="section diag-bg" id="conversacion">
+<section class="section" id="proceso">
   <div class="wrap">
-    <h2 class="serif">Conversación estratégica de 15 minutos</h2>
-    <p class="lead">Sin costo y sin compromiso. Hablamos de tu negocio, identificamos tus dolores y buscamos juntos si puedo ayudarte como socio. Nada de promesas mágicas: primero escucho.</p>
-    <form class="diag-form" id="diagForm">
-      <label for="dNegocio">Nombre de tu negocio</label>
-      <input class="input" id="dNegocio" type="text" placeholder="Ej. Taquería El Buen Sabor" required/>
-      <label for="dWeb">Sitio web (si tienes)</label>
-      <input class="input" id="dWeb" type="url" placeholder="https://..." />
-      <label for="dWa">Tu WhatsApp (con indicativo, ej. 300 123 4567)</label>
-      <input class="input" id="dWa" type="tel" placeholder="300 123 4567" required/>
-      <div style="margin-top:22px">
-        <button class="btn amber" style="width:100%;border:none;cursor:pointer" type="submit">Agendar mi conversación →</button>
+    <h2>Cómo trabajamos juntos</h2>
+    <p class="lead">Un proceso simple, sin sorpresas. Primero escucho, después propongo.</p>
+    <div class="pilares">
+      <div class="pilar">
+        <h3>Conversación inicial</h3>
+        <p>Me cuentas de tu negocio, tus dolores, tus clientes. Sin costo, sin compromiso. Yo escucho y hago preguntas.</p>
       </div>
-      <p class="note" style="color:#aeb8c2">Se abre WhatsApp con tu solicitud lista para enviar. Te respondo personalmente en horario hábil.</p>
+      <div class="pilar">
+        <h3>Auditoría de procesos</h3>
+        <p>Reviso cómo opera tu negocio hoy, dónde se va el tiempo, qué se puede automatizar y qué necesita diseño.</p>
+      </div>
+      <div class="pilar">
+        <h3>Propuesta clara</h3>
+        <p>Te presento un plan con resultados esperados, tiempos y costos. Si no te convence, te vas con el diagnóstico.</p>
+      </div>
+      <div class="pilar">
+        <h3>Implementación y seguimiento</h3>
+        <p>Ejecutamos juntos. Mido resultados, ajusto lo que haga falta y nos aseguramos de que funcione.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section cta-bg" id="contacto">
+  <div class="wrap">
+    <h2>Cuéntame tu negocio</h2>
+    <p class="lead">Sin costo, sin compromiso. Solo hablamos y vemos si puedo ayudarte.</p>
+    <form class="cta-form" id="contactForm">
+      <label for="fNombre">Cómo te llamas</label>
+      <input class="input" id="fNombre" type="text" placeholder="Tu nombre" required/>
+      <label for="fNegocio">Nombre de tu negocio</label>
+      <input class="input" id="fNegocio" type="text" placeholder="Ej. Restaurante El Buen Sabor" required/>
+      <label for="fWa">Tu WhatsApp</label>
+      <input class="input" id="fWa" type="tel" placeholder="300 123 4567" required/>
+      <button class="btn wa" type="submit">Enviar por WhatsApp</button>
+      <p style="font-size:.78rem;color:#a0aec0;margin-top:12px;text-align:center">Te respondo personalmente en horario hábil.</p>
     </form>
   </div>
 </section>
 
-<!-- PROCESO -->
-<section class="section" id="proceso">
+<section class="final">
   <div class="wrap">
-    <h2 class="serif">Cómo trabajamos</h2>
-    <p class="lead">Un proceso claro, sin letra chica. Primero entendemos, después proponemos.</p>
-    <div class="cases">
-      <div class="case">
-        <div class="result">01</div>
-        <h3>Conversación inicial</h3>
-        <p>Identificamos tus dolores: dónde se va tu tiempo, tu dinero y tus clientes. Sin costo, sin compromiso.</p>
-      </div>
-      <div class="case">
-        <div class="result">02</div>
-        <h3>Auditoría de procesos</h3>
-        <p>Reviso cómo opera tu negocio hoy y qué se puede automatizar o mejorar con IA y diseño.</p>
-      </div>
-      <div class="case">
-        <div class="result">03</div>
-        <h3>Propuesta de socio</h3>
-        <p>Te presento un plan claro con resultados esperados. Si no te convence, te vas con el diagnóstico de todas formas.</p>
-      </div>
-      <div class="case">
-        <div class="result">04</div>
-        <h3>Relación continua</h3>
-        <p>Nos convertimos en socios: optimizo tus sistemas mes a mes y medimos resultados.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- POSICIONAMIENTO -->
-<section class="section" style="padding-top:0">
-  <div class="wrap">
-    <h2 class="serif">Por qué trabajar conmigo</h2>
-    <p class="lead">Soy tu socio estratégico recurrente, no una agencia que entrega y desaparece.</p>
-    <div class="pilares">
-      <div class="pilar"><span class="n">01</span><h3>Auditoría de procesos primero</h3><p>Antes de escribir una línea de código, entiendo cómo opera tu negocio y dónde está el cuello de botella real.</p></div>
-      <div class="pilar"><span class="n">02</span><h3>Tu Fractional AI &amp; Design Officer</h3><p>Me convierto en tu socio mes a mes: actualizo, mido y optimizo tus sistemas con un retainer mensual.</p></div>
-      <div class="pilar"><span class="n">03</span><h3>Conecto lo que ya usas</h3><p>Agentes MCP integrados a tu CRM, inventario y bases de datos actuales. Cero migraciones, cero fricción.</p></div>
-    </div>
-  </div>
-</section>
-
-<!-- CTA FINAL -->
-<section class="final" id="contacto">
-  <div class="wrap">
-    <h2 class="serif">Convierte tu negocio en una máquina que vende mientras duermes</h2>
-    <p>Agenda 15 minutos. Sin costo, sin compromiso. Solo hablamos de tu negocio, encontramos tus dolores y vemos si puedo ayudarte como socio.</p>
-    <a class="btn wa" href="https://wa.me/573174446641?text=Hola%20Daniel%2C%20quiero%20agendar%20una%20conversaci%C3%B3n%20sobre%20mi%20negocio." target="_blank" rel="noopener">Agendar por WhatsApp</a>
+    <h2>Tu negocio merece funcionar mejor</h2>
+    <p>La IA no es magia, pero bien aplicada puede hacer que tu equipo trabaje menos y tus clientes reciban más. Hablemos.</p>
+    <a class="btn wa" href="https://wa.me/573174446641?text=Hola%20Daniel%2C%20quiero%20hablar%20sobre%20mi%20negocio." target="_blank" rel="noopener">Escribirme por WhatsApp</a>
   </div>
 </section>
 
 <footer>
   <div class="wrap">
-    <div class="brand"><span class="dot"></span>DANIEL ROJAS</div>
-    <p>Consultor de IA y Diseño para Pymes · <a href="https://danielrojasdesign.netlify.app">danielrojasdesign.netlify.app</a></p>
-    <p style="margin-top:6px">© 2026 Daniel Rojas · Auditoría de procesos primero, código después.</p>
+    <div class="brand">DANIEL ROJAS</div>
+    <p>Consultor de IA y Diseño para Pymes · <a href="https://danielrojasdesign.netlify.app" style="color:var(--accent)">danielrojasdesign.netlify.app</a></p>
+    <p style="margin-top:4px">© 2026 Daniel Rojas</p>
   </div>
 </footer>
 
 <script>
-const SECTORS = {
-  restaurantes:{name:"Restaurante / Café",pct:30,leadsPer100:8,
-    sol:{t:"Agente de WhatsApp que toma pedidos y reservas 24/7",
-         d:"Atiende mensajes, toma pedidos y confirma reservas en minutos, incluso a las 2 a.m. Ningún cliente se queda sin respuesta."}},
-  clinicas:{name:"Clínica / Consultorio",pct:28,leadsPer100:12,
-    sol:{t:"Agenda inteligente con recordatorios y confirmación",
-         d:"Automatiza la gestión de citas, envía recordatorios y reduce los 'no show' que hoy pierdes cada semana."}},
-  retail:{name:"Retail / Tienda",pct:25,leadsPer100:10,
-    sol:{t:"Chatbot de ventas + inventario conectado",
-         d:"Responde precios, disponibilidad y cierra ventas por WhatsApp, sincronizado con tu stock real."}},
-  profesionales:{name:"Firma profesional / Consultoría",pct:35,leadsPer100:15,
-    sol:{t:"Asistente que cotiza y da seguimiento",
-         d:"Elabora cotizaciones y da seguimiento automático a cada prospecto hasta convertir la venta."}},
-  belleza:{name:"Salón / Spa / Gimnasio",pct:30,leadsPer100:14,
-    sol:{t:"Agente de reservas y confirmación 24/7",
-         d:"Aparta citas, confirma asistencia y avisa a tu equipo, eliminando el teléfono como cuello de botella."}},
-  hogar:{name:"Servicios a domicilio / Mantenimiento",pct:25,leadsPer100:9,
-    sol:{t:"Agente de cotización y agenda de visitas",
-         d:"Cotiza y agenda visitas automáticamente, dándole respuestas inmediatas a tus clientes."}}
-};
-const CURR = {
-  COP:{fmt:new Intl.NumberFormat("es-CO"), min:3000, max:200000, def:8000, label:"Peso colombiano"},
-  USD:{fmt:new Intl.NumberFormat("en-US"), min:1, max:300, def:2, label:"Dólar"},
-  MXN:{fmt:new Intl.NumberFormat("es-MX"), min:20, max:6000, def:42, label:"Peso mexicano"}
-};
-let currency = "COP";
-let copPerUnit = {COP:1, USD:1/3200, MXN:1/184};
-fetch("https://open.er-api.com/v6/latest/COP")
-  .then(r=>r.json()).then(d=>{
-    if (d && d.result === "success" && d.rates) {
-      copPerUnit.USD = d.rates.USD;
-      copPerUnit.MXN = d.rates.MXN;
-    }
-  }).catch(()=>{});
-
-const money = n => currency + " " + CURR[currency].fmt.format(Math.round(n));
-
-function toCurrency(value, from, to){
-  return value / copPerUnit[from] * copPerUnit[to];
-}
-
-function setCurrency(next){
-  if (next === currency) return;
-  const cur = +document.getElementById("rate").value || 0;
-  const el = document.getElementById("rate");
-  el.value = cur ? Math.round(toCurrency(cur, currency, next)*100)/100 : CURR[next].def;
-  el.min = CURR[next].min;
-  el.max = CURR[next].max;
-  currency = next;
-  document.getElementById("rateHint").textContent =
-    "Costo por hora en " + next + " · tasas de referencia";
-  compute();
-}
-
-function buildSectors(){
-  const box = document.getElementById("sectors");
-  Object.keys(SECTORS).forEach((k,i)=>{
-    const s = SECTORS[k];
-    const b = document.createElement("button");
-    b.type = "button";
-    b.className = "sector" + (i===0 ? " active":"");
-    b.dataset.key = k;
-    b.innerHTML = "<b>" + s.name + "</b><span>" + s.pct + "% en tareas repetitivas</span>";
-    b.addEventListener("click", ()=>selectSector(k));
-    box.appendChild(b);
-  });
-}
-function selectSector(key){
-  document.querySelectorAll(".sector").forEach(el=>el.classList.toggle("active", el.dataset.key===key));
-  const s = SECTORS[key];
-  document.getElementById("hours").value = Math.round(40*s.pct/100*2)/2;
-  document.getElementById("hoursHint").textContent = "≈ " + s.pct + "% de una jornada de 40h semanales";
-  compute();
-}
-function compute(){
-  const key = (document.querySelector(".sector.active")||{dataset:{key:"restaurantes"}}).dataset.key;
-  const s = SECTORS[key];
-  const employees = Math.max(1, +document.getElementById("employees").value || 0);
-  const hours = Math.max(0, +document.getElementById("hours").value || 0);
-  const rate = Math.max(0, +document.getElementById("rate").value || 0);
-  const leads = Math.max(0, +document.getElementById("cta24").value || 0);
-  const hoursSavedMonth = employees*hours*4.33*0.6;
-  document.getElementById("rHours").textContent = Math.round(hoursSavedMonth) + "h";
-  document.getElementById("rMoney").textContent = money(hoursSavedMonth*rate);
-  document.getElementById("rLeads").textContent = Math.round(leads*0.6);
-  document.getElementById("results").style.display = "grid";
-  document.getElementById("sTitle").textContent = "Tu recomendación: " + s.sol.t;
-  document.getElementById("sDesc").textContent = s.sol.d + " En una conversación vemos si es viable para tu negocio.";
-  document.getElementById("solution").style.display = "block";
-}
-["employees","hours","rate","cta24"].forEach(id=>{
-  document.getElementById(id).addEventListener("input", compute);
-});
-document.getElementById("currency").addEventListener("change", e=>setCurrency(e.target.value));
-
-// Formulario de conversación → abre WhatsApp con la solicitud
-document.getElementById("diagForm").addEventListener("submit", e=>{
+document.getElementById("contactForm").addEventListener("submit", e=>{
   e.preventDefault();
-  const negocio = document.getElementById("dNegocio").value.trim();
-  const web = document.getElementById("dWeb").value.trim();
-  const wa = document.getElementById("dWa").value.replace(/[^\d]/g,"");
-  const msg = "Hola Daniel, quiero agendar una conversación sobre mi negocio.\n" +
+  const nombre = document.getElementById("fNombre").value.trim();
+  const negocio = document.getElementById("fNegocio").value.trim();
+  const wa = document.getElementById("fWa").value.replace(/[^\d]/g,"");
+  const msg = "Hola Daniel, me llamo " + nombre + " y quiero hablar sobre mi negocio.\n" +
     "Negocio: " + negocio + "\n" +
-    "Sitio web: " + (web || "No tengo") + "\n" +
     "Mi WhatsApp: " + wa;
   window.open("https://wa.me/573174446641?text=" + encodeURIComponent(msg), "_blank");
 });
-
-buildSectors();
-selectSector("restaurantes");
-compute();
 </script>
 </body>
 </html>
