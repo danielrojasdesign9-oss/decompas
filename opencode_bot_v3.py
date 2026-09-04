@@ -103,16 +103,17 @@ async def encendido(ctx):
     try:
         await ctx.send("🔄 Iniciando OpenCode Web...")
         
-        # Iniciar el servidor en background
+        # Iniciar el servidor en background (shell=True para encontrar opencode en PATH)
         opencode_process = subprocess.Popen(
-            ["opencode", "web", "--port", str(OPENCODE_PORT), "--host", "0.0.0.0"],
+            f"opencode web --port {OPENCODE_PORT} --host 0.0.0.0",
             stdout=subprocess.PIPE,
             stderr=subprocess.PIPE,
+            shell=True,
             creationflags=subprocess.CREATE_NO_WINDOW if os.name == 'nt' else 0
         )
         
         # Esperar un momento para que inicie
-        await asyncio.sleep(3)
+        await asyncio.sleep(4)
         
         if opencode_process.poll() is None:
             await ctx.send(f"✅ **OpenCode Web encendido**")
@@ -121,7 +122,10 @@ async def encendido(ctx):
             await ctx.send(f"🔑 **Usuario:** danielremoto")
             await ctx.send(f"🔐 **Contraseña:** makiMa12*")
         else:
+            stderr = opencode_process.stderr.read().decode()
             await ctx.send(f"❌ Error al iniciar OpenCode Web")
+            if stderr:
+                await ctx.send(f"```{stderr[:200]}```")
             
     except FileNotFoundError:
         await ctx.send("❌ Error: OpenCode no está instalado. Ejecuta `npm install -g opencode-ai`")
