@@ -42,16 +42,19 @@ a{color:inherit}
 a:focus-visible,button:focus-visible,input:focus-visible{outline:3px solid var(--accent);outline-offset:2px}
 /* Nav */
 nav{position:sticky;top:0;z-index:50;background:rgba(248,246,243,.94);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
-nav .wrap{display:flex;align-items:center;justify-content:space-between;height:60px}
+nav .wrap{display:flex;align-items:center;justify-content:space-between;height:56px}
 .brand{font-weight:700;font-size:1rem;letter-spacing:.03em;color:var(--ink)}
 .navlinks{display:flex;gap:28px;font-size:.88rem;font-weight:500}
 .navlinks a{text-decoration:none;color:var(--muted);transition:color .2s}
 .navlinks a:hover{color:var(--ink)}
 .hamburger{display:none;background:none;border:none;cursor:pointer;padding:8px;z-index:60}
 .hamburger svg{width:24px;height:24px;stroke:var(--ink);stroke-width:2;fill:none}
+.btn-nav{display:inline-block;background:var(--ink);color:#fff;text-decoration:none;font-weight:600;
+padding:8px 18px;border-radius:6px;font-size:.82rem;transition:all .2s;border:none;cursor:pointer}
+.btn-nav:hover{background:var(--ink-light)}
 @media(max-width:760px){
   .hamburger{display:block}
-  .navlinks{display:none;position:absolute;top:60px;left:0;right:0;background:var(--cream);flex-direction:column;gap:0;padding:0 24px;border-bottom:1px solid var(--line)}
+  .navlinks{display:none;position:absolute;top:56px;left:0;right:0;background:var(--cream);flex-direction:column;gap:0;padding:0 24px;border-bottom:1px solid var(--line)}
   .navlinks.open{display:flex}
   .navlinks a{padding:14px 0;border-bottom:1px solid var(--line);font-size:1rem}
   .nav .btn-desktop{display:none}
@@ -69,8 +72,8 @@ padding:14px 28px;border-radius:8px;font-size:.92rem;transition:all .2s;border:n
 .btn.primary:hover{background:#1e3a54}
 /* Hero */
 .hero{padding:100px 0 80px;text-align:center}
-.tag{display:inline-block;background:var(--accent-soft);color:var(--accent);font-size:.78rem;font-weight:600;
-letter-spacing:.06em;padding:8px 16px;border-radius:6px;margin-bottom:24px}
+.tag{display:inline-block;color:var(--accent);font-size:.78rem;font-weight:600;
+letter-spacing:.06em;margin-bottom:24px}
 h1{font-size:clamp(2rem,5vw,3.2rem);line-height:1.15;margin:0 0 20px;font-weight:700;letter-spacing:-.02em}
 .hero p{max-width:580px;margin:0 auto 36px;color:var(--muted);font-size:1.05rem}
 .ctas{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
@@ -97,6 +100,14 @@ h1{font-size:clamp(2rem,5vw,3.2rem);line-height:1.15;margin:0 0 20px;font-weight
 .pilar .step{position:absolute;left:20px;top:28px;width:24px;height:24px;background:var(--accent);color:#fff;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:.75rem;font-weight:700}
 .pilar h3{font-size:1.05rem;margin-bottom:10px;font-weight:600}
 .pilar p{color:var(--muted);font-size:.9rem;line-height:1.6}
+/* LATAM */
+.latam{background:var(--accent-soft);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.latam h2{color:var(--ink)}
+.latam .lead{color:var(--muted)}
+.latam-features{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:24px}
+.latam-feat{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:28px}
+.latam-feat h3{font-size:1.05rem;margin-bottom:10px;font-weight:600}
+.latam-feat p{color:var(--muted);font-size:.9rem;line-height:1.6}
 /* CTA */
 .cta-bg{background:var(--ink);color:#fff}
 .cta-bg .lead{color:#a0aec0}
@@ -136,11 +147,11 @@ footer a:hover{text-decoration:underline}
     <div class="navlinks">
       <a href="#servicios">Servicios</a>
       <a href="#casos">Casos</a>
-      <a href="#proceso">Proceso</a>
+      <a href="#latam">LATAM</a>
       <a href="#contacto">Contacto</a>
     </div>
-    <a class="btn btn-desktop" href="#contacto">Hablemos</a>
-    <a class="btn btn-mobile" href="#contacto" style="display:none">Hablemos</a>
+    <a class="btn-nav btn-desktop" href="#contacto">Hablemos</a>
+    <a class="btn-nav btn-mobile" href="#contacto" style="display:none">Hablemos</a>
   </div>
 </nav>
 
@@ -185,6 +196,30 @@ footer a:hover{text-decoration:underline}
     <p class="lead">Proyectos reales donde la IA y el diseño resolvieron problemas concretos.</p>
     <div class="cases">
       <article class="case">
+        <span class="tag-sm">Edtech · Automatización</span>
+        <h3>UTAP</h3>
+        <p>Flujo de correos que analiza, entiende y gestiona respuestas en múltiples buzones en simultáneo. Aprende de cada interacción para mejorar las respuestas automáticas.</p>
+        <span class="metric">Tiempo de respuesta -80%</span>
+      </article>
+      <article class="case">
+        <span class="tag-sm">Fintech · Mercados LATAM</span>
+        <h3>Paycool</h3>
+        <p>Adaptación de servicios financieros a diferentes mercados. Procesos bancarios simplificados para jóvenes millennials aplicando metodologías de Design Thinking.</p>
+        <span class="metric">Adopción millennials +45%</span>
+      </article>
+      <article class="case">
+        <span class="tag-sm">Fintech · Fiscal</span>
+        <h3>Silin</h3>
+        <p>Plataforma de reporte tributario con dashboard intuitivo. Complej fiscal simplificada en una interfaz que cualquier contador puede usar sin capacitación.</p>
+        <span class="metric">Tiempo de reporte -70%</span>
+      </article>
+      <article class="case">
+        <span class="tag-sm">SaaS · Portafolios</span>
+        <h3>Innu</h3>
+        <p>Portafolios escalables y editables con alojamiento virtual de bajo costo. Templates personalizados para comunicar con impacto tu información profesional.</p>
+        <span class="metric">Costo de hosting -90%</span>
+      </article>
+      <article class="case">
         <span class="tag-sm">Logística · App móvil</span>
         <h3>Igo</h3>
         <p>Diseño UX + agente IA para rastreo de pedidos y gestión de repartidores en tiempo real.</p>
@@ -195,30 +230,6 @@ footer a:hover{text-decoration:underline}
         <h3>E-Signer</h3>
         <p>Flujo completo de carga, revisión y firma electrónica de documentos legales.</p>
         <span class="metric">Pasos de firma reducidos de 8 a 3</span>
-      </article>
-      <article class="case">
-        <span class="tag-sm">SaaS · Productividad</span>
-        <h3>Silin</h3>
-        <p>Sistema de diseño con componentes reutilizables para plataforma de gestión de equipos.</p>
-        <span class="metric">Velocidad de desarrollo +40%</span>
-      </article>
-      <article class="case">
-        <span class="tag-sm">Retail · E-commerce</span>
-        <h3>Paycool</h3>
-        <p>Tienda online con experiencia de compra móvil optimizada para marca de moda.</p>
-        <span class="metric">Conversión móvil +25%</span>
-      </article>
-      <article class="case">
-        <span class="tag-sm">Edtech · Educación</span>
-        <h3>Innu</h3>
-        <p>Dashboard del estudiante y reproductor de video para plataforma de cursos online.</p>
-        <span class="metric">Retención de estudiantes +35%</span>
-      </article>
-      <article class="case">
-        <span class="tag-sm">Fintech · Comparador</span>
-        <h3>Linklight</h3>
-        <p>Comparador de productos financieros con diseño que transmite transparencia y confianza.</p>
-        <span class="metric">Tiempo de decisión -50%</span>
       </article>
     </div>
   </div>
@@ -248,6 +259,27 @@ footer a:hover{text-decoration:underline}
         <span class="step">4</span>
         <h3>Implementación y seguimiento</h3>
         <p>Ejecutamos juntos. Mido resultados, ajusto lo que haga falta y nos aseguramos de que funcione.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="section latam" id="latam">
+  <div class="wrap">
+    <h2>Socios tecnológicos para startups LATAM</h2>
+    <p class="lead">No solo vendo un servicio. Busco socios tecnológicos para generar cambio e impacto real en Latinoamérica.</p>
+    <div class="latam-features">
+      <article class="latam-feat">
+        <h3>Sistemas de diseño accesibles</h3>
+        <p>Tu startup necesita un sistema de diseño, pero no tiene presupuesto de empresa grande. Implemento sistemas de diseño escalables con componentes reutilizables que crecen con tu producto sin romperse.</p>
+      </article>
+      <article class="latam-feat">
+        <h3>IA aplicada a problemas reales</h3>
+        <p>Automatizo procesos que consumen tiempo de tu equipo: atención al cliente, generación de reportes, gestión de correos. La IA no es el producto, es la herramienta que hace tu producto mejor.</p>
+      </article>
+      <article class="latam-feat">
+        <h3>Impacto medible</h3>
+        <p>Cada proyecto tiene métricas claras. No trabajo por entregar, trabajo por resultados. Si no mejora tu negocio, no sirvió. Eso es ser socio, no proveedor.</p>
       </article>
     </div>
   </div>
