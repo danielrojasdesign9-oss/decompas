@@ -94,10 +94,13 @@ async def encendido(ctx):
     """Enciende el servidor de OpenCode Web en el puerto 4096"""
     global opencode_process
     
+    channel = bot.get_channel(CHANNEL_ID)
+    
     # Verificar si ya está corriendo
     if opencode_process and opencode_process.poll() is None:
-        await ctx.send(f"⚠️ OpenCode Web ya está corriendo en el puerto {OPENCODE_PORT}")
-        await ctx.send(f"📱 Accede desde tu celular: http://desktop-ide6st8:{OPENCODE_PORT}")
+        if channel:
+            await channel.send(f"⚠️ **OpenCode Web** ya está corriendo en el puerto {OPENCODE_PORT}")
+            await channel.send(f"📱 http://desktop-ide6st8:{OPENCODE_PORT}")
         return
     
     try:
@@ -116,11 +119,15 @@ async def encendido(ctx):
         await asyncio.sleep(4)
         
         if opencode_process.poll() is None:
-            await ctx.send(f"✅ **OpenCode Web encendido**")
-            await ctx.send(f"📱 **Desde tu celular (Tailscale):** http://desktop-ide6st8:{OPENCODE_PORT}")
-            await ctx.send(f"💻 **Desde tu PC:** http://localhost:{OPENCODE_PORT}")
-            await ctx.send(f"🔑 **Usuario:** danielremoto")
-            await ctx.send(f"🔐 **Contraseña:** makiMa12*")
+            msg = f"🟢 **OpenCode Web ENCENDIDO**\n\n"
+            msg += f"📱 **Celular (Tailscale):** http://desktop-ide6st8:{OPENCODE_PORT}\n"
+            msg += f"💻 **PC:** http://localhost:{OPENCODE_PORT}\n\n"
+            msg += f"🔑 **Usuario:** danielremoto\n"
+            msg += f"🔐 **Contraseña:** makiMa12*"
+            
+            if channel:
+                await channel.send(msg)
+            await ctx.send(f"✅ OpenCode Web encendido — revisa el canal general")
         else:
             stderr = opencode_process.stderr.read().decode()
             await ctx.send(f"❌ Error al iniciar OpenCode Web")
@@ -137,8 +144,11 @@ async def apagado(ctx):
     """Apaga el servidor de OpenCode Web"""
     global opencode_process
     
+    channel = bot.get_channel(CHANNEL_ID)
+    
     if opencode_process is None or opencode_process.poll() is not None:
-        await ctx.send("ℹ️ OpenCode Web no está corriendo")
+        if channel:
+            await channel.send("ℹ️ **OpenCode Web** no está corriendo")
         return
     
     try:
@@ -155,8 +165,9 @@ async def apagado(ctx):
         
         opencode_process = None
         
-        await ctx.send("✅ **OpenCode Web apagado**")
-        await ctx.send(f"🔌 Puerto {OPENCODE_PORT} liberado")
+        if channel:
+            await channel.send(f"🔴 **OpenCode Web APAGADO** — Puerto {OPENCODE_PORT} liberado")
+        await ctx.send("✅ OpenCode Web apagado")
         
     except Exception as e:
         await ctx.send(f"❌ Error al apagar: {str(e)}")
