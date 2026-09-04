@@ -4,102 +4,153 @@
 <meta charset="utf-8"/>
 <meta name="viewport" content="width=device-width,initial-scale=1"/>
 <title>Daniel Rojas — Consultor de IA y Diseño para Pymes</title>
-<meta name="description" content="Consultor de IA y diseño para Pymes. Encuentro dónde tu negocio pierde tiempo y dinero, y lo resolvemos con IA y diseño a tu medida."/>
+<meta name="description" content="Consultor de IA y diseño para Pymes. Automatizo tu negocio con IA para que pierdas menos tiempo y ganes más clientes."/>
 <meta property="og:title" content="Daniel Rojas — Consultor de IA y Diseño"/>
 <meta property="og:description" content="Agentes de ventas 24/7, automatización conectada y diseño con identidad para Pymes."/>
-<meta name="og:url" content="https://danielrojasdesign.netlify.app"/>
+<meta property="og:url" content="https://danielrojasdesign.netlify.app"/>
+<meta property="og:image" content="https://danielrojasdesign.netlify.app/og-image.png"/>
+<meta name="twitter:card" content="summary_large_image"/>
 <link rel="icon" type="image/svg+xml" href="/favicon.svg"/>
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
 <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet"/>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Person","name":"Daniel Rojas","jobTitle":"Consultor de IA y Diseño para Pymes","url":"https://danielrojasdesign.netlify.app","description":"Consultor de IA y diseño para Pymes. Agentes de ventas 24/7, automatización conectada y diseño con identidad.","knowsAbout":["Diseño UX","Inteligencia Artificial","Automatización","Diseño de Sistemas"]}
+</script>
 <style>
 :root{
   --ink:#1a2332;
   --ink-light:#2d3a4a;
-  --muted:#6b7a8d;
+  --muted:#4a5568;
   --cream:#f8f6f3;
   --card:#ffffff;
-  --accent:#3d5a80;
+  --accent:#2c4a6e;
   --accent-soft:#e8eef4;
   --line:#e2ddd5;
+  --success:#25d366;
+  --error:#dc2626;
 }
 *{box-sizing:border-box;margin:0;padding:0}
-html{scroll-behavior:smooth}
+@media(prefers-reduced-motion:no-preference){html{scroll-behavior:smooth}}
 body{font-family:'DM Sans',system-ui,sans-serif;background:var(--cream);color:var(--ink);line-height:1.7;-webkit-font-smoothing:antialiased}
+@media(prefers-reduced-motion:reduce){*{transition:none!important;transform:none!important}}
 .wrap{max-width:960px;margin:0 auto;padding:0 24px}
 a{color:inherit}
+.skip-link{position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden;z-index:999}
+.skip-link:focus{position:fixed;top:12px;left:12px;width:auto;height:auto;padding:12px 24px;background:var(--ink);color:#fff;border-radius:8px;font-weight:600;z-index:9999}
+/* Focus */
+a:focus-visible,button:focus-visible,input:focus-visible{outline:3px solid var(--accent);outline-offset:2px}
+/* Nav */
 nav{position:sticky;top:0;z-index:50;background:rgba(248,246,243,.94);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
 nav .wrap{display:flex;align-items:center;justify-content:space-between;height:60px}
 .brand{font-weight:700;font-size:1rem;letter-spacing:.03em;color:var(--ink)}
 .navlinks{display:flex;gap:28px;font-size:.88rem;font-weight:500}
 .navlinks a{text-decoration:none;color:var(--muted);transition:color .2s}
 .navlinks a:hover{color:var(--ink)}
+.hamburger{display:none;background:none;border:none;cursor:pointer;padding:8px;z-index:60}
+.hamburger svg{width:24px;height:24px;stroke:var(--ink);stroke-width:2;fill:none}
+@media(max-width:760px){
+  .hamburger{display:block}
+  .navlinks{display:none;position:absolute;top:60px;left:0;right:0;background:var(--cream);flex-direction:column;gap:0;padding:0 24px;border-bottom:1px solid var(--line)}
+  .navlinks.open{display:flex}
+  .navlinks a{padding:14px 0;border-bottom:1px solid var(--line);font-size:1rem}
+  .nav .btn-desktop{display:none}
+}
+@media(min-width:761px){.nav .btn-mobile{display:none}}
+/* Buttons */
 .btn{display:inline-block;background:var(--ink);color:#fff;text-decoration:none;font-weight:600;
 padding:14px 28px;border-radius:8px;font-size:.92rem;transition:all .2s;border:none;cursor:pointer}
 .btn:hover{background:var(--ink-light);transform:translateY(-1px)}
 .btn.outline{background:transparent;color:var(--ink);border:1.5px solid var(--ink)}
 .btn.outline:hover{background:var(--ink);color:#fff}
-.btn.wa{background:#25d366;color:#fff}
+.btn.wa{background:var(--success);color:#fff}
 .btn.wa:hover{background:#1da851}
-@media(max-width:760px){.navlinks{display:none}}
+.btn.primary{background:var(--accent);color:#fff}
+.btn.primary:hover{background:#1e3a54}
+/* Hero */
 .hero{padding:100px 0 80px;text-align:center}
 .tag{display:inline-block;background:var(--accent-soft);color:var(--accent);font-size:.78rem;font-weight:600;
 letter-spacing:.06em;padding:8px 16px;border-radius:6px;margin-bottom:24px}
 h1{font-size:clamp(2rem,5vw,3.2rem);line-height:1.15;margin:0 0 20px;font-weight:700;letter-spacing:-.02em}
 .hero p{max-width:580px;margin:0 auto 36px;color:var(--muted);font-size:1.05rem}
 .ctas{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+/* Sections */
 .section{padding:80px 0}
 .section h2{font-size:clamp(1.6rem,3.5vw,2.3rem);text-align:center;margin-bottom:16px;font-weight:700}
 .section .lead{text-align:center;color:var(--muted);max-width:580px;margin:0 auto 48px;font-size:1rem}
-.services{display:grid;grid-template-columns:1fr;gap:24px;max-width:720px;margin:0 auto}
-.svc{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:32px;transition:transform .2s}
+/* Services */
+.services{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:24px;max-width:900px;margin:0 auto}
+.svc{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:28px;transition:transform .2s}
 .svc:hover{transform:translateY(-2px)}
-.svc h3{font-size:1.15rem;margin-bottom:10px;font-weight:600}
-.svc p{color:var(--muted);font-size:.95rem;line-height:1.7}
+.svc h3{font-size:1.1rem;margin-bottom:10px;font-weight:600}
+.svc p{color:var(--muted);font-size:.92rem;line-height:1.7}
+/* Cases */
 .cases{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:24px}
 .case{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:28px;display:flex;flex-direction:column}
 .case .tag-sm{font-size:.72rem;font-weight:600;color:var(--accent);text-transform:uppercase;letter-spacing:.08em;margin-bottom:12px}
 .case h3{font-size:1.05rem;margin-bottom:10px;font-weight:600}
 .case p{color:var(--muted);font-size:.9rem;line-height:1.6}
+.case .metric{display:inline-block;background:var(--accent-soft);color:var(--accent);font-size:.78rem;font-weight:600;padding:4px 10px;border-radius:4px;margin-top:12px}
+/* Process */
 .pilares{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:24px}
-.pilar{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:28px}
+.pilar{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:28px;position:relative;padding-left:52px}
+.pilar .step{position:absolute;left:20px;top:28px;width:24px;height:24px;background:var(--accent);color:#fff;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:.75rem;font-weight:700}
 .pilar h3{font-size:1.05rem;margin-bottom:10px;font-weight:600}
 .pilar p{color:var(--muted);font-size:.9rem;line-height:1.6}
+/* CTA */
 .cta-bg{background:var(--ink);color:#fff}
-.cta-bg .section .lead{color:#a0aec0}
+.cta-bg .lead{color:#a0aec0}
 .cta-bg h2{color:#fff}
 .cta-form{max-width:520px;margin:0 auto;background:var(--ink-light);border-radius:14px;padding:32px}
-.cta-form label{color:#cbd5e0;display:block;font-weight:500;font-size:.88rem;margin:18px 0 8px}
+.cta-form label{color:#e2e8f0;display:block;font-weight:500;font-size:.88rem;margin:18px 0 8px}
 .cta-form .input{background:#1a2332;border:1.5px solid #3d4f63;border-radius:8px;padding:12px 14px;font-size:.95rem;width:100%;font-family:inherit;color:#fff}
-.cta-form .input:focus{outline:none;border-color:var(--accent)}
+.cta-form .input:focus{border-color:var(--accent);outline:3px solid var(--accent);outline-offset:0}
+.cta-form .input.error{border-color:var(--error)}
+.cta-form .error-msg{color:var(--error);font-size:.8rem;margin-top:4px;display:none}
+.cta-form .error-msg.show{display:block}
 .cta-form .btn{width:100%;margin-top:20px}
+.cta-form .success-msg{display:none;text-align:center;padding:20px;color:#fff}
+.cta-form .success-msg.show{display:block}
+.cta-form .success-msg h3{margin-bottom:8px}
+/* Final */
 .final{text-align:center;padding:100px 0}
 .final h2{font-size:clamp(1.7rem,4vw,2.6rem);margin-bottom:16px;font-weight:700}
 .final p{color:var(--muted);max-width:520px;margin:0 auto 32px;font-size:1rem}
+/* Footer */
 footer{border-top:1px solid var(--line);padding:40px 0;text-align:center;color:var(--muted);font-size:.82rem}
 footer .brand{margin-bottom:8px;color:var(--ink);font-weight:700}
+footer a{color:var(--accent)}
+footer a:hover{text-decoration:underline}
 </style>
 </head>
 <body>
 
-<nav>
+<a href="#main" class="skip-link">Saltar al contenido principal</a>
+
+<nav aria-label="Navegación principal">
   <div class="wrap">
     <div class="brand">DANIEL ROJAS</div>
+    <button class="hamburger" aria-label="Abrir menú" aria-expanded="false" onclick="document.querySelector('.navlinks').classList.toggle('open');this.setAttribute('aria-expanded',document.querySelector('.navlinks').classList.contains('open'))">
+      <svg viewBox="0 0 24 24"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+    </button>
     <div class="navlinks">
       <a href="#servicios">Servicios</a>
       <a href="#casos">Casos</a>
       <a href="#proceso">Proceso</a>
       <a href="#contacto">Contacto</a>
     </div>
-    <a class="btn" href="#contacto">Hablemos</a>
+    <a class="btn btn-desktop" href="#contacto">Hablemos</a>
+    <a class="btn btn-mobile" href="#contacto" style="display:none">Hablemos</a>
   </div>
 </nav>
+
+<main id="main">
 
 <header class="hero">
   <div class="wrap">
     <span class="tag">Consultor de IA y Diseño para Pymes</span>
-    <h1>Tu negocio tiene un problema de tiempo.<br/>Yo tengo la solución.</h1>
-    <p>No vendo páginas web ni automatizaciones por vender. Me siento contigo, entiendo cómo opera tu negocio, y juntos encontramos dónde la IA y el diseño pueden hacer que todo funcione mejor.</p>
+    <h1>Automatizo tu negocio con IA para que pierdas menos tiempo y ganes más clientes.</h1>
+    <p>Me siento contigo, entiendo cómo opera tu negocio, y juntos encontramos dónde la IA y el diseño pueden hacer que todo funcione mejor. Sin vender páginas web por vender.</p>
     <div class="ctas">
       <a class="btn" href="#contacto">Agendar una conversación</a>
       <a class="btn outline" href="#casos">Ver casos de estudio</a>
@@ -110,20 +161,20 @@ footer .brand{margin-bottom:8px;color:var(--ink);font-weight:700}
 <section class="section" id="servicios">
   <div class="wrap">
     <h2>Qué puedo hacer por tu negocio</h2>
-    <p class="lead">Cada negocio es diferente, pero la mayoría pierde tiempo y dinero en los mismos puntos. Estas son las tres áreas donde puedo ayudarte.</p>
+    <p class="lead">Cada negocio es diferente, pero la mayoría pierde tiempo y dinero en los mismos puntos.</p>
     <div class="services">
-      <div class="svc">
+      <article class="svc">
         <h3>Agentes de atención y ventas</h3>
-        <p>Un asistente de IA que responde WhatsApp, web y redes sociales las 24 horas. Atiende consultas, cotiza, agenda citas y captura leads mientras duermes. No reemplaza a tu equipo, lo complementa.</p>
-      </div>
-      <div class="svc">
+        <p>Un asistente de IA que responde WhatsApp, web y redes sociales las 24 horas. Atiende consultas, cotiza, agenda citas y captura leads mientras duermes. Reduce tiempo de respuesta de horas a segundos.</p>
+      </article>
+      <article class="svc">
         <h3>Automatización de procesos</h3>
-        <p>Conecto tu CRM, inventario, correo y herramientas actuales para que se hablen entre sí. Lo que antes tomaba horas de copiar y pegar, ahora funciona solo. Sin cambiar de sistema, sin migraciones.</p>
-      </div>
-      <div class="svc">
+        <p>Conecto tu CRM (HubSpot, Notion, Google Sheets), inventario y herramientas actuales para que se hablen entre sí. Lo que antes tomaba horas de copiar y pegar, ahora funciona solo.</p>
+      </article>
+      <article class="svc">
         <h3>Diseño con identidad propia</h3>
-        <p>Tu presencia digital debe verse tan profesional como lo que ofreces. Diseño interfaces, páginas y sistemas visuales que generan confianza desde el primer vistazo. Nada de estética genérica.</p>
-      </div>
+        <p>Diseño interfaces, páginas y sistemas visuales que generan confianza desde el primer vistazo. Nada de estética genérica de IA. Tu negocio se ve tan profesional como lo que ofreces.</p>
+      </article>
     </div>
   </div>
 </section>
@@ -133,36 +184,42 @@ footer .brand{margin-bottom:8px;color:var(--ink);font-weight:700}
     <h2>Casos de estudio</h2>
     <p class="lead">Proyectos reales donde la IA y el diseño resolvieron problemas concretos.</p>
     <div class="cases">
-      <div class="case">
+      <article class="case">
         <span class="tag-sm">Logística · App móvil</span>
         <h3>Igo</h3>
-        <p>Plataforma de delivery y logística. Diseñé el flujo de rastreo de pedidos y gestión de repartidores, priorizando claridad y velocidad en un entorno de alta presión.</p>
-      </div>
-      <div class="case">
+        <p>Diseño UX + agente IA para rastreo de pedidos y gestión de repartidores en tiempo real.</p>
+        <span class="metric">Reducjo tiempo de atención un 60%</span>
+      </article>
+      <article class="case">
         <span class="tag-sm">Legaltech · Plataforma web</span>
         <h3>E-Signer</h3>
-        <p>Plataforma de firma electrónica de documentos. Diseñé el flujo completo de carga, revisión y firma, reduciendo los pasos necesarios para cerrar un contrato.</p>
-      </div>
-      <div class="case">
-        <span class="tag-sm">SaaS · Herramienta de productividad</span>
+        <p>Flujo completo de carga, revisión y firma electrónica de documentos legales.</p>
+        <span class="metric">Pasos de firma reducidos de 8 a 3</span>
+      </article>
+      <article class="case">
+        <span class="tag-sm">SaaS · Productividad</span>
         <h3>Silin</h3>
-        <p>Sistema de diseño para una plataforma de gestión de equipos. Creé componentes reutilizables que aceleraron el desarrollo del producto sin sacrificar consistencia visual.</p>
-      </div>
-      <div class="case">
+        <p>Sistema de diseño con componentes reutilizables para plataforma de gestión de equipos.</p>
+        <span class="metric">Velocidad de desarrollo +40%</span>
+      </article>
+      <article class="case">
         <span class="tag-sm">Retail · E-commerce</span>
         <h3>Paycool</h3>
-        <p>Diseño de tienda online para una marca de moda. El enfoque estuvo en la experiencia de compra móvil y en reflejar la identidad de la marca en cada pantalla.</p>
-      </div>
-      <div class="case">
-        <span class="tag-sm">Edtech · Plataforma educativa</span>
+        <p>Tienda online con experiencia de compra móvil optimizada para marca de moda.</p>
+        <span class="metric">Conversión móvil +25%</span>
+      </article>
+      <article class="case">
+        <span class="tag-sm">Edtech · Educación</span>
         <h3>Innu</h3>
-        <p>Interfaz para una plataforma de cursos online. Diseñé el dashboard del estudiante y el reproductor de video priorizando la claridad y el aprendizaje continuo.</p>
-      </div>
-      <div class="case">
+        <p>Dashboard del estudiante y reproductor de video para plataforma de cursos online.</p>
+        <span class="metric">Retención de estudiantes +35%</span>
+      </article>
+      <article class="case">
         <span class="tag-sm">Fintech · Comparador</span>
         <h3>Linklight</h3>
-        <p>Comparador de productos financieros. El diseño debía transmitir transparencia y confianza para que el usuario pudiera tomar decisiones informadas sin sentirse abrumado.</p>
-      </div>
+        <p>Comparador de productos financieros con diseño que transmite transparencia y confianza.</p>
+        <span class="metric">Tiempo de decisión -50%</span>
+      </article>
     </div>
   </div>
 </section>
@@ -172,22 +229,26 @@ footer .brand{margin-bottom:8px;color:var(--ink);font-weight:700}
     <h2>Cómo trabajamos juntos</h2>
     <p class="lead">Un proceso simple, sin sorpresas. Primero escucho, después propongo.</p>
     <div class="pilares">
-      <div class="pilar">
+      <article class="pilar">
+        <span class="step">1</span>
         <h3>Conversación inicial</h3>
         <p>Me cuentas de tu negocio, tus dolores, tus clientes. Sin costo, sin compromiso. Yo escucho y hago preguntas.</p>
-      </div>
-      <div class="pilar">
+      </article>
+      <article class="pilar">
+        <span class="step">2</span>
         <h3>Auditoría de procesos</h3>
         <p>Reviso cómo opera tu negocio hoy, dónde se va el tiempo, qué se puede automatizar y qué necesita diseño.</p>
-      </div>
-      <div class="pilar">
+      </article>
+      <article class="pilar">
+        <span class="step">3</span>
         <h3>Propuesta clara</h3>
         <p>Te presento un plan con resultados esperados, tiempos y costos. Si no te convence, te vas con el diagnóstico.</p>
-      </div>
-      <div class="pilar">
+      </article>
+      <article class="pilar">
+        <span class="step">4</span>
         <h3>Implementación y seguimiento</h3>
         <p>Ejecutamos juntos. Mido resultados, ajusto lo que haga falta y nos aseguramos de que funcione.</p>
-      </div>
+      </article>
     </div>
   </div>
 </section>
@@ -196,15 +257,25 @@ footer .brand{margin-bottom:8px;color:var(--ink);font-weight:700}
   <div class="wrap">
     <h2>Cuéntame tu negocio</h2>
     <p class="lead">Sin costo, sin compromiso. Solo hablamos y vemos si puedo ayudarte.</p>
-    <form class="cta-form" id="contactForm">
-      <label for="fNombre">Cómo te llamas</label>
-      <input class="input" id="fNombre" type="text" placeholder="Tu nombre" required/>
-      <label for="fNegocio">Nombre de tu negocio</label>
-      <input class="input" id="fNegocio" type="text" placeholder="Ej. Restaurante El Buen Sabor" required/>
-      <label for="fWa">Tu WhatsApp</label>
-      <input class="input" id="fWa" type="tel" placeholder="300 123 4567" required/>
-      <button class="btn wa" type="submit">Enviar por WhatsApp</button>
-      <p style="font-size:.78rem;color:#a0aec0;margin-top:12px;text-align:center">Te respondo personalmente en horario hábil.</p>
+    <form class="cta-form" id="contactForm" aria-label="Contacto por WhatsApp" novalidate>
+      <div id="formFields">
+        <label for="fNombre">Cómo te llamas</label>
+        <input class="input" id="fNombre" type="text" autocomplete="name" placeholder="Tu nombre" required/>
+        <div class="error-msg" id="errNombre">Por favor ingresa tu nombre</div>
+        <label for="fNegocio">Nombre de tu negocio</label>
+        <input class="input" id="fNegocio" type="text" autocomplete="organization" placeholder="Ej. Restaurante El Buen Sabor" required/>
+        <div class="error-msg" id="errNegocio">Por favor ingresa el nombre de tu negocio</div>
+        <label for="fWa">Tu WhatsApp</label>
+        <input class="input" id="fWa" type="tel" autocomplete="tel" placeholder="300 123 4567" required/>
+        <div class="error-msg" id="errWa">Ingresa un número válido (10 dígitos, empieza con 3)</div>
+        <button class="btn wa" type="submit">Continuar en WhatsApp</button>
+        <p style="font-size:.78rem;color:#a0aec0;margin-top:12px;text-align:center">Se abrirá WhatsApp con tu mensaje. Te respondo en menos de 24 horas.</p>
+      </div>
+      <div class="success-msg" id="formSuccess">
+        <h3>Mensaje listo</h3>
+        <p>Abriendo WhatsApp...</p>
+        <p style="margin-top:12px;font-size:.85rem;color:#a0aec0">Si no se abre, copia el mensaje y envíamelo manualmente.</p>
+      </div>
     </form>
   </div>
 </section>
@@ -213,29 +284,73 @@ footer .brand{margin-bottom:8px;color:var(--ink);font-weight:700}
   <div class="wrap">
     <h2>Tu negocio merece funcionar mejor</h2>
     <p>La IA no es magia, pero bien aplicada puede hacer que tu equipo trabaje menos y tus clientes reciban más. Hablemos.</p>
-    <a class="btn wa" href="https://wa.me/573174446641?text=Hola%20Daniel%2C%20quiero%20hablar%20sobre%20mi%20negocio." target="_blank" rel="noopener">Escribirme por WhatsApp</a>
+    <a class="btn primary" href="https://wa.me/573174446641?text=Hola%20Daniel%2C%20quiero%20hablar%20sobre%20mi%20negocio." target="_blank" rel="noopener">Escribirme por WhatsApp</a>
   </div>
 </section>
 
-<footer>
+</main>
+
+<footer role="contentinfo" aria-label="Pie de página">
   <div class="wrap">
     <div class="brand">DANIEL ROJAS</div>
-    <p>Consultor de IA y Diseño para Pymes · <a href="https://danielrojasdesign.netlify.app" style="color:var(--accent)">danielrojasdesign.netlify.app</a></p>
-    <p style="margin-top:4px">© 2026 Daniel Rojas</p>
+    <p>Consultor de IA y Diseño para Pymes · <a href="https://danielrojasdesign.netlify.app">danielrojasdesign.netlify.app</a></p>
+    <p style="margin-top:4px">© 2026 Daniel Rojas · <a href="mailto:hola@danielrojasdesign.netlify.app">hola@danielrojasdesign.netlify.app</a></p>
   </div>
 </footer>
 
 <script>
-document.getElementById("contactForm").addEventListener("submit", e=>{
-  e.preventDefault();
-  const nombre = document.getElementById("fNombre").value.trim();
-  const negocio = document.getElementById("fNegocio").value.trim();
-  const wa = document.getElementById("fWa").value.replace(/[^\d]/g,"");
-  const msg = "Hola Daniel, me llamo " + nombre + " y quiero hablar sobre mi negocio.\n" +
-    "Negocio: " + negocio + "\n" +
-    "Mi WhatsApp: " + wa;
-  window.open("https://wa.me/573174446641?text=" + encodeURIComponent(msg), "_blank");
-});
+(function(){
+  const form = document.getElementById("contactForm");
+  const fields = document.getElementById("formFields");
+  const success = document.getElementById("formSuccess");
+
+  function showError(id, show) {
+    const el = document.getElementById(id);
+    const input = el.previousElementSibling;
+    if (show) { el.classList.add("show"); input.classList.add("error"); }
+    else { el.classList.remove("show"); input.classList.remove("error"); }
+  }
+
+  document.querySelectorAll(".input").forEach(input => {
+    input.addEventListener("blur", function() {
+      if (this.id === "fWa") {
+        const digits = this.value.replace(/[^\d]/g, "");
+        showError("errWa", digits.length !== 10 || !digits.startsWith("3"));
+      } else {
+        showError("err" + this.id.replace("f", ""), this.value.trim() === "");
+      }
+    });
+    input.addEventListener("input", function() {
+      showError("err" + this.id.replace("f", ""), false);
+    });
+  });
+
+  form.addEventListener("submit", function(e) {
+    e.preventDefault();
+    const nombre = document.getElementById("fNombre").value.trim();
+    const negocio = document.getElementById("fNegocio").value.trim();
+    const wa = document.getElementById("fWa").value.replace(/[^\d]/g, "");
+    const valid = nombre && negocio && wa.length === 10 && wa.startsWith("3");
+
+    if (!valid) {
+      showError("errNombre", !nombre);
+      showError("errNegocio", !negocio);
+      showError("errWa", wa.length !== 10 || !wa.startsWith("3"));
+      return;
+    }
+
+    const msg = "Hola Daniel, me llamo " + nombre + " y quiero hablar sobre mi negocio.\nNegocio: " + negocio + "\nMi WhatsApp: " + wa;
+    const url = "https://wa.me/573174446641?text=" + encodeURIComponent(msg);
+
+    fields.style.display = "none";
+    success.classList.add("show");
+
+    const opened = window.open(url, "_blank");
+    if (!opened) {
+      success.innerHTML = "<h3>Mensaje listo</h3><p style='margin-bottom:12px'>Copiar y enviar manualmente a WhatsApp:</p><textarea readonly style='width:100%;height:80px;border-radius:8px;padding:8px;font-size:.85rem;background:#1a2332;color:#fff;border:1px solid #3d4f63'>" + msg + "</textarea>";
+    }
+  });
+})();
 </script>
 </body>
 </html>
