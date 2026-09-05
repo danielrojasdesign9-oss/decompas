@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>Propuesta — EnvíaLo</title>
+<style>
+@page{size:A4;margin:0}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Segoe UI',system-ui,sans-serif;color:#1a2332;line-height:1.6;-webkit-font-smoothing:antialiased}
+.page{width:210mm;min-height:297mm;padding:40px 50px;background:#fff}
+.header{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:40px;padding-bottom:24px;border-bottom:2px solid #e2ddd5}
+.header-left h1{font-size:1.8rem;font-weight:700;color:#1a2332;letter-spacing:-.02em}
+.header-left p{color:#6b7a8d;font-size:.9rem;margin-top:4px}
+.header-right{text-align:right}
+.header-right .logo{font-size:1.2rem;font-weight:700;color:#1a2332;letter-spacing:.03em}
+.header-right .date{color:#6b7a8d;font-size:.82rem;margin-top:4px}
+.client{background:#f8f6f3;border-radius:10px;padding:24px;margin-bottom:32px}
+.client h2{font-size:.78rem;text-transform:uppercase;letter-spacing:.08em;color:#6b7a8d;margin-bottom:12px}
+.client-info{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.client-info div{font-size:.88rem}
+.client-info strong{display:block;color:#1a2332;font-weight:600}
+.client-info span{color:#6b7a8d}
+.section{margin-bottom:32px}
+.section h2{font-size:1.1rem;font-weight:700;color:#1a2332;margin-bottom:12px;padding-bottom:8px;border-bottom:1px solid #e2ddd5}
+.section p{color:#4a5568;font-size:.9rem;line-height:1.7}
+.services-list{list-style:none}
+.services-list li{padding:16px 0;border-bottom:1px solid #f0ece6;display:flex;gap:16px;align-items:flex-start}
+.services-list li:last-child{border-bottom:none}
+.service-icon{width:36px;height:36px;background:#e8eef4;border-radius:8px;display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:1rem}
+.service-content h3{font-size:.95rem;font-weight:600;color:#1a2332;margin-bottom:4px}
+.service-content p{font-size:.85rem;color:#6b7a8d}
+.process-steps{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.step{text-align:center;padding:16px 8px}
+.step-num{width:32px;height:32px;background:#2c4a6e;color:#fff;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:.85rem;font-weight:700;margin:0 auto 8px}
+.step h3{font-size:.82rem;font-weight:600;color:#1a2332;margin-bottom:4px}
+.step p{font-size:.75rem;color:#6b7a8d}
+.investment{background:#1a2332;color:#fff;border-radius:10px;padding:28px;margin-bottom:32px}
+.investment h2{color:#fff;border-bottom-color:#3d4f63}
+.investment-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-top:16px}
+.investment-item h3{font-size:.82rem;text-transform:uppercase;letter-spacing:.06em;color:#a0aec0;margin-bottom:8px}
+.investment-item .price{font-size:1.5rem;font-weight:700;color:#fff}
+.investment-item .price span{font-size:.85rem;font-weight:400;color:#a0aec0}
+.investment-item p{font-size:.82rem;color:#a0aec0;margin-top:4px}
+.timeline{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:16px}
+.timeline-item{text-align:center;padding:16px;background:#f8f6f3;border-radius:8px}
+.timeline-item h3{font-size:.82rem;font-weight:600;color:#1a2332;margin-bottom:4px}
+.timeline-item p{font-size:.75rem;color:#6b7a8d}
+.terms{font-size:.82rem;color:#6b7a8d;line-height:1.8}
+.terms h3{font-size:.88rem;font-weight:600;color:#1a2332;margin-bottom:8px}
+.footer{margin-top:40px;padding-top:24px;border-top:2px solid #e2ddd5;text-align:center}
+.footer p{font-size:.82rem;color:#6b7a8d}
+.footer strong{color:#1a2332}
+.cta-box{background:#e8eef4;border-radius:10px;padding:24px;text-align:center;margin-top:24px}
+.cta-box h3{font-size:1rem;font-weight:700;color:#1a2332;margin-bottom:8px}
+.cta-box p{font-size:.85rem;color:#6b7a8d;margin-bottom:16px}
+.cta-box .btn{display:inline-block;background:#2c4a6e;color:#fff;padding:12px 28px;border-radius:8px;text-decoration:none;font-weight:600;font-size:.9rem}
+</style>
+</head>
+<body>
+<div class="page">
+<div class="header">
+  <div class="header-left">
+    <h1>Propuesta de Trabajo</h1>
+    <p>Automatización y Diseño para EnvíaLo</p>
+  </div>
+  <div class="header-right">
+    <div class="logo">DANIEL ROJAS</div>
+    <div class="date">6 de septiembre de 2026</div>
+  </div>
+</div>
+
+<div class="client">
+  <h2>Información del Cliente</h2>
+  <div class="client-info">
+    <div><strong>EnvíaLo</strong><span>Negocio</span></div>
+    <div><strong>Daniel Steven Rojas</strong><span>Contacto</span></div>
+    <div><strong>Startup / Delivery</strong><span>Sector</span></div>
+    <div><strong>danielstevenrojas@hotmail.com</strong><span>Comunicación</span></div>
+  </div>
+</div>
+
+<div class="section">
+  <h2>Situación Actual</h2>
+  <p>EnvíaLo recibe consultas de restaurantes interesados en el servicio por WhatsApp, Instagram y LinkedIn, pero solo responde en horario laboral. Cuando un restaurante escribe a las 11pm preguntando por el servicio, se pierde la oportunidad. Se pierden entre 8-10 restaurantes potenciales al mes, representando ~$4M en ingresos perdidos.</p>
+</div>
+
+<div class="section">
+  <h2>Soluciones Propuestas</h2>
+  <ul class="services-list">
+    <li>
+      <div class="service-icon">⚡</div>
+      <div class="service-content">
+        <h3>Agente de Ventas 24/7</h3>
+        <p>Asistente de IA que responde WhatsApp las 24 horas. Atiende consultas de restaurantes interesados, muestra planes y precios, agenda demos y captura leads fuera de horario.</p>
+      </div>
+    </li>
+    <li>
+      <div class="service-icon">📅</div>
+      <div class="service-content">
+        <h3>Flujo de Demo Automática</h3>
+        <p>Cuando un restaurante pide una demo, el agente toma datos (nombre, restaurante, teléfono), agenda la fecha y envía confirmación automática.</p>
+      </div>
+    </li>
+    <li>
+      <div class="service-icon">🌐</div>
+      <div class="service-content">
+        <h3>Página Web Simple</h3>
+        <p>Landing page con información del servicio, planes de precios y botón de WhatsApp para consultas directas.</p>
+      </div>
+    </li>
+    <li>
+      <div class="service-icon">📊</div>
+      <div class="service-content">
+        <h3>Monitoreo de Leads</h3>
+        <p>Dashboard simple para ver cuántos leads se capturan, cuántos agendan demo y cuántos convierten.</p>
+      </div>
+    </li>
+  </ul>
+</div>
+
+<div class="section">
+  <h2>Proceso de Trabajo</h2>
+  <div class="process-steps">
+    <div class="step">
+      <div class="step-num">1</div>
+      <h3>Auditoría</h3>
+      <p>Revisamos tu negocio y identificamos oportunidades</p>
+    </div>
+    <div class="step">
+      <div class="step-num">2</div>
+      <h3>Diseño</h3>
+      <p>Creamos la solución a tu medida</p>
+    </div>
+    <div class="step">
+      <div class="step-num">3</div>
+      <h3>Implementación</h3>
+      <p>Configuramos y lanzamos todo</p>
+    </div>
+    <div class="step">
+      <div class="step-num">4</div>
+      <h3>Seguimiento</h3>
+      <p>Medimos resultados y optimizamos</p>
+    </div>
+  </div>
+</div>
+
+<div class="investment">
+  <h2>Inversión</h2>
+  <div class="investment-grid">
+    <div class="investment-item">
+      <h3>Estándar</h3>
+      <div class="price">$2.000.000 <span>COP</span></div>
+      <p>WhatsApp 24/7 + landing page + flujo de demo + monitoreo</p>
+    </div>
+    <div class="investment-item">
+      <h3>Mantenimiento Mensual</h3>
+      <div class="price">$500.000 <span>/mes</span></div>
+      <p>Soporte continuo, optimización y nuevas funcionalidades</p>
+    </div>
+  </div>
+</div>
+
+<div class="section">
+  <h2>Cronograma</h2>
+  <div class="timeline">
+    <div class="timeline-item">
+      <h3>Semana 1</h3>
+      <p>Configuración del agente y landing page</p>
+    </div>
+    <div class="timeline-item">
+      <h3>Entrega</h3>
+      <p>1 semana desde anticipo</p>
+    </div>
+    <div class="timeline-item">
+      <h3>Mantenimiento</h3>
+      <p>Soporte mensual continuo</p>
+    </div>
+  </div>
+</div>
+
+<div class="section">
+  <h2>Términos</h2>
+  <div class="terms">
+    <h3>Condiciones Generales</h3>
+    <p>• 50% de anticipo al firmar ($1.000.000), 50% restante contra entrega ($1.000.000)<br/>
+    • Propuesta válida por 15 días<br/>
+    • Mantenimiento mensual después de la entrega<br/>
+    • Sin anticipo no se inicia el proyecto</p>
+  </div>
+</div>
+
+<div class="cta-box">
+  <h3>¿Listo para empezar?</h3>
+  <p>Esta propuesta es el punto de partida. El siguiente paso es que me confirmes el paquete y coordinemos el anticipo para iniciar.</p>
+  <a class="btn" href="https://wa.me/573174446641?text=Hola%20Daniel%2C%20acepto%20la%20propuesta%20para%20Env%C3%ADaLo" target="_blank">Aceptar propuesta por WhatsApp</a>
+</div>
+
+<div class="footer">
+  <p><strong>Daniel Rojas</strong> — Consultor de IA y Diseño para Pymes</p>
+  <p>danielrojascali.netlify.app · +57 317 444 6641</p>
+</div>
+</div>
+</body>
+</html>
