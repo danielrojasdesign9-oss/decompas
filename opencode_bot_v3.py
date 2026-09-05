@@ -19,6 +19,46 @@ CHANNEL_ID = 1544195974023352415  # Canal general
 opencode_process = None
 OPENCODE_PORT = 4096
 
+# Base de conocimiento - ideas
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+IDEAS_FILE = os.path.join(BASE_DIR, "scripts", "soporte", "ideas.txt")
+IDEAS_MIRROR = r"X:\Proyectos IA OpenCode\Entregables_Proyecto\soporte\ideas.txt"
+
+def clasificar_idea(texto):
+    t = texto.lower()
+    if any(k in t for k in ["horario", "emergencia", "turno", "atienden", "abren", "cierran"]):
+        return "horarios"
+    if any(k in t for k in ["precio", "costo", "cobra", "pago", "anticipo", "cuota"]):
+        return "precios"
+    if any(k in t for k in ["menu", "catalogo", "producto", "plato", "pdf"]):
+        return "catalogo"
+    if any(k in t for k in ["reserva", "cita", "agenda", "turno"]):
+        return "reservas"
+    if any(k in t for k in ["estacionamiento", "parqueo", "ubicacion", "direccion", "donde"]):
+        return "ubicacion"
+    if any(k in t for k in ["faq", "pregunta frecuente", "siempre preguntan"]):
+        return "faqs"
+    if any(k in t for k in ["pedido", "domicilio", "entrega", "delivery"]):
+        return "pedidos"
+    if any(k in t for k in ["propuesta", "diagnostico", "auditoria", "template", "plantilla"]):
+        return "templates"
+    return "general"
+
+def guardar_idea(texto):
+    os.makedirs(os.path.dirname(IDEAS_FILE), exist_ok=True)
+    ts = datetime.now().strftime("%Y-%m-%d %H:%M")
+    cat = clasificar_idea(texto)
+    linea = f"[{ts}] [{cat}] {texto}\n"
+    with open(IDEAS_FILE, "a", encoding="utf-8") as f:
+        f.write(linea)
+    try:
+        os.makedirs(os.path.dirname(IDEAS_MIRROR), exist_ok=True)
+        with open(IDEAS_MIRROR, "a", encoding="utf-8") as f:
+            f.write(linea)
+    except Exception:
+        pass
+    return cat
+
 # Bot
 intents = discord.Intents.default()
 intents.message_content = True
@@ -119,11 +159,9 @@ async def encendido(ctx):
         await asyncio.sleep(4)
         
         if opencode_process.poll() is None:
-            msg = f"🟢 **OpenCode Web ENCENDIDO**\n\n"
+            msg = f"🟢 **OpenCode Web ENCENDIDO** (sin contrasena)\n\n"
             msg += f"📱 **Celular (Tailscale):** http://desktop-ide6st8:{OPENCODE_PORT}\n"
-            msg += f"💻 **PC:** http://localhost:{OPENCODE_PORT}\n\n"
-            msg += f"🔑 **Usuario:** danielremoto\n"
-            msg += f"🔐 **Contraseña:** makiMa12*"
+            msg += f"💻 **PC:** http://localhost:{OPENCODE_PORT}\n"
             
             if channel:
                 await channel.send(msg)
@@ -207,6 +245,40 @@ async def propuesta(ctx):
     msg += f"2. Presiona Ctrl+P (Imprimir)\n"
     msg += f"3. Selecciona 'Guardar como PDF'\n"
     await ctx.send(msg)
+
+@bot.command(name="idea")
+async def idea(ctx, *, texto: str = ""):
+    """Guarda una idea en tu base de conocimiento. Uso: !idea tu texto"""
+    if not texto.strip():
+        await ctx.send("Uso: `!idea tu idea aqui`\nEj: `!idea los clinicos piden horarios de emergencia`")
+        return
+    try:
+        cat = guardar_idea(texto.strip())
+        channel = bot.get_channel(CHANNEL_ID)
+        msg = f"Idea guardada en tu base de conocimiento\nCategoria: **{cat}**\nTexto: {texto.strip()[:300]}"
+        if channel and ctx.channel.id != CHANNEL_ID:
+            await channel.send(msg)
+        await ctx.send(msg)
+    except Exception as e:
+        await ctx.send(f"Error guardando idea: {str(e)}")
+
+@bot.command(name="ideas")
+async def ideas(ctx):
+    """Muestra las ultimas 5 ideas guardadas"""
+    try:
+        if not os.path.exists(IDEAS_FILE):
+            await ctx.send("Aun no hay ideas. Usa `!idea tu texto`")
+            return
+        with open(IDEAS_FILE, "r", encoding="utf-8") as f:
+            lineas = [l.strip() for l in f if l.strip() and not l.startswith("#")]
+        if not lineas:
+            await ctx.send("Aun no hay ideas. Usa `!idea tu texto`")
+            return
+        ultimas = lineas[-5:]
+        msg = "**Ultimas ideas:**\n" + "\n".join([f"- {l[:200]}" for l in ultimas])
+        await ctx.send(msg[:1900])
+    except Exception as e:
+        await ctx.send(f"Error: {str(e)}")
 
 # Ejecutar bot
 if __name__ == "__main__":

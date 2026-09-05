@@ -245,6 +245,39 @@ aquí estoy. Éxitos con [nombre del negocio] 🚀
 
 ---
 
+## 5.5 PRECIOS (cuando preguntan)
+
+**Si pregunta "¿cuánto cobra?" después de la auditoría:**
+```
+Tengo 3 opciones según lo que necesites:
+
+ENTRADA — $800.000 COP
+WhatsApp 24/7 + 1 flujo (pedido, reserva o cita)
+Entrega en 3-5 días. Anticipo: $400.000.
+
+ESTÁNDAR — $2.000.000 COP
+WhatsApp + página web + 2 flujos + monitoreo
+Entrega en 1 semana. Anticipo: $1.000.000.
+
+PREMIUM — $3.500.000 COP
+Todo + diseño sistema + IA avanzada + 3 meses soporte
+Entrega en 2 semanas. Anticipo: $1.750.000.
+
+¿Cuál se ajusta más a lo que necesitas?
+```
+
+**Si dice "es caro":**
+```
+Entiendo. ¿Cuánto te ha costado no responder a tiempo? 
+Si pierdes 5 clientes al mes, a $50.000 cada uno, 
+son $250.000 al mes que se van. En 3 meses ya recuperaste 
+la inversión. Y con ENTRADA puedes empezar con $400K de anticipo.
+
+¿Te preparo la propuesta?
+```
+
+---
+
 ## 6. SEGUIMIENTO
 
 **Seguimiento después de 3 días sin respuesta:**
