@@ -87,15 +87,22 @@ h1{font-size:clamp(2rem,5vw,3.2rem);line-height:1.15;margin:0 0 20px;font-weight
 .svc:hover{transform:translateY(-2px)}
 .svc h3{font-size:1.1rem;margin-bottom:10px;font-weight:600}
 .svc p{color:var(--muted);font-size:.92rem;line-height:1.7}
+.svc-price{margin-top:16px;padding-top:14px;border-top:1px solid var(--line);display:flex;align-items:baseline;gap:8px;flex-wrap:wrap}
+.svc-price .price-from{color:var(--muted);font-size:.78rem}
+.svc-price .price{color:var(--ink);font-size:1.15rem;font-weight:700}
+.svc-price .price-usd{color:var(--accent);font-size:.82rem;font-weight:500}
 /* Cases */
-.cases{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:24px}
-.case{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:28px;display:flex;flex-direction:column}
-.case .tag-sm{font-size:.72rem;font-weight:600;color:var(--accent);text-transform:uppercase;letter-spacing:.08em;margin-bottom:12px}
-.case h3{font-size:1.05rem;margin-bottom:10px;font-weight:600}
-.case p{color:var(--muted);font-size:.9rem;line-height:1.6}
+.cases{display:grid;grid-template-columns:repeat(2,1fr);gap:24px}
+@media(max-width:600px){.cases{grid-template-columns:1fr}}
+.case{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:28px;display:flex;flex-direction:column;gap:12px}
+.case .tag-sm{font-size:.72rem;font-weight:600;color:var(--accent);text-transform:uppercase;letter-spacing:.08em}
+.case h3{font-size:1.05rem;font-weight:600}
+.case p{color:var(--muted);font-size:.9rem;line-height:1.6;flex:1}
+.case .metric{display:inline-block;background:var(--accent-soft);color:var(--accent);font-size:.78rem;font-weight:600;padding:4px 10px;border-radius:4px;align-self:flex-start}
 .case .metric{display:inline-block;background:var(--accent-soft);color:var(--accent);font-size:.78rem;font-weight:600;padding:4px 10px;border-radius:4px;margin-top:12px}
 /* Process */
-.pilares{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:24px}
+.pilares{display:grid;grid-template-columns:repeat(2,1fr);gap:24px}
+@media(max-width:600px){.pilares{grid-template-columns:1fr}}
 .pilar{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:28px;position:relative;padding-left:52px}
 .pilar .step{position:absolute;left:20px;top:28px;width:24px;height:24px;background:var(--accent);color:#fff;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:.75rem;font-weight:700}
 .pilar h3{font-size:1.05rem;margin-bottom:10px;font-weight:600}
@@ -161,7 +168,7 @@ footer a:hover{text-decoration:underline}
   <div class="wrap">
     <span class="tag">Consultor de IA y Diseño para Pymes</span>
     <h1>Automatizo tu negocio con IA para que pierdas menos tiempo y ganes más clientes.</h1>
-    <p>Me siento contigo, entiendo cómo opera tu negocio, y juntos encontramos dónde la IA y el diseño pueden hacer que todo funcione mejor. Sin vender páginas web por vender.</p>
+    <p>Me siento contigo, entiendo cómo opera tu negocio, y juntos encontramos soluciones integrales entre IA y diseño para construir mejores productos y servicios. Todo con propósito.</p>
     <div class="ctas">
       <a class="btn" href="#contacto">Agendar una conversación</a>
       <a class="btn outline" href="#casos">Ver casos de estudio</a>
@@ -177,14 +184,29 @@ footer a:hover{text-decoration:underline}
       <article class="svc">
         <h3>Agentes de atención y ventas</h3>
         <p>Un asistente de IA que responde WhatsApp, web y redes sociales las 24 horas. Atiende consultas, cotiza, agenda citas y captura leads mientras duermes. Reduce tiempo de respuesta de horas a segundos.</p>
+        <div class="svc-price">
+          <span class="price-from">Desde</span>
+          <span class="price">$800.000 COP</span>
+          <span class="price-usd">$200 USD</span>
+        </div>
       </article>
       <article class="svc">
         <h3>Automatización de procesos</h3>
         <p>Conecto tu CRM (HubSpot, Notion, Google Sheets), inventario y herramientas actuales para que se hablen entre sí. Lo que antes tomaba horas de copiar y pegar, ahora funciona solo.</p>
+        <div class="svc-price">
+          <span class="price-from">Desde</span>
+          <span class="price">$2.000.000 COP</span>
+          <span class="price-usd">$500 USD</span>
+        </div>
       </article>
       <article class="svc">
         <h3>Diseño con identidad propia</h3>
         <p>Diseño interfaces, páginas y sistemas visuales que generan confianza desde el primer vistazo. Nada de estética genérica de IA. Tu negocio se ve tan profesional como lo que ofreces.</p>
+        <div class="svc-price">
+          <span class="price-from">Desde</span>
+          <span class="price">$3.500.000 COP</span>
+          <span class="price-usd">$900 USD</span>
+        </div>
       </article>
     </div>
   </div>
@@ -202,22 +224,10 @@ footer a:hover{text-decoration:underline}
         <span class="metric">Tiempo de respuesta -80%</span>
       </article>
       <article class="case">
-        <span class="tag-sm">Fintech · Mercados LATAM</span>
-        <h3>Paycool</h3>
-        <p>Adaptación de servicios financieros a diferentes mercados. Procesos bancarios simplificados para jóvenes millennials aplicando metodologías de Design Thinking.</p>
-        <span class="metric">Adopción millennials +45%</span>
-      </article>
-      <article class="case">
         <span class="tag-sm">Fintech · Fiscal</span>
         <h3>Silin</h3>
-        <p>Plataforma de reporte tributario con dashboard intuitivo. Complej fiscal simplificada en una interfaz que cualquier contador puede usar sin capacitación.</p>
+        <p>Plataforma de reporte tributario con dashboard intuitivo. Complejidad fiscal simplificada en una interfaz que cualquier contador puede usar sin capacitación.</p>
         <span class="metric">Tiempo de reporte -70%</span>
-      </article>
-      <article class="case">
-        <span class="tag-sm">SaaS · Portafolios</span>
-        <h3>Innu</h3>
-        <p>Portafolios escalables y editables con alojamiento virtual de bajo costo. Templates personalizados para comunicar con impacto tu información profesional.</p>
-        <span class="metric">Costo de hosting -90%</span>
       </article>
       <article class="case">
         <span class="tag-sm">Logística · App móvil</span>
